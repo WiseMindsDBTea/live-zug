@@ -1,0 +1,16 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "trips": {
+      "$tripId": {
+        ".read": "auth != null && data.exists() && data.child('active').val() === true && data.child('expiresAt').val() > now",
+        ".write": "auth != null && ((!data.exists() && newData.child('ownerUid').val() === auth.uid) || (data.exists() && data.child('ownerUid').val() === auth.uid && newData.child('ownerUid').val() === auth.uid))",
+        ".validate": "!newData.exists() || (newData.hasChildren(['ownerUid','active','expiresAt']) && newData.child('ownerUid').isString() && newData.child('active').isBoolean() && newData.child('expiresAt').isNumber() && newData.child('expiresAt').val() <= now + 28800000)",
+        "location": {
+          ".validate": "!newData.exists() || (newData.hasChildren(['lat','lon','timestamp']) && newData.child('lat').isNumber() && newData.child('lat').val() >= -90 && newData.child('lat').val() <= 90 && newData.child('lon').isNumber() && newData.child('lon').val() >= -180 && newData.child('lon').val() <= 180 && newData.child('timestamp').isNumber())"
+        }
+      }
+    }
+  }
+}
