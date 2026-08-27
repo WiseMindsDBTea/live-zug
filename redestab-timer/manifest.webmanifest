@@ -1,0 +1,16 @@
+{
+  "name": "Redestab-Timer",
+  "short_name": "Redestab",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F4F1EA",
+  "theme_color": "#1C1C1A",
+  "icons": [
+    {
+      "src": "apple-touch-icon-v3.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
