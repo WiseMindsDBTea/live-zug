@@ -1,0 +1,70 @@
+  trunks.castShadow=state.shadows&&!MOBILE;crowns.castShadow=state.shadows&&!MOBILE;trunks.receiveShadow=true;crowns.receiveShadow=true;worldGroup.add(trunks,crowns);
+}
+function buildFallbackTrees(){
+  const nodes=[];for(let d=20;d<routeTotal;d+=22){const p=pointAtDistance(d),p2=pointAtDistance(Math.min(routeTotal,d+2)),dir=p2.clone().sub(p).normalize(),n=new THREE.Vector3(-dir.z,0,dir.x);for(const s of [-1,1]){const q=p.clone().addScaledVector(n,s*(8.5+(Math.sin(d*.03+s)*2)));const ll=unproject(q);nodes.push({lat:ll.lat,lon:ll.lon});}}buildTrees(nodes.slice(0,MAX_TREES));
+}
+
+function lon2tile(lon,z){return Math.floor((lon+180)/360*Math.pow(2,z));}
+function lat2tile(lat,z){const r=lat*Math.PI/180,n=Math.pow(2,z);return Math.floor((1-Math.log(Math.tan(r)+1/Math.cos(r))/Math.PI)/2*n);}
+function tile2lon(x,z){return x/Math.pow(2,z)*360-180;}
+function tile2lat(y,z){const n=Math.PI-2*Math.PI*y/Math.pow(2,z);return 180/Math.PI*Math.atan(.5*(Math.exp(n)-Math.exp(-n)));}
+async function buildSatellite(){
+  setLoad('Luftbildboden wird vorbereitet …',70);
+  const z=16,lats=routeLL.map(p=>p.lat),lons=routeLL.map(p=>p.lon),pad=.004;
+  const minLat=Math.min(...lats)-pad,maxLat=Math.max(...lats)+pad,minLon=Math.min(...lons)-pad,maxLon=Math.max(...lons)+pad;
+  let x0=lon2tile(minLon,z),x1=lon2tile(maxLon,z),y0=lat2tile(maxLat,z),y1=lat2tile(minLat,z);
+  const maxTiles=MOBILE?42:65;let coords=[];for(let x=x0;x<=x1;x++)for(let y=y0;y<=y1;y++)coords.push([x,y]);
+  if(coords.length>maxTiles){
+    const center=project(geo.lat0,geo.lon0);coords=coords.map(c=>{const lat=(tile2lat(c[1],z)+tile2lat(c[1]+1,z))/2,lon=(tile2lon(c[0],z)+tile2lon(c[0]+1,z))/2;return {c,d:project(lat,lon).distanceTo(center)}}).sort((a,b)=>a.d-b.d).slice(0,maxTiles).map(x=>x.c);
+  }
+  const loader=new THREE.TextureLoader();let done=0;
+  for(const [x,y] of coords){
+    const north=tile2lat(y,z),south=tile2lat(y+1,z),west=tile2lon(x,z),east=tile2lon(x+1,z);
+    const nw=project(north,west),se=project(south,east),cx=(nw.x+se.x)/2,cz=(nw.z+se.z)/2,w=Math.abs(se.x-nw.x),h=Math.abs(se.z-nw.z);
+    loader.load(`https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/${z}/${y}/${x}`,tex=>{
+      tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=Math.min(4,renderer.capabilities.getMaxAnisotropy?.()||1);
+      const mesh=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({map:tex}));mesh.rotation.x=-Math.PI/2;mesh.position.set(cx,-.16,cz);mesh.receiveShadow=false;tileGroup.add(mesh);done++;if(done===coords.length) $('satBtn').textContent='Satellitenboden: an';
+    },undefined,()=>{});
+  }
+}
+
+function placeCarAtStart(){
+  state.autoDist=8;const p=pointAtDistance(state.autoDist);car.pos.copy(p);state.heading=headingAtDistance(state.autoDist);state.speed=0;car.lastRoadIndex=0;state.lookYaw=state.lookPitch=0;updateLatLon();
+}
+function resetToRoad(){
+  const n=nearestOnRoute(car.pos);car.pos.copy(n.point);state.heading=headingAtDistance(n.along);state.autoDist=n.along;state.speed=0;state.lookYaw=state.lookPitch=0;toast('Zurück auf die Oberföhringer Straße');
+}
+function updateLatLon(){const ll=unproject(car.pos);state.carLat=ll.lat;state.carLon=ll.lon;}
+
+function updateCar(dt){
+  if(state.auto){
+    const target=state.autoSpeedKmh/3.6;state.speed=THREE.MathUtils.damp(state.speed,target,3.2,dt);state.autoDist+=state.speed*dt;
+    if(state.autoDist>=routeTotal-4){state.autoDist=8;toast('Nordende erreicht – Fahrt startet wieder am Herkomerplatz.');}
+    car.pos.copy(pointAtDistance(state.autoDist));state.heading=headingAtDistance(state.autoDist);car.lastRoadIndex=Math.max(0,routeCum.findIndex(v=>v>=state.autoDist)-1);
+  }else{
+    const acc=state.throttle?4.0:0,br=state.brake?8.5:0;
+    if(acc)state.speed+=acc*dt;if(br)state.speed-=br*dt;
+    if(!state.throttle&&!state.brake)state.speed=THREE.MathUtils.damp(state.speed,0,0.55,dt);
+    state.speed=THREE.MathUtils.clamp(state.speed,-5.5,20);
+    const steer=(state.steerL?1:0)-(state.steerR?1:0);
+    if(Math.abs(state.speed)>.2) state.heading += steer * dt * (0.42+Math.min(1.0,Math.abs(state.speed)/9)) * Math.sign(state.speed);
+    const forward=new THREE.Vector3(Math.sin(state.heading),0,Math.cos(state.heading));car.pos.addScaledVector(forward,state.speed*dt);
+    const n=nearestOnRoute(car.pos);
+    if(n.dist>22){car.pos.lerp(n.point,Math.min(.75,dt*.8));state.speed*=Math.pow(.78,dt*5);}
+    if(n.dist>45){car.pos.copy(n.point);state.speed=0;toast('Straßenkorridor verlassen – automatisch zurückgesetzt.');}
+    state.autoDist=n.along;
+  }
+  updateLatLon();
+}
+
+function updateCamera(dt){
+  const sy=Math.sin(state.heading),cy=Math.cos(state.heading),forward=new THREE.Vector3(sy,0,cy),right=new THREE.Vector3(cy,0,-sy);
+  const lookHeading=state.heading+state.lookYaw,lsy=Math.sin(lookHeading),lcy=Math.cos(lookHeading),lookDir=new THREE.Vector3(lsy,Math.sin(state.lookPitch),lcy).normalize();
+  if(state.cameraMode===0){
+    const target=car.pos.clone().add(new THREE.Vector3(0,1.55,0));camera.position.lerp(target,1-Math.exp(-12*dt));hood.visible=true;
+    camera.rotation.y=lookHeading;camera.rotation.x=-state.lookPitch;
+  }else if(state.cameraMode===1){
+    const target=car.pos.clone().addScaledVector(forward,-8.2).add(new THREE.Vector3(0,4.1,0));camera.position.lerp(target,1-Math.exp(-6*dt));camera.lookAt(car.pos.clone().addScaledVector(forward,7).add(new THREE.Vector3(0,1.2,0)));hood.visible=false;
+  }else{
+    const target=car.pos.clone().addScaledVector(right,7.5).addScaledVector(forward,-3).add(new THREE.Vector3(0,3.0,0));camera.position.lerp(target,1-Math.exp(-5*dt));camera.lookAt(car.pos.clone().add(new THREE.Vector3(0,1.5,0)));hood.visible=false;
+  }

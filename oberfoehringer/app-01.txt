@@ -1,0 +1,70 @@
+  const tex=new THREE.CanvasTexture(canvas);tex.colorSpace=THREE.SRGBColorSpace;
+  const sky=new THREE.Mesh(new THREE.SphereGeometry(2300,24,12),new THREE.MeshBasicMaterial({map:tex,side:THREE.BackSide,fog:false}));scene.add(sky);
+}
+
+function project(lat,lon){
+  const x=(lon-geo.lon0)*111320*Math.cos(geo.lat0*Math.PI/180);
+  const z=-(lat-geo.lat0)*110540;
+  return new THREE.Vector3(x,0,z);
+}
+function unproject(v){
+  const lat=geo.lat0-v.z/110540;
+  const lon=geo.lon0+v.x/(111320*Math.cos(geo.lat0*Math.PI/180));
+  return {lat,lon};
+}
+function hav(a,b){
+  const R=6371000,rad=Math.PI/180,dLat=(b.lat-a.lat)*rad,dLon=(b.lon-a.lon)*rad;
+  const la1=a.lat*rad,la2=b.lat*rad;
+  const h=Math.sin(dLat/2)**2+Math.cos(la1)*Math.cos(la2)*Math.sin(dLon/2)**2;
+  return 2*R*Math.asin(Math.sqrt(h));
+}
+
+const OVERPASS=[
+ 'https://overpass-api.de/api/interpreter',
+ 'https://overpass.kumi.systems/api/interpreter',
+ 'https://overpass.nchc.org.tw/api/interpreter'
+];
+async function overpass(query){
+  let last;
+  for(const ep of OVERPASS){
+    try{
+      const ctl=new AbortController();const tm=setTimeout(()=>ctl.abort(),26000);
+      const r=await fetch(ep+'?data='+encodeURIComponent(query),{signal:ctl.signal,headers:{'Accept':'application/json'}});clearTimeout(tm);
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return await r.json();
+    }catch(e){last=e;}
+  }
+  throw last||new Error('Overpass nicht erreichbar');
+}
+
+async function loadRoute(){
+  setLoad('Reale Straßenachse wird aus OpenStreetMap geladen …',16);
+  const q='[out:json][timeout:25];way["highway"]["name"="Oberföhringer Straße"](48.155,11.608,48.211,11.651);out tags geom;';
+  try{
+    const data=await overpass(q);
+    let pts=[];
+    for(const e of data.elements||[]) if(e.geometry) for(const p of e.geometry) if(p?.lat&&p?.lon) pts.push({lat:p.lat,lon:p.lon});
+    pts.sort((a,b)=>a.lat-b.lat || a.lon-b.lon);
+    const ded=[];for(const p of pts){if(!ded.length||hav(ded[ded.length-1],p)>2.0) ded.push(p);}
+    if(ded.length<8) throw new Error('zu wenige Straßenpunkte');
+    routeLL=ded;state.routeSource='OpenStreetMap';
+  }catch(e){
+    routeLL=[
+      {lat:48.16180,lon:11.61925},{lat:48.16380,lon:11.61970},{lat:48.16620,lon:11.62025},{lat:48.16860,lon:11.62095},
+      {lat:48.17110,lon:11.62175},{lat:48.17370,lon:11.62270},{lat:48.17630,lon:11.62370},{lat:48.17890,lon:11.62490},
+      {lat:48.18160,lon:11.62625},{lat:48.18430,lon:11.62770},{lat:48.18700,lon:11.62915},{lat:48.18980,lon:11.63065},
+      {lat:48.19260,lon:11.63210},{lat:48.19540,lon:11.63335},{lat:48.19830,lon:11.63445},{lat:48.20120,lon:11.63520}
+    ];
+    state.routeSource='Fallback (Näherung)';
+    toast('OSM-Straßenachse nicht erreichbar – vorläufige Näherung aktiv.',3500);
+  }
+  const minLat=Math.min(...routeLL.map(p=>p.lat)),maxLat=Math.max(...routeLL.map(p=>p.lat));
+  const minLon=Math.min(...routeLL.map(p=>p.lon)),maxLon=Math.max(...routeLL.map(p=>p.lon));
+  geo.lat0=(minLat+maxLat)/2;geo.lon0=(minLon+maxLon)/2;
+  routeWorld=routeLL.map(p=>project(p.lat,p.lon));
+  routeCum=[0];for(let i=1;i<routeWorld.length;i++) routeCum.push(routeCum[i-1]+routeWorld[i].distanceTo(routeWorld[i-1]));
+  routeTotal=routeCum.at(-1);state.routeKm=routeTotal/1000;
+  $('distance').textContent=state.routeKm.toFixed(1);
+}
+
+function makeRoadStrip(points,width,y,material){

@@ -1,0 +1,70 @@
+    return new THREE.MeshStandardMaterial({map:tex,roughness:.82,metalness:0});
+  });
+}
+const roofMats=[];
+function matIndexFromId(id,n){let x=Number(String(id).replace(/\D/g,'').slice(-7))||1;return Math.abs(x)%n;}
+function parseHeight(tags={}){
+  const h=parseFloat(String(tags.height||'').replace(',','.'));if(Number.isFinite(h)&&h>2&&h<120)return h;
+  const lev=parseFloat(String(tags['building:levels']||'').replace(',','.'));if(Number.isFinite(lev)&&lev>0&&lev<30)return 3.05*lev+1.2;
+  const type=tags.building;return ['garage','garages','shed'].includes(type)?3.1:9.6;
+}
+function centroidLL(geom){let la=0,lo=0,n=0;for(const p of geom||[]){if(p?.lat&&p?.lon){la+=p.lat;lo+=p.lon;n++;}}return n?{lat:la/n,lon:lo/n}:null;}
+function distancePointToRouteLL(p){let m=Infinity;for(let i=0;i<routeLL.length;i+=Math.max(1,Math.floor(routeLL.length/100))){m=Math.min(m,hav(p,routeLL[i]));}return m;}
+
+async function loadBuildingsAndTrees(){
+  setLoad('Gebäudegrundrisse und Bäume werden geladen …',38);
+  const lats=routeLL.map(p=>p.lat),lons=routeLL.map(p=>p.lon);
+  const bbox=[Math.min(...lats)-.0024,Math.min(...lons)-.0035,Math.max(...lats)+.0024,Math.max(...lons)+.0035];
+  const b=bbox.join(',');
+  const q=`[out:json][timeout:35];(way["building"](${b});node["natural"="tree"](${b}););out tags geom;`;
+  let elements=[];
+  try{const data=await overpass(q);elements=data.elements||[];state.buildingSource='OpenStreetMap';}
+  catch(e){state.buildingSource='Fallback-Umgebung';toast('Gebäudedaten konnten nicht geladen werden – Ersatzumgebung wird erzeugt.',3500);}
+  const buildings=elements.filter(e=>e.type==='way'&&e.tags?.building&&e.geometry?.length>=4)
+    .map(e=>({e,c:centroidLL(e.geometry)})).filter(x=>x.c)
+    .map(x=>({...x,d:distancePointToRouteLL(x.c)})).sort((a,b)=>a.d-b.d).slice(0,TARGET_BUILDINGS);
+  const trees=elements.filter(e=>e.type==='node'&&e.tags?.natural==='tree'&&e.lat&&e.lon)
+    .map(e=>({e,d:distancePointToRouteLL({lat:e.lat,lon:e.lon})})).sort((a,b)=>a.d-b.d).slice(0,MAX_TREES);
+
+  if(buildings.length){buildRealBuildings(buildings);$('buildings').textContent=buildings.length;}
+  else{buildFallbackBuildings();$('buildings').textContent='~90';}
+  if(trees.length) buildTrees(trees.map(x=>x.e)); else buildFallbackTrees();
+}
+
+function buildRealBuildings(items){
+  setLoad(`277 Gebäude werden extrudiert …`,52);
+  const walls=createWallMaterials();
+  const roofPalette=[0x5c5751,0x6a625b,0x77736c,0x504f4d,0x8c8278];
+  for(const col of roofPalette) roofMats.push(new THREE.MeshStandardMaterial({color:col,roughness:.95}));
+  let made=0;
+  for(const {e} of items){
+    const pts=(e.geometry||[]).filter(p=>p?.lat&&p?.lon).map(p=>project(p.lat,p.lon));
+    if(pts.length<4)continue;
+    if(pts[0].distanceTo(pts.at(-1))>2.5)continue;
+    const shape=new THREE.Shape();shape.moveTo(pts[0].x,-pts[0].z);for(let i=1;i<pts.length;i++)shape.lineTo(pts[i].x,-pts[i].z);
+    const height=parseHeight(e.tags),g=new THREE.ExtrudeGeometry(shape,{depth:height,bevelEnabled:false,steps:1});g.rotateX(-Math.PI/2);
+    const wi=matIndexFromId(e.id,walls.length),ri=matIndexFromId(e.id,roofMats.length);
+    const mesh=new THREE.Mesh(g,[roofMats[ri],walls[wi]]);mesh.position.y=0;mesh.castShadow=state.shadows&&(made<(MOBILE?60:110));mesh.receiveShadow=true;worldGroup.add(mesh);made++;
+  }
+}
+
+function buildFallbackBuildings(){
+  setLoad('Ersatzbebauung wird aufgebaut …',52);
+  const mats=[0xe8e6df,0xd6d4ce,0xf1efe8,0xc9c5bd].map(c=>new THREE.MeshStandardMaterial({color:c,roughness:.85}));
+  let count=0;
+  for(let d=45;d<routeTotal-45;d+=42){
+    const p=pointAtDistance(d),p2=pointAtDistance(Math.min(routeTotal,d+2)),dir=p2.clone().sub(p).normalize(),n=new THREE.Vector3(-dir.z,0,dir.x);
+    for(const side of [-1,1]){
+      if((count%4===0&&side===1)||(count%7===0&&side===-1))continue;
+      const w=10+(count%5)*2.2,dep=9+(count%4)*2,h=7+(count%3)*2.2;
+      const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,dep),mats[count%mats.length]);m.position.copy(p).addScaledVector(n,side*(12+dep/2+(count%3)*4));m.position.y=h/2;m.rotation.y=Math.atan2(dir.x,dir.z);m.castShadow=count<70;m.receiveShadow=true;worldGroup.add(m);count++;
+    }
+  }
+}
+
+function buildTrees(nodes){
+  setLoad('Straßenbäume werden gesetzt …',63);
+  const trunkG=new THREE.CylinderGeometry(.14,.18,2.3,5),crownG=new THREE.IcosahedronGeometry(1.65,1);
+  const trunkM=new THREE.MeshStandardMaterial({color:0x6e4d34,roughness:1}),crownM=new THREE.MeshStandardMaterial({color:0x56754d,roughness:1});
+  const trunks=new THREE.InstancedMesh(trunkG,trunkM,nodes.length),crowns=new THREE.InstancedMesh(crownG,crownM,nodes.length);const dummy=new THREE.Object3D();
+  nodes.forEach((n,i)=>{const p=project(n.lat,n.lon);dummy.position.set(p.x,1.15,p.z);dummy.scale.setScalar(.8+(i%7)*.035);dummy.updateMatrix();trunks.setMatrixAt(i,dummy.matrix);dummy.position.y=3.35;dummy.scale.set(1,1.15,1);dummy.updateMatrix();crowns.setMatrixAt(i,dummy.matrix);});

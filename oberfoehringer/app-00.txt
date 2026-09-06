@@ -1,0 +1,70 @@
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js';
+
+const $ = id => document.getElementById(id);
+const loadingText = $('loadingText');
+const progress = $('progress');
+const setLoad = (text,p) => { loadingText.textContent=text; progress.style.width=`${p}%`; };
+
+const MOBILE = matchMedia('(pointer:coarse)').matches;
+const TARGET_BUILDINGS = 277;
+const MAX_TREES = MOBILE ? 260 : 520;
+const state = {
+  ready:false, auto:false, autoSpeedKmh:32, satellite:true, shadows:true,
+  cameraMode:0, speed:0, heading:0, lookYaw:0, lookPitch:0,
+  throttle:false, brake:false, steerL:false, steerR:false,
+  routeKm:0, routeSource:'', buildingSource:'', autoDist:0,
+  carLat:48.162037, carLon:11.619382
+};
+
+let renderer, scene, camera, sun, roadGroup, worldGroup, tileGroup, carMarker, hood;
+let routeLL=[], routeWorld=[], routeCum=[], routeTotal=0;
+let geo = {lat0:48.181, lon0:11.627};
+const clock = new THREE.Clock();
+const car = {pos:new THREE.Vector3(), lastRoadIndex:0};
+
+function toast(msg,ms=2200){ const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(t._tm);t._tm=setTimeout(()=>t.classList.remove('show'),ms); }
+function setStatus(kind,sub){ $('statusDot').className=kind||''; $('substatus').textContent=sub; }
+
+function initThree(){
+  setLoad('3D-Engine wird initialisiert …',8);
+  renderer=new THREE.WebGLRenderer({antialias:!MOBILE,powerPreference:'high-performance'});
+  renderer.setPixelRatio(Math.min(devicePixelRatio,MOBILE?1.4:1.8));
+  renderer.setSize(innerWidth,innerHeight);
+  renderer.shadowMap.enabled=true;
+  renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+  renderer.outputColorSpace=THREE.SRGBColorSpace;
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure=1.05;
+  $('scene').appendChild(renderer.domElement);
+
+  scene=new THREE.Scene();
+  scene.background=new THREE.Color(0xaecbe2);
+  scene.fog=new THREE.FogExp2(0xc5d4dc,0.0017);
+  camera=new THREE.PerspectiveCamera(67,innerWidth/innerHeight,.08,2600);
+  camera.rotation.order='YXZ';
+
+  worldGroup=new THREE.Group();scene.add(worldGroup);
+  roadGroup=new THREE.Group();worldGroup.add(roadGroup);
+  tileGroup=new THREE.Group();worldGroup.add(tileGroup);
+
+  const hemi=new THREE.HemisphereLight(0xe9f5ff,0x5f6958,2.4);scene.add(hemi);
+  sun=new THREE.DirectionalLight(0xfff3dc,3.1);sun.position.set(-220,300,-140);sun.castShadow=true;
+  sun.shadow.camera.left=-180;sun.shadow.camera.right=180;sun.shadow.camera.top=180;sun.shadow.camera.bottom=-180;sun.shadow.camera.near=20;sun.shadow.camera.far=700;
+  sun.shadow.mapSize.set(MOBILE?1024:2048,MOBILE?1024:2048);scene.add(sun);
+
+  const ground=new THREE.Mesh(new THREE.PlaneGeometry(2200,7000),new THREE.MeshStandardMaterial({color:0x71836b,roughness:1}));
+  ground.rotation.x=-Math.PI/2;ground.position.y=-.22;ground.receiveShadow=true;worldGroup.add(ground);
+
+  hood=new THREE.Mesh(new THREE.BoxGeometry(1.55,.20,1.4),new THREE.MeshStandardMaterial({color:0x23282d,metalness:.55,roughness:.25}));
+  hood.position.set(0,-.55,-1.45);camera.add(hood);scene.add(camera);
+  carMarker=new THREE.Mesh(new THREE.BoxGeometry(1.8,.65,4.2),new THREE.MeshStandardMaterial({color:0x222933,metalness:.6,roughness:.28}));
+  carMarker.castShadow=true;worldGroup.add(carMarker);
+
+  addSkyHaze();
+  addEventListeners();
+}
+
+function addSkyHaze(){
+  const canvas=document.createElement('canvas');canvas.width=32;canvas.height=512;
+  const c=canvas.getContext('2d');const g=c.createLinearGradient(0,0,0,512);
+  g.addColorStop(0,'#6aa7d8');g.addColorStop(.55,'#c7dbe8');g.addColorStop(1,'#f1e8d4');c.fillStyle=g;c.fillRect(0,0,32,512);
