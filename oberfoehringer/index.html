@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<title>Oberföhringer Straße – 3D-Fahrsimulation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app"><div id="scene"></div></div>
+<div id="loading"><div id="loadingCard"><h1>Oberföhringer Straße wird aufgebaut</h1><div id="loadingText">3D-Engine startet …</div><div class="bar"><i id="progress"></i></div></div></div>
+<div id="hud">
+  <div id="topbar" class="glass">
+    <div id="statusDot"></div>
+    <div id="title">Oberföhringer Straße<small id="substatus">Daten werden geladen</small></div>
+    <div class="metric"><b id="speed">0</b><span>km/h</span></div>
+    <div class="metric optional"><b id="buildings">0</b><span>Gebäude</span></div>
+    <div class="metric optional"><b id="distance">0.0</b><span>km Strecke</span></div>
+    <div id="spacer"></div>
+    <button class="btn textHide" id="autoBtn">🚗 <span>Automatik</span></button>
+    <button class="btn textHide" id="settingsBtn">⚙️ <span>Info</span></button>
+  </div>
+  <div id="help" class="glass"><b>Fahren:</b> Pfeile/WASD oder Bildschirmtasten. <b>Blick:</b> mit Maus/Finger über die Szene ziehen. <b>C:</b> Kamera wechseln. <b>R:</b> zurück auf die Straße.</div>
+  <div id="centerMark"></div>
+  <div id="controls">
+    <div class="pad" id="steerPad"><div class="touchBtn" id="left">◀</div><div class="touchBtn" id="right">▶</div></div>
+    <div class="pad" id="pedalPad"><div class="touchBtn" id="brake">▼<small>BREMSE</small></div><div class="touchBtn" id="gas">▲<small>GAS</small></div></div>
+    <div id="bottomCenter">
+      <button class="btn" id="cameraBtn">👁 Kamera</button>
+      <button class="btn" id="resetBtn">↺ Straße</button>
+      <button class="btn" id="realityBtn">📷 Original</button>
+    </div>
+  </div>
+  <div id="drawer" class="glass">
+    <h3>Simulation & Daten</h3>
+    <p><b>Straßenführung und Gebäudegrundrisse</b> werden live aus OpenStreetMap geladen. Für die Szene werden die 277 der Straße nächstgelegenen Gebäude verwendet. Gebäudehöhen kommen – soweit vorhanden – aus OSM; sonst werden plausible Standardhöhen eingesetzt.</p>
+    <p><b>Wichtig:</b> Die Fassaden sind rekonstruiert und nicht fotografisch vermessen. Der Grundriss und die Lage sind realdatenbasiert, die sichtbare Fassadengestaltung ist eine Näherung. „Original“ öffnet die aktuelle Position in einer Straßenfoto-Ansicht, sofern dort Bilder verfügbar sind.</p>
+    <div class="row"><label>Automatiktempo</label><input id="autoSpeed" type="range" min="15" max="50" value="32" step="1"><b id="autoSpeedLabel">32 km/h</b></div>
+    <div class="row"><button class="btn primary" id="satBtn">Satellitenboden: an</button><button class="btn" id="shadowsBtn">Schatten: an</button></div>
+    <p id="dataInfo">Datenstatus: wird geladen …</p>
+    <p style="margin-bottom:0">Daten: © OpenStreetMap-Mitwirkende. Luftbildkacheln: Esri World Imagery. Dies ist eine private Visualisierung, keine Navigations- oder Vermessungsanwendung.</p>
+  </div>
+  <div id="toast" class="glass"></div>
+  <div id="portrait" class="glass">Querformat ist für die Fahrt deutlich besser.</div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
