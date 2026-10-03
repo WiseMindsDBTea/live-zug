@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#CFE3EE"/>
+  <!-- Sonne -->
+  <circle cx="372" cy="150" r="54" fill="#EE9F2E"/>
+  <!-- Wolke -->
+  <g fill="#FFFFFF">
+    <circle cx="150" cy="170" r="40"/>
+    <circle cx="198" cy="150" r="52"/>
+    <circle cx="246" cy="174" r="36"/>
+    <rect x="110" y="170" width="172" height="40" rx="20"/>
+  </g>
+  <!-- Zwiebelschichten: Querschnitt -->
+  <path d="M 56 452 A 200 200 0 0 1 456 452 Z" fill="#4E7D8A"/>
+  <path d="M 104 452 A 152 152 0 0 1 408 452 Z" fill="#9FC4A3"/>
+  <path d="M 150 452 A 106 106 0 0 1 362 452 Z" fill="#F2C065"/>
+  <path d="M 194 452 A 62 62 0 0 1 318 452 Z" fill="#FFD6C2"/>
+  <!-- Keimling -->
+  <path d="M 256 252 C 262 226 286 214 306 220" stroke="#9FC4A3" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <rect y="452" width="512" height="60" fill="#23324A"/>
+</svg>

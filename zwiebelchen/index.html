@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zwiebelchen</title>
+<meta name="description" content="Was ziehe ich der Kleinen heute an – und was kommt in den Rucksack?">
+<meta name="theme-color" content="#DDE9F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17202D" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Zwiebelchen">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#23324A;
+  --ink-soft:#5A6880;
+  --paper:#F5F7F3;
+  --card:#FFFFFF;
+  --line:#DCE3DE;
+  --sky:#DDE9F1;
+  --peach:#FFD6C2;
+  --mustard:#F2C065;
+  --sage:#9FC4A3;
+  --teal:#4E7D8A;
+  --winter:#33506B;
+  --rain:#3F6DB3;
+  --sun:#EE9F2E;
+  --alert:#B5452F;
+  --tick:#2F7A55;
+  --radius-l:28px;
+  --radius-m:16px;
+  --serif:"Young Serif", Georgia, serif;
+  --sans:"Atkinson Hyperlegible", system-ui, -apple-system, sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink:#E8EEF5; --ink-soft:#A3B1C4; --paper:#121A25; --card:#1B2533; --line:#2C394B;
+    --sky:#17202D; --peach:#E9B39A; --mustard:#D9A64A; --sage:#7FA885; --teal:#5F95A3; --winter:#6F8FB0;
+    --rain:#7FA6E6; --sun:#F1B456; --alert:#F08B72; --tick:#6CC79A;
+    color-scheme:dark;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family:var(--sans); color:var(--ink); background:var(--paper);
+  font-size:17px; line-height:1.5; -webkit-text-size-adjust:100%;
+  padding-bottom:calc(32px + env(safe-area-inset-bottom));
+}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--rain);outline-offset:2px;border-radius:8px}
+.wrap{max-width:560px;margin:0 auto;padding:0 16px}
+
+/* ---------- top / sky ---------- */
+.sky{
+  background:var(--sky);
+  padding:calc(12px + env(safe-area-inset-top)) 0 28px;
+  border-radius:0 0 var(--radius-l) var(--radius-l);
+  transition:background-color .6s ease;
+}
+.sky[data-mood="cold"]{--sky:#D6E4F0}
+.sky[data-mood="cool"]{--sky:#DDE9EA}
+.sky[data-mood="mild"]{--sky:#E6EEDB}
+.sky[data-mood="warm"]{--sky:#FBE8C8}
+.sky[data-mood="hot"]{--sky:#FCDCC0}
+@media (prefers-color-scheme: dark){
+  .sky[data-mood]{--sky:#1A2433}
+}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.place{
+  display:flex;align-items:center;gap:6px;background:none;border:0;padding:8px 0;cursor:pointer;
+  font-weight:700;font-size:16px;max-width:60%;
+}
+.place span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.place svg{flex:none}
+.days{display:flex;background:color-mix(in srgb,var(--card) 70%,transparent);border-radius:999px;padding:3px}
+.days button{border:0;background:none;padding:6px 14px;border-radius:999px;cursor:pointer;font-size:15px}
+.days button[aria-pressed="true"]{background:var(--ink);color:var(--paper);font-weight:700}
+
+.date{margin:18px 0 2px;color:var(--ink-soft);font-size:15px}
+h1{
+  font-family:var(--serif);font-weight:400;font-size:clamp(34px,10vw,46px);line-height:1.05;
+  margin:0 0 10px;letter-spacing:-.01em;
+}
+.lede{margin:0;max-width:34ch;font-size:17px}
+
+/* ---------- onion ---------- */
+.onion{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;margin-top:22px}
+.onion svg{width:150px;height:auto;display:block;overflow:visible}
+.onion svg path{transform-origin:75px 75px;transform:scale(.2);opacity:0;transition:transform .7s cubic-bezier(.2,.9,.25,1.15),opacity .4s}
+.onion.in svg path{transform:scale(1);opacity:1}
+@media (prefers-reduced-motion: reduce){.onion svg path{transition:none}}
+.layers{list-style:none;margin:0;padding:0;display:flex;flex-direction:column-reverse;gap:6px}
+.layers li{display:flex;gap:10px;align-items:baseline;font-size:16px;line-height:1.3}
+.layers i{flex:none;width:12px;height:12px;border-radius:50%;transform:translateY(1px)}
+.layers small{display:block;color:var(--ink-soft);font-size:13.5px}
+.temps{display:flex;gap:22px;margin-top:22px;flex-wrap:wrap}
+.temps div{font-size:14px;color:var(--ink-soft)}
+.temps b{display:block;font-family:var(--serif);font-weight:400;font-size:26px;color:var(--ink);line-height:1.1}
+
+/* ---------- sections ---------- */
+section{margin-top:30px}
+h2{font-family:var(--serif);font-weight:400;font-size:24px;margin:0 0 4px}
+.sub{margin:0 0 14px;color:var(--ink-soft);font-size:15px}
+
+.mode{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:22px}
+.mode button{
+  border:1.5px solid var(--line);background:var(--card);border-radius:var(--radius-m);padding:10px 12px;text-align:left;cursor:pointer;
+  font-size:15px;line-height:1.25;
+}
+.mode button b{display:block;font-size:16px}
+.mode button span{color:var(--ink-soft);font-size:13px}
+.mode button[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+
+/* timeline */
+.timeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.phase{
+  background:var(--card);border-radius:var(--radius-m);padding:12px 8px 12px;text-align:center;position:relative;
+  border:1.5px solid transparent;
+}
+.phase.now{border-color:var(--ink)}
+.phase .t{font-size:12.5px;color:var(--ink-soft)}
+.phase .ic{font-size:26px;line-height:1.3;margin:2px 0}
+.phase .deg{font-family:var(--serif);font-size:19px;line-height:1.1;white-space:nowrap}
+.phase .fl{font-size:12px;color:var(--ink-soft)}
+.phase .rn{font-size:12.5px;color:var(--rain);font-weight:700;min-height:1.3em;margin-top:4px}
+.phase .hint{font-size:12.5px;line-height:1.25;margin-top:6px;font-weight:700}
+.phase.past{opacity:.45}
+
+/* outfit */
+.outfit{background:var(--card);border-radius:var(--radius-l);padding:6px 18px}
+.row{display:grid;grid-template-columns:36px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .e{font-size:24px;line-height:1.2}
+.row h3{margin:0;font-size:13.5px;font-weight:400;color:var(--ink-soft)}
+.row p{margin:1px 0 0;font-size:17px;line-height:1.35}
+.row ol{margin:2px 0 0;padding:0;list-style:none;counter-reset:l}
+.row ol li{counter-increment:l;display:flex;gap:8px;align-items:baseline;line-height:1.35;padding:1px 0}
+.row ol li::before{content:counter(l);flex:none;width:18px;height:18px;border-radius:50%;font-size:11px;font-weight:700;display:inline-grid;place-items:center;transform:translateY(-1px);background:var(--c,#ccc);color:#23324A}
+.row .note{font-size:14px;color:var(--ink-soft);margin-top:3px}
+
+/* pack */
+.pack{background:var(--card);border-radius:var(--radius-l);padding:6px 6px}
+.pack h3{font-size:14px;font-weight:700;margin:12px 12px 4px;color:var(--ink-soft)}
+.item{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:14px;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+.item input{position:absolute;opacity:0;pointer-events:none}
+.box{flex:none;width:24px;height:24px;border-radius:8px;border:2px solid var(--line);display:grid;place-items:center;margin-top:1px;transition:background .15s,border-color .15s}
+.box svg{opacity:0;transition:opacity .15s}
+.item input:checked + .box{background:var(--tick);border-color:var(--tick)}
+.item input:checked + .box svg{opacity:1}
+.item input:checked ~ .txt{color:var(--ink-soft);text-decoration:line-through;text-decoration-thickness:1px}
+.item input:focus-visible + .box{outline:3px solid var(--rain);outline-offset:2px}
+.txt b{font-weight:700}
+.txt small{display:block;color:var(--ink-soft);font-size:14px;line-height:1.3;text-decoration:none}
+.today-extra .item{background:color-mix(in srgb,var(--mustard) 16%,transparent);margin:4px 0}
+.progress{font-size:14px;color:var(--ink-soft);margin:0 0 10px}
+
+/* tips */
+.tips{display:flex;flex-direction:column;gap:10px}
+.tip{background:var(--card);border-radius:var(--radius-m);padding:14px 16px;border-left:5px solid var(--c,var(--teal))}
+.tip b{display:block;margin-bottom:2px}
+.tip p{margin:0;font-size:15.5px;line-height:1.4}
+.tip.warn{--c:var(--alert)}
+
+footer{margin-top:34px;font-size:13px;color:var(--ink-soft);line-height:1.5}
+footer a{color:inherit}
+.linkbtn{background:none;border:0;padding:0;text-decoration:underline;cursor:pointer;font-size:13px;color:var(--ink-soft)}
+
+/* states */
+.state{padding:60px 0 20px;text-align:left}
+.state h1{font-size:34px}
+.cta{display:inline-flex;gap:8px;align-items:center;background:var(--ink);color:var(--paper);border:0;border-radius:999px;padding:13px 20px;font-weight:700;cursor:pointer;margin-top:12px}
+.ghost{background:none;border:1.5px solid var(--ink);color:var(--ink);border-radius:999px;padding:11px 18px;font-weight:700;cursor:pointer;margin-top:12px;margin-left:6px}
+.skeleton{height:120px;border-radius:var(--radius-m);background:color-mix(in srgb,var(--ink) 7%,transparent);margin-top:14px;animation:pulse 1.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.5}}
+@media (prefers-reduced-motion: reduce){.skeleton{animation:none}}
+.banner{background:var(--card);border-radius:var(--radius-m);padding:10px 14px;font-size:14.5px;margin-top:14px}
+
+/* sheet */
+dialog{border:0;padding:0;background:transparent;max-width:none;width:100%;margin:0;inset:auto 0 0 0;position:fixed}
+dialog::backdrop{background:rgba(15,22,32,.45)}
+.sheet{background:var(--paper);border-radius:var(--radius-l) var(--radius-l) 0 0;padding:20px 18px calc(24px + env(safe-area-inset-bottom));max-width:560px;margin:0 auto;max-height:88vh;overflow:auto}
+.sheet h2{margin-bottom:12px}
+.field{margin:16px 0}
+.field label{display:block;font-size:14px;color:var(--ink-soft);margin-bottom:6px}
+.field input,.field select{width:100%;font:inherit;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink)}
+.results{list-style:none;padding:0;margin:8px 0 0}
+.results button{width:100%;text-align:left;background:var(--card);border:0;border-radius:12px;padding:11px 14px;margin-bottom:6px;cursor:pointer}
+.results small{color:var(--ink-soft)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sheet .close{float:right;background:none;border:0;font-size:15px;cursor:pointer;color:var(--ink-soft);padding:6px}
+</style>
+</head>
+<body>
+
+<header class="sky" id="sky">
+  <div class="wrap">
+    <div class="bar">
+      <button class="place" id="placeBtn" aria-label="Ort und Einstellungen ändern">
+        <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+        <span id="placeName">Ort wählen</span>
+      </button>
+      <div class="days" role="group" aria-label="Tag">
+        <button id="d0" aria-pressed="true">Heute</button>
+        <button id="d1" aria-pressed="false">Morgen</button>
+      </div>
+    </div>
+    <div id="hero"></div>
+  </div>
+</header>
+
+<main class="wrap" id="main"></main>
+
+<dialog id="sheet">
+  <form method="dialog" class="sheet" id="sheetForm">
+    <button class="close" value="close" aria-label="Schließen">Fertig</button>
+    <h2>Einstellungen</h2>
+
+    <div class="field">
+      <label for="q">Ort</label>
+      <input id="q" type="search" placeholder="Stadt oder Stadtteil suchen" autocomplete="off">
+      <ul class="results" id="results"></ul>
+      <button type="button" class="ghost" id="gps" style="margin-left:0">Meinen Standort verwenden</button>
+    </div>
+
+    <div class="field">
+      <label for="kid">Name der Kleinen</label>
+      <input id="kid" type="text" placeholder="z. B. Mila" autocomplete="off">
+    </div>
+
+    <div class="field">
+      <label for="birth">Geburtsmonat (damit die Tipps mitwachsen)</label>
+      <input id="birth" type="month">
+    </div>
+
+    <div class="field two">
+      <div>
+        <label for="from">Draußen ab</label>
+        <select id="from"></select>
+      </div>
+      <div>
+        <label for="to">bis</label>
+        <select id="to"></select>
+      </div>
+    </div>
+  </form>
+</dialog>
+
+<script>
+/* =========================================================
+   Zwiebelchen – Anziehhilfe fürs Kleinkind nach Wetter
+   Wetterdaten: Open-Meteo (Modell-Mix, für DE v. a. DWD ICON)
+   ========================================================= */
+const $ = s => document.querySelector(s);
+const LS = {
+  get(k, d){ try{ const v = localStorage.getItem('zw.'+k); return v==null ? d : JSON.parse(v); }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem('zw.'+k, JSON.stringify(v)); }catch(e){} }
+};
+
+const state = {
+  day: 0,
+  mode: LS.get('mode','still'),          // still = Buggy/Trage, active = zu Fuß & Spielplatz
+  loc: LS.get('loc', null),
+  kid: LS.get('kid',''),
+  birth: LS.get('birth','2025-04'),
+  from: LS.get('from', 8),
+  to: LS.get('to', 19),
+  data: null
+};
+
+/* ---------- Wetter-Codes (WMO) ---------- */
+function wx(code, isDay=1){
+  if(code===0) return {i: isDay?'☀️':'🌙', t:'klar'};
+  if(code===1) return {i: isDay?'🌤️':'🌙', t:'überwiegend klar'};
+  if(code===2) return {i:'⛅', t:'teils bewölkt'};
+  if(code===3) return {i:'☁️', t:'bedeckt'};
+  if(code===45||code===48) return {i:'🌫️', t:'Nebel'};
+  if(code>=51&&code<=55) return {i:'🌦️', t:'Niesel'};
+  if(code===56||code===57||code===66||code===67) return {i:'🧊', t:'gefrierender Regen'};
+  if(code>=61&&code<=65) return {i:'🌧️', t:'Regen'};
+  if(code>=71&&code<=77) return {i:'🌨️', t:'Schnee'};
+  if(code>=80&&code<=82) return {i:'🌦️', t:'Schauer'};
+  if(code===85||code===86) return {i:'🌨️', t:'Schneeschauer'};
+  if(code>=95) return {i:'⛈️', t:'Gewitter'};
+  return {i:'☁️', t:''};
+}
+const severity = c => c>=95?9 : (c===56||c===57||c===66||c===67)?8 : (c>=71&&c<=77)||c===85||c===86?7 : (c>=61&&c<=65)?6 : (c>=80&&c<=82)?5 : (c>=51&&c<=55)?4 : (c===45||c===48)?3 : c;
+
+/* ---------- Kleidungslogik ----------
+   Stufe nach gefühlter Temperatur (apparent temperature) minus Ruhe-Abzug.
+   Die Schwellen sind praktische Heuristik, keine Norm. */
+const LEVEL_EDGES = [25, 20, 16, 12, 8, 3, -2]; // >=25 → 0, 20–25 → 1 … < -2 → 7
+const level = t => { for(let i=0;i<LEVEL_EDGES.length;i++){ if(t>=LEVEL_EDGES[i]) return i; } return 7; };
+const MOOD = ['hot','warm','mild','cool','cool','cold','cold','cold'];
+const FEEL = ['heiß','warm','mild','kühl','frisch','kalt','frostig','eisig'];
+
+const G = {
+  body_short:{n:'Kurzarm-Body', c:'var(--peach)'},
+  body_long:{n:'Langarm-Body', c:'var(--peach)'},
+  body_wool:{n:'Wolle-Seide-Body, langarm', s:'wärmt auch, wenn sie schwitzt', c:'var(--peach)'},
+  tshirt:{n:'T-Shirt', c:'var(--mustard)'},
+  longsleeve:{n:'Langarmshirt', c:'var(--mustard)'},
+  sweater:{n:'Pulli', c:'var(--mustard)'},
+  cardigan:{n:'dünne Strickjacke', s:'leicht auszuziehen', c:'var(--sage)'},
+  fleece:{n:'Fleece- oder Wolljacke', c:'var(--sage)'},
+  softshell:{n:'Übergangsjacke (Softshell)', s:'winddicht, leicht wasserabweisend', c:'var(--teal)'},
+  softshell_warm:{n:'Übergangsjacke mit Fleecefutter', s:'winddicht, leicht wasserabweisend', c:'var(--teal)'},
+  padded:{n:'gefütterte Winterjacke', c:'var(--teal)'},
+  overall:{n:'Winteroverall / Schneeanzug', s:'hält Rücken und Bauch zusammen warm', c:'var(--winter)'},
+  rainjacket:{n:'Regen- oder Matschjacke', s:'als äußerste Schicht', c:'var(--rain)'}
+};
+const TORSO = [
+  ['body_short'],
+  ['body_short','tshirt'],
+  ['body_short','longsleeve','cardigan'],
+  ['body_long','longsleeve','softshell'],
+  ['body_long','sweater','softshell_warm'],
+  ['body_wool','sweater','padded'],
+  ['body_wool','sweater','fleece','overall'],
+  ['body_wool','sweater','fleece','overall']
+];
+const LEGS = [
+  'kurze Hose oder luftiges Kleidchen',
+  'leichte Hose, kurz oder lang',
+  'lange Hose',
+  'lange Hose',
+  'Strumpfhose + lange Hose',
+  'Wollstrumpfhose + lange Hose',
+  'Wollstrumpfhose + Hose, darüber der Overall',
+  'Wollstrumpfhose + Fleecehose, darüber der Overall'
+];
+const HEAD = [
+  'Sonnenhut mit Nackenschutz',
+  'Sonnenhut mit Nackenschutz',
+  null,
+  'dünne Baumwollmütze',
+  'Übergangsmütze, Ohren bedeckt',
+  'warme Wollmütze, Ohren bedeckt',
+  'Wintermütze mit Fleecefutter',
+  'Wintermütze mit Fleecefutter'
+];
+const NECK = [null,null,null,null,'Halstuch oder dünner Loop','Schlauchschal','Schlauchschal aus Wolle oder Fleece','Schlauchschal aus Wolle oder Fleece'];
+const HANDS = [null,null,null,null,null,'Fäustlinge','gefütterte, wasserdichte Fäustlinge','gefütterte, wasserdichte Fäustlinge'];
+const FEET = [
+  'Sandalen, keine Socken nötig',
+  'Sandalen oder Sneaker mit dünnen Socken',
+  'Halbschuhe + Socken',
+  'Halbschuhe + Socken',
+  'wasserabweisende Übergangsschuhe + dickere Socken',
+  'gefütterte Schuhe + Wollsocken',
+  'Winterstiefel + Wollsocken',
+  'Winterstiefel + Wollsocken'
+];
+const BUGGY = [null,null,null,'dünne Decke im Buggy','Decke oder leichter Fußsack','Fußsack','Winterfußsack, gern mit Lammfell','Winterfußsack mit Lammfell'];
+
+function outfitFor(L, o){
+  // o: {rain, wind, uv, snow, still}
+  const torso = TORSO[L].slice();
+  let legs = LEGS[L];
+  let head = HEAD[L];
+  let feet = FEET[L];
+  let neck = NECK[L], hands = HANDS[L];
+  const notes = {};
+
+  if(L<=1 && o.uv<3){ head = L===0 ? 'leichter Sonnenhut, falls die Sonne rauskommt' : null; }
+  if(L===2 && (o.wind || o.morningCool)) head = 'dünne Mütze, später abnehmbar';
+  if(L===3 && o.wind) neck = 'Halstuch gegen den Wind';
+  if(L===4 && o.still) hands = 'dünne Handschuhe';
+
+  if(o.rain){
+    if(L<=1){ torso.push('rainjacket'); }
+    else if(L<=3){ torso[torso.length-1] = 'rainjacket'; }
+    else if(L<=5){ notes.torso = 'Darüber Regen-/Matschjacke, wenn die Jacke nicht wasserdicht ist.'; }
+    if(L<=5) legs = legs + ', darüber Matschhose';
+    if(L<=3) feet = 'Gummistiefel + Socken';
+    else if(L<=5) feet = 'gefütterte Gummistiefel + Wollsocken';
+    if(L<=2 && !head) head = 'Regenhut oder Kapuze';
+  }
+  if(o.snow && L>=5){ torso[torso.length-1]='overall'; feet='Winterstiefel + Wollsocken'; hands='gefütterte, wasserdichte Fäustlinge'; }
+  if(o.wind && (L===2) && torso[torso.length-1]==='cardigan'){ torso[torso.length-1]='softshell'; }
+
+  return {L, torso, legs, head, neck, hands, feet, buggy: o.still ? BUGGY[L] : null, notes};
+}
+
+/* Was ändert sich zwischen zwei Outfits?
+   Grundsatz: Die unterste Schicht bleibt den ganzen Tag. Bei Wärme kommen
+   äußere Schichten runter, bei Kälte Mittelschichten und Accessoires dazu. */
+const OUTER = new Set(['softshell','softshell_warm','padded','overall','rainjacket','cardigan']);
+const isBody = k => k.startsWith('body_');
+function diff(a, b, still){
+  const on = [], off = [];
+  const acc = [['head','Mütze/Hut'],['neck','Schal'],['hands','Handschuhe']];
+  if(b.L < a.L){ // wärmer
+    let k = Math.max(a.torso.length - b.torso.length, a.L - b.L >= 2 ? 2 : 1);
+    k = Math.min(k, a.torso.length - 1);
+    a.torso.slice(a.torso.length - k).forEach(x=>off.push(G[x].n));
+    acc.forEach(([key,lab])=>{ if(a[key] && !b[key]) off.push(short(a[key],lab)); });
+    if(a.head && b.head && /Mütze/.test(a.head) && /Sonnenhut/.test(b.head)){ off.push('Mütze'); on.push('Sonnenhut'); }
+  } else if(b.L > a.L){ // kälter
+    b.torso.forEach(x=>{ if(!isBody(x) && !OUTER.has(x) && !a.torso.includes(x)) on.push(G[x].n); });
+    acc.forEach(([key,lab])=>{ if(!a[key] && b[key]) on.push(short(b[key],lab)); });
+    if(!on.length) on.push(still ? 'Decke oder Fußsack zu' : 'Kapuze auf, Jacke ganz zu');
+  }
+  return {on, off};
+}
+function short(s, fallback){
+  if(/Sonnenhut/.test(s)) return 'Sonnenhut';
+  if(/Mütze/.test(s)) return 'Mütze';
+  if(/Schal|Halstuch|Loop/.test(s)) return 'Schal';
+  if(/Handschuh|Fäustling/.test(s)) return 'Handschuhe';
+  if(/Regenhut/.test(s)) return 'Regenhut';
+  return fallback;
+}
+function shortLayer(n){
+  return n.replace(/ \(.*\)/,'').replace(/ mit Fleecefutter/,'').replace(/^dünne /,'').replace(/^gefütterte /,'').replace(/, langarm$/,'').replace(/ \/ Schneeanzug/,'').replace(/Fleece- oder Wolljacke/,'Fleecejacke');
+}
+
+/* ---------- Tag auswerten ---------- */
+function analyse(data, dayIdx){
+  const H = data.hourly;
+  const dayStr = data.daily.time[dayIdx];
+  const hours = [];
+  H.time.forEach((t,i)=>{
+    if(t.startsWith(dayStr)){
+      hours.push({
+        h:+t.slice(11,13), t:H.temperature_2m[i], a:H.apparent_temperature[i],
+        pp:H.precipitation_probability[i] ?? 0, p:H.precipitation[i] ?? 0,
+        c:H.weather_code[i], w:H.wind_speed_10m[i], g:H.wind_gusts_10m[i],
+        uv:H.uv_index[i] ?? 0, d:H.is_day[i]
+      });
+    }
+  });
+  const from = state.from, to = state.to;
+  const win = hours.filter(x=>x.h>=from && x.h<=to);
+  const still = state.mode==='still';
+  const OFF = still ? 3 : 0;   // stilles Sitzen kühlt aus → wie ~3° kälter behandeln (Heuristik)
+
+  // Tagesabschnitte
+  const cuts = [
+    {k:'Morgens', a:from, b:Math.min(10,to)},
+    {k:'Mittags', a:11, b:Math.min(14,to)},
+    {k:'Nachmittags', a:15, b:Math.min(17,to)},
+    {k:'Abends', a:18, b:to}
+  ].filter(c=>c.a<=c.b && c.a<=to && c.b>=from).map(c=>({...c, a:Math.max(c.a,from)}));
+
+  const nowH = new Date().getHours();
+  const phases = cuts.map(c=>{
+    const hs = win.filter(x=>x.h>=c.a && x.h<=c.b);
+    if(!hs.length) return null;
+    const minA = Math.min(...hs.map(x=>x.a));
+    const maxT = Math.max(...hs.map(x=>x.t));
+    const minT = Math.min(...hs.map(x=>x.t));
+    const pp = Math.max(...hs.map(x=>x.pp));
+    const p = hs.reduce((s,x)=>s+x.p,0);
+    const g = Math.max(...hs.map(x=>x.g));
+    const w = Math.max(...hs.map(x=>x.w));
+    const uv = Math.max(...hs.map(x=>x.uv));
+    const worst = hs.reduce((m,x)=> severity(x.c)>severity(m.c)?x:m, hs[0]);
+    const snow = hs.some(x=>(x.c>=71&&x.c<=77)||x.c===85||x.c===86);
+    const rain = pp>=50 || p>=0.4;
+    const L = level(minA - OFF);
+    return {...c, hs, minA, maxT, minT, pp, p, g, w, uv, code:worst.c, isDay:worst.d, snow, rain,
+      wind: w>=25 || g>=45, L,
+      past: dayIdx===0 && c.b < nowH,
+      now: dayIdx===0 && nowH>=c.a && nowH<=c.b};
+  }).filter(Boolean);
+
+  if(!phases.length) return null;
+
+  // Anzieh-Ausgangspunkt: erster noch relevanter Abschnitt
+  const startIdx = Math.max(0, phases.findIndex(p=>!p.past));
+  const live = phases.slice(startIdx);
+  const start = live[0];
+  const uvMax = Math.max(...live.map(p=>p.uv));
+  const morningCool = start.minA < 14;
+  const base = outfitFor(start.L, {rain:start.rain, wind:start.wind, uv:Math.max(start.uv, live[1]?.uv||0), snow:start.snow, still, morningCool});
+
+  phases.forEach(p=>{
+    p.outfit = outfitFor(p.L, {rain:p.rain, wind:p.wind, uv:p.uv, snow:p.snow, still});
+    p.change = diff(base, p.outfit, still);
+  });
+
+  // Kennzahlen
+  const all = live.flatMap(p=>p.hs);
+  const minA = Math.min(...all.map(x=>x.a)), maxA = Math.max(...all.map(x=>x.a));
+  const minT = Math.min(...all.map(x=>x.t)), maxT = Math.max(...all.map(x=>x.t));
+  const ppMax = Math.max(...all.map(x=>x.pp));
+  const pSum = all.reduce((s,x)=>s+x.p,0);
+  const gMax = Math.max(...all.map(x=>x.g));
+  const anyRain = live.some(p=>p.rain);
+  const rainLater = live.slice(1).some(p=>p.rain) && !start.rain;
+  const maybeRain = !anyRain && ppMax>=25;
+  const wetGround = hours.filter(x=>x.h < from && x.h >= from-10).reduce((s,x)=>s+x.p,0) >= 0.5 || (data.prevRain && dayIdx===0);
+  const snowAny = live.some(p=>p.snow);
+  const freezing = all.some(x=>x.c===56||x.c===57||x.c===66||x.c===67) || (minT<=1 && (pSum>0 || wetGround));
+  const storm = all.some(x=>x.c>=95);
+  const sunset = data.daily.sunset[dayIdx]?.slice(11,16);
+  const sunsetH = sunset ? +sunset.slice(0,2) + (+sunset.slice(3,5))/60 : 20;
+
+  return {dayStr, phases, start, startIdx, base, still, uvMax, minA, maxA, minT, maxT, ppMax, pSum, gMax,
+    anyRain, rainLater, maybeRain, wetGround, snowAny, freezing, storm, sunset, sunsetH,
+    rainHour: firstRainHour(all), rainIsSnow: (()=>{ const h=firstRainHour(all); const x=all.find(y=>y.h===h); return x?isSnowCode(x.c):false; })(), daily: data.daily, dayIdx};
+}
+function firstRainHour(hs){ const x = hs.find(h=>h.pp>=50 || h.p>=0.3); return x ? x.h : null; }
+const isSnowCode = c => (c>=71&&c<=77)||c===85||c===86;
+
+/* ---------- Rucksack ---------- */
+function backpack(A){
+  const always = [
+    ['Windeln (3–4), Feuchttücher, Wickelunterlage', 'plus Tüte für volle Windeln'],
+    ['Wechselset: Body, Hose, Socken', 'Matsch, Saft, Windel – irgendwas ist immer'],
+    ['Trinkflasche mit Wasser', null],
+    ['Snack', 'Reiswaffel, Obst, Brezel'],
+    ['Taschentücher + Beutel für Nasses', null],
+    ['Kuscheltier / Schnuller, falls im Einsatz', null],
+    ['Pflaster', null]
+  ];
+  const extra = [];
+  const later = A.phases.slice(A.startIdx+1);
+  const colder = later.filter(p=>p.change.on.length);
+  if(colder.length){
+    const items = [...new Set(colder.flatMap(p=>p.change.on))];
+    const when = colder[0].k.toLowerCase();
+    extra.push([items.join(', '), `${when} wird es kühler – dann wieder anziehen`]);
+  }
+  const warmer = later.filter(p=>p.change.off.length);
+  if(warmer.length && !A.still){
+    extra.push(['Platz im Rucksack für abgelegte Schichten', `${warmer[0].k.toLowerCase()} wird’s wärmer`]);
+  } else if(warmer.length){
+    extra.push(['Buggynetz frei lassen für abgelegte Schichten', `${warmer[0].k.toLowerCase()} wird’s wärmer`]);
+  }
+  if(A.maybeRain && A.base.L<6){
+    extra.push(['Regenjacke + Matschhose', `Regenrisiko bis ${A.ppMax}% – lieber dabei`]);
+    if(A.still) extra.push(['Regenverdeck für den Buggy', null]);
+  }
+  if(A.rainLater && A.base.L<6){
+    const h = A.rainHour;
+    extra.push(['Regenjacke + Matschhose' + (A.base.L<=3 ? ', Gummistiefel' : ''), h!=null ? `Regen ab etwa ${h} Uhr` : 'später Regen']);
+    if(A.still) extra.push(['Regenverdeck für den Buggy', null]);
+  }
+  if(A.anyRain && !A.rainLater){
+    if(A.still) extra.push(['Regenverdeck für den Buggy', null]);
+    extra.push(['Ersatzsocken + kleines Handtuch', 'nasse Füße kühlen schnell aus']);
+  }
+  if(A.wetGround && !A.anyRain && !A.maybeRain){
+    extra.push(['Matschhose', 'der Boden ist noch nass – Spielplatz, Pfützen']);
+  }
+  if(A.uvMax>=3){
+    extra.push(['Sonnencreme LSF 50, mineralisch', `UV-Index bis ${Math.round(A.uvMax)} – Gesicht, Ohren, Nacken, Handrücken`]);
+    if(!A.base.head || !/Sonnenhut/.test(A.base.head)) extra.push(['Sonnenhut mit Nackenschutz', null]);
+    if(A.uvMax>=6) extra.push(['Kinder-Sonnenbrille (UV400)', null]);
+  }
+  if(A.maxT>=27){
+    extra.push(['Zweite Wasserflasche', 'bei Hitze trinkt sie deutlich mehr']);
+    extra.push(['Sprühflasche mit Wasser', 'zum Abkühlen von Armen und Beinen']);
+  }
+  if(A.base.L>=5){
+    extra.push(['Ersatz-Handschuhe', 'die ersten sind nach dem Spielplatz nass']);
+    extra.push(['Warmes Wasser oder Tee in der Thermosflasche', null]);
+    extra.push(['Wind- und Wetterschutzcreme für Wangen', 'wasserfrei, vor dem Rausgehen']);
+  }
+  if(A.gMax>=50 && A.base.L<4){
+    extra.push(['Mütze, die über die Ohren geht', `Böen bis ${Math.round(A.gMax)} km/h`]);
+  }
+  if(A.sunsetH < state.to){
+    extra.push(['Reflektoren / Licht am Buggy', `Sonnenuntergang ${A.sunset} Uhr`]);
+  }
+  // Duplikate raus
+  const seen = new Set();
+  const ex = extra.filter(([n])=>{ if(seen.has(n)) return false; seen.add(n); return true; });
+  return {always, extra:ex};
+}
+
+function ageMonths(){
+  if(!state.birth) return 18;
+  const [y,m] = state.birth.split('-').map(Number);
+  const n = new Date();
+  return (n.getFullYear()-y)*12 + (n.getMonth()+1-m);
+}
+
+/* ---------- Tipps ---------- */
+function tips(A){
+  const t = [];
+  t.push(['Nackentest', 'Fühl in den Nacken: warm und trocken passt. Feucht oder heiß – eine Schicht runter. Kühle Hände allein sagen wenig.']);
+  if(A.base.L>=4) t.push(['Im Autositz ohne dicke Jacke', 'Dicke Jacken oder Overalls lassen den Gurt zu locker sitzen. Jacke aus, anschnallen, Jacke oder Decke drüber.', 'warn']);
+  if(A.still && A.base.L>=4) t.push(['Rein ins Warme', 'Im Laden oder in der Bahn Fußsack öffnen und Mütze ab – Kleinkinder überhitzen drinnen schnell.']);
+  if(A.still && A.base.L>=3) t.push(['In der Trage', 'Die Beinchen hängen frei: Stulpen oder dicke Socken über die Hose, Tragecover oder Jacke über euch beide.']);
+  if(A.uvMax>=3) t.push(['Sonne', A.uvMax>=6 ? 'Zwischen 11 und 15 Uhr den Schatten suchen. Creme 30 Min. vorher, alle zwei Stunden nach.' : 'Sonnencreme auf alles, was rausschaut, und Hut auf – auch wenn es nicht heiß wirkt.']);
+  if(A.maxT>=27 && A.still) t.push(['Kein Tuch über den Buggy', 'Ein Mulltuch über dem Buggy staut die Hitze darunter. Besser Sonnensegel oder Schirm mit Luftspalt.', 'warn']);
+  if(A.freezing) t.push(['Glätte', 'Gefrierende Nässe möglich – auf Gehwegen langsam, Buggy mit Bremse nah am Körper.', 'warn']);
+  if(A.storm) t.push(['Gewitter', 'Bei Donner raus aus offenem Gelände und unter feste Dächer; nicht unter einzelne Bäume.', 'warn']);
+  if(A.base.L>=4) t.push(['Schlauchschal statt Wickelschal', 'Lange Schalenden können sich an Rutsche oder Klettergerüst verfangen.']);
+  if(A.base.L>=6) t.push(['Kurze Runden', 'Unter null lieber zwei kurze Ausflüge als ein langer – Kleinkinder kühlen beim Sitzen schnell aus.']);
+  return t;
+}
+
+/* ---------- Rendering ---------- */
+const N = ['null','eine','zwei','drei','vier','fünf'];
+function esc(s){ return String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+const kidName = () => state.kid.trim() || 'die Kleine';
+const r = x => Math.round(x);
+
+function lede(A){
+  const live = A.phases.slice(A.startIdx);
+  const seq = [];
+  live.forEach(p=>{ const f = FEEL[level(p.minA)]; if(!seq.length || seq[seq.length-1].f!==f) seq.push({k:p.k, f}); });
+  let s;
+  if(seq.length===1) s = live.length>1 ? `Den ganzen Tag ${seq[0].f}` : `${seq[0].k} ${seq[0].f}`;
+  else s = seq.slice(0,3).map((x,i)=> (i? x.k.toLowerCase() : x.k) + ' ' + x.f).join(', ');
+  const bits = [s];
+  const what = A.rainIsSnow ? 'Schnee' : 'Regen';
+  if(A.anyRain) bits.push(A.rainHour!=null && A.rainHour>live[0].a ? `ab etwa ${A.rainHour} Uhr ${what}` : (A.rainIsSnow?'mit Schnee':'mit Regen'));
+  else if(A.maybeRain) bits.push(`Regenrisiko bis ${A.ppMax}%`);
+  if(A.snowAny && !A.rainIsSnow) bits.push('Schnee möglich');
+  if(A.gMax>=50) bits.push('böig');
+  if(A.uvMax>=6) bits.push('kräftige Sonne');
+  return bits.join(', ') + '.';
+}
+const cap = s => s.charAt(0).toUpperCase()+s.slice(1);
+
+function onionSVG(layers){
+  // Querschnitt: Halbkreise von innen (Haut) nach außen
+  const n = layers.length, R = 72, r0 = 22;
+  const step = (R - r0) / Math.max(1,n-1);
+  let paths = '';
+  for(let i=n-1;i>=0;i--){
+    const rad = r0 + step*i;
+    const c = G[layers[i]].c;
+    paths += `<path d="M ${75-rad} 75 A ${rad} ${rad} 0 0 1 ${75+rad} 75 Z" fill="${c}" style="transition-delay:${(n-1-i)*90}ms"/>`;
+  }
+  return `<svg viewBox="0 0 150 80" role="img" aria-label="${n} Schichten am Oberkörper">${paths}<path d="M75 3 c 3 -6 10 -6 12 -4" stroke="var(--sage)" stroke-width="4" fill="none" stroke-linecap="round" style="transition-delay:${n*90}ms"/></svg>`;
+}
+
+function renderHero(A){
+  const o = A.base;
+  const n = o.torso.length;
+  const who = kidName();
+  const title = A.dayIdx===0 ? 'Heute' : 'Morgen';
+  const d = new Date(A.dayStr+'T12:00:00');
+  const dateTxt = d.toLocaleDateString('de-DE',{weekday:'long', day:'numeric', month:'long'});
+  $('#sky').dataset.mood = MOOD[o.L];
+  const layersList = o.torso.map(k=>`<li><i style="background:${G[k].c}"></i><div>${esc(G[k].n)}${G[k].s?`<small>${esc(G[k].s)}</small>`:''}</div></li>`).join('');
+  $('#hero').innerHTML = `
+    <p class="date">${dateTxt}${A.startIdx>0 ? ' · ab jetzt' : ''}</p>
+    <h1>${title}: ${N[n]} Schicht${n>1?'en':''} für ${esc(who)}.</h1>
+    <p class="lede">${esc(lede(A))}</p>
+    <div class="onion" id="onion">${onionSVG(o.torso)}<ul class="layers">${layersList}</ul></div>
+    <div class="temps">
+      <div><b>${r(A.minT)}° – ${r(A.maxT)}°</b>Luft</div>
+      <div><b>${r(A.minA)}° – ${r(A.maxA)}°</b>gefühlt</div>
+      <div><b>${A.ppMax}%</b>Regen max.</div>
+    </div>
+    <div class="mode" role="group" aria-label="Wie seid ihr unterwegs?">
+      <button data-mode="still" aria-pressed="${state.mode==='still'}"><b>Buggy &amp; Trage</b><span>sitzt viel, kühlt schneller aus</span></button>
+      <button data-mode="active" aria-pressed="${state.mode==='active'}"><b>Zu Fuß &amp; Spielplatz</b><span>läuft, klettert, wird warm</span></button>
+    </div>`;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>$('#onion')?.classList.add('in')));
+  document.querySelectorAll('.mode button').forEach(b=>b.onclick=()=>{ state.mode=b.dataset.mode; LS.set('mode',state.mode); render(); });
+}
+
+function renderMain(A){
+  const o = A.base;
+  // Tagesverlauf
+  const tl = A.phases.map((p,i)=>{
+    const w = wx(p.code, p.isDay);
+    let hint = '';
+    if(i>A.startIdx){
+      const parts = [];
+      if(p.change.off.length) parts.push(p.change.off.map(shortLayer).join(', ')+' aus');
+      if(p.change.on.length) parts.push(p.change.on.map(shortLayer).join(', ')+' an');
+      if(p.rain && !A.phases[A.startIdx].rain && A.base.L<6) parts.push(p.snow ? 'Matschhose an' : 'Regenzeug an');
+      hint = parts.join(' · ') || 'bleibt so';
+    } else if(i===A.startIdx){ hint = 'so los'; }
+    return `<div class="phase ${p.now?'now':''} ${p.past?'past':''}" aria-label="${p.k}: ${r(p.maxT)} Grad, ${w.t}">
+      <div class="t">${p.k}</div><div class="ic" aria-hidden="true">${w.i}</div>
+      <div class="deg">${r(p.minT)===r(p.maxT) ? r(p.maxT) : r(p.minT)+'–'+r(p.maxT)}°</div><div class="fl">gefühlt ${r(p.minA)}°</div>
+      <div class="rn">${p.pp>=20?`💧 ${p.pp}%`:''}</div>
+      <div class="hint">${esc(hint)}</div></div>`;
+  }).join('');
+
+  // Outfit von Kopf bis Fuß
+  const rows = [];
+  rows.push(['🧢','Kopf', o.head || 'nichts nötig']);
+  if(o.neck) rows.push(['🧣','Hals', o.neck]);
+  rows.push(['👕','Oberkörper, von innen nach außen', `<ol>${o.torso.map(k=>`<li style="--c:${G[k].c}">${esc(G[k].n)}</li>`).join('')}</ol>${o.notes.torso?`<div class="note">${esc(o.notes.torso)}</div>`:''}`, true]);
+  if(o.hands) rows.push(['🧤','Hände', o.hands]);
+  rows.push(['👖','Beine', o.legs]);
+  rows.push(['👟','Füße', o.feet]);
+  if(o.buggy) rows.push(['👶','Im Buggy', o.buggy]);
+  const outfit = rows.map(([e,h,v,html])=>`<div class="row"><div class="e" aria-hidden="true">${e}</div><div><h3>${h}</h3>${html?v:`<p>${esc(v)}</p>`}</div></div>`).join('');
+
+  // Rucksack
+  const bp = backpack(A);
+  const key = 'pack.'+A.dayStr;
+  const ticked = LS.get(key, {});
+  const item = (n,s,id)=>`<label class="item"><input type="checkbox" data-id="${esc(id)}" ${ticked[id]?'checked':''}><span class="box"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="txt"><b>${esc(n)}</b>${s?`<small>${esc(s)}</small>`:''}</span></label>`;
+  const extraHtml = bp.extra.length ? `<div class="today-extra"><h3>Heute zusätzlich</h3>${bp.extra.map(([n,s])=>item(n,s,'x:'+n)).join('')}</div>` : '';
+  const alwaysHtml = `<h3>Immer dabei</h3>${bp.always.map(([n,s])=>item(n,s,'a:'+n)).join('')}`;
+  const total = bp.extra.length + bp.always.length;
+
+  const tp = tips(A).map(([h,p,cls])=>`<div class="tip ${cls||''}"><b>${esc(h)}</b><p>${esc(p)}</p></div>`).join('');
+
+  $('#main').innerHTML = `
+    ${A.autoTomorrow ? `<div class="banner">Für heute ist der Tag draußen rum – hier ist schon mal morgen.</div>` : ''}
+    <section aria-labelledby="h-tl">
+      <h2 id="h-tl">Über den Tag</h2>
+      <p class="sub">${state.from}–${state.to} Uhr · Zwiebelprinzip: an- und ausziehen statt frieren oder schwitzen</p>
+      <div class="timeline">${tl}</div>
+    </section>
+    <section aria-labelledby="h-of">
+      <h2 id="h-of">Anziehen</h2>
+      <p class="sub">${A.startIdx>0?'Für jetzt':'Für den Start'} – ${esc(A.still?'im Buggy oder in der Trage':'zu Fuß unterwegs')}</p>
+      <div class="outfit">${outfit}</div>
+    </section>
+    <section aria-labelledby="h-bp">
+      <h2 id="h-bp">Rucksack</h2>
+      <p class="progress" id="prog"></p>
+      <div class="pack" id="pack">${extraHtml}${alwaysHtml}</div>
+    </section>
+    <section aria-labelledby="h-tp">
+      <h2 id="h-tp">Gut zu wissen</h2>
+      <div class="tips">${tp}</div>
+    </section>
+    <footer>
+      Wetterdaten: <a href="https://open-meteo.com/" rel="noopener">Open-Meteo.com</a> (CC BY 4.0), für Deutschland vor allem das DWD-ICON-Modell.
+      Stand ${A.fetched}. Die Empfehlungen sind Faustregeln – du kennst dein Kind am besten.<br>
+      <button class="linkbtn" id="refresh">Neu laden</button>
+    </footer>`;
+
+  const upd = ()=>{
+    const boxes = [...document.querySelectorAll('#pack input')];
+    const done = boxes.filter(b=>b.checked).length;
+    $('#prog').textContent = done===total ? 'Alles drin. Viel Spaß draußen!' : `${done} von ${total} eingepackt`;
+  };
+  document.querySelectorAll('#pack input').forEach(b=>b.onchange=()=>{
+    const t = LS.get(key,{}); t[b.dataset.id]=b.checked; LS.set(key,t); upd();
+  });
+  upd();
+  $('#refresh').onclick = ()=>load(true);
+}
+
+function render(){
+  if(!state.data) return;
+  let dayIdx = state.day;
+  let auto = false;
+  let A = analyse(state.data, dayIdx);
+  if(dayIdx===0 && (!A || A.phases.every(p=>p.past))){ dayIdx = 1; auto = true; A = analyse(state.data, 1); }
+  if(!A){ showError('Für diesen Tag gibt es keine Stundenwerte.'); return; }
+  A.autoTomorrow = auto;
+  A.fetched = new Date(state.data.fetchedAt).toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'}) + ' Uhr';
+  $('#d0').setAttribute('aria-pressed', String(dayIdx===0));
+  $('#d1').setAttribute('aria-pressed', String(dayIdx===1));
+  renderHero(A); renderMain(A);
+}
+
+/* ---------- Laden ---------- */
+const API = (lat,lon) => `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}`+
+  `&hourly=temperature_2m,apparent_temperature,precipitation_probability,precipitation,weather_code,wind_speed_10m,wind_gusts_10m,uv_index,is_day`+
+  `&daily=sunrise,sunset,uv_index_max,temperature_2m_max,temperature_2m_min,precipitation_sum`+
+  `&timezone=auto&forecast_days=3&past_days=1`;
+
+async function load(force){
+  if(!state.loc){ showWelcome(); return; }
+  $('#placeName').textContent = state.loc.name;
+  const cached = LS.get('cache', null);
+  const fresh = cached && cached.key===`${state.loc.lat},${state.loc.lon}` && (Date.now()-cached.fetchedAt) < 45*60*1000
+    && cached.daily.time.includes(today());
+  if(cached && cached.key===`${state.loc.lat},${state.loc.lon}`){ state.data = trimPast(cached); render(); }
+  else showLoading();
+  if(fresh && !force) return;
+  try{
+    const res = await fetch(API(state.loc.lat, state.loc.lon));
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const j = await res.json();
+    j.fetchedAt = Date.now(); j.key = `${state.loc.lat},${state.loc.lon}`;
+    LS.set('cache', j);
+    state.data = trimPast(j); render();
+  }catch(e){
+    if(!state.data) showError('Das Wetter ließ sich gerade nicht laden. Prüf die Verbindung und tipp auf „Nochmal“.');
+  }
+}
+function today(){ const d=new Date(); return d.toLocaleDateString('sv-SE'); }
+// past_days=1 liefert gestern mit → Regen in der Nacht erkennen, dann Index so verschieben, dass daily[0] = heute
+function trimPast(j){
+  const t = today();
+  const i = j.daily.time.indexOf(t);
+  if(i<=0) return j;
+  const prevDay = j.daily.time[i-1];
+  const lateRain = j.hourly.time.reduce((s,tm,k)=> (tm.startsWith(prevDay) && +tm.slice(11,13)>=18) ? s + (j.hourly.precipitation[k]||0) : s, 0);
+  const daily = {}; Object.keys(j.daily).forEach(k=> daily[k] = j.daily[k].slice(i));
+  return {...j, daily, prevRain: lateRain>=1};
+}
+
+function showLoading(){
+  $('#hero').innerHTML = `<p class="date">Wetter wird geladen …</p><div class="skeleton" style="height:56px"></div><div class="skeleton"></div>`;
+  $('#main').innerHTML = `<div class="skeleton"></div><div class="skeleton"></div>`;
+}
+function showError(msg){
+  $('#hero').innerHTML = `<div class="state"><h1>Kein Wetter.</h1><p>${esc(msg)}</p><button class="cta" id="retry">Nochmal</button></div>`;
+  $('#main').innerHTML = '';
+  $('#retry').onclick = ()=>load(true);
+}
+function showWelcome(){
+  $('#hero').innerHTML = `<div class="state">
+    <h1>Was zieht sie heute an?</h1>
+    <p>Jeden Morgen eine konkrete Empfehlung – von der Mütze bis zu den Socken – und was in den Rucksack muss. Dafür brauche ich nur euren Ort.</p>
+    <button class="cta" id="w-gps">Standort verwenden</button><button class="ghost" id="w-search">Ort suchen</button>
+  </div>`;
+  $('#main').innerHTML = '';
+  $('#w-gps').onclick = useGPS;
+  $('#w-search').onclick = openSheet;
+}
+
+/* ---------- Ort ---------- */
+function setLoc(lat, lon, name){
+  state.loc = {lat:+(+lat).toFixed(3), lon:+(+lon).toFixed(3), name};
+  LS.set('loc', state.loc);
+  $('#placeName').textContent = name;
+  load(true);
+}
+function useGPS(){
+  if(!navigator.geolocation){ openSheet(); return; }
+  $('#placeName').textContent = 'Standort wird gesucht …';
+  navigator.geolocation.getCurrentPosition(async pos=>{
+    const {latitude:lat, longitude:lon} = pos.coords;
+    let name = 'Mein Standort';
+    try{
+      const g = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=de`).then(r=>r.json());
+      name = g.locality || g.city || name;
+    }catch(e){}
+    setLoc(lat, lon, name);
+    $('#sheet').open && $('#sheet').close();
+  }, ()=>{
+    $('#placeName').textContent = state.loc?.name || 'Ort wählen';
+    openSheet(); $('#q').focus();
+  }, {maximumAge: 30*60*1000, timeout: 12000});
+}
+let qTimer;
+async function search(q){
+  const ul = $('#results');
+  if(q.trim().length<2){ ul.innerHTML=''; return; }
+  try{
+    const j = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(q)}&count=6&language=de&format=json`).then(r=>r.json());
+    ul.innerHTML = (j.results||[]).map(x=>`<li><button type="button" data-lat="${x.latitude}" data-lon="${x.longitude}" data-name="${esc(x.name)}">${esc(x.name)} <small>${esc([x.admin1,x.country].filter(Boolean).join(', '))}</small></button></li>`).join('') || '<li><small>Nichts gefunden – anders schreiben?</small></li>';
+    ul.querySelectorAll('button').forEach(b=>b.onclick=()=>{ setLoc(b.dataset.lat,b.dataset.lon,b.dataset.name); ul.innerHTML=''; $('#q').value=''; $('#sheet').close(); });
+  }catch(e){ ul.innerHTML = '<li><small>Suche gerade nicht erreichbar.</small></li>'; }
+}
+
+/* ---------- Einstellungen ---------- */
+function openSheet(){
+  $('#kid').value = state.kid; $('#birth').value = state.birth || '';
+  $('#from').value = state.from; $('#to').value = state.to;
+  $('#sheet').showModal();
+}
+function initSheet(){
+  const opts = (a,b)=>Array.from({length:b-a+1},(_,i)=>`<option value="${a+i}">${a+i}:00</option>`).join('');
+  $('#from').innerHTML = opts(5,14); $('#to').innerHTML = opts(12,21);
+  $('#q').oninput = e=>{ clearTimeout(qTimer); qTimer = setTimeout(()=>search(e.target.value), 280); };
+  $('#gps').onclick = useGPS;
+  $('#kid').oninput = e=>{ state.kid = e.target.value; LS.set('kid', state.kid); };
+  $('#birth').onchange = e=>{ state.birth = e.target.value; LS.set('birth', state.birth); };
+  $('#from').onchange = e=>{ state.from = +e.target.value; if(state.to<=state.from) state.to = state.from+2; LS.set('from',state.from); LS.set('to',state.to); };
+  $('#to').onchange = e=>{ state.to = +e.target.value; if(state.to<=state.from) state.from = Math.max(5,state.to-2); LS.set('to',state.to); LS.set('from',state.from); };
+  $('#sheet').addEventListener('close', ()=>render());
+  $('#sheet').addEventListener('click', e=>{ if(e.target===$('#sheet')) $('#sheet').close(); });
+}
+
+$('#placeBtn').onclick = openSheet;
+$('#d0').onclick = ()=>{ state.day=0; render(); };
+$('#d1').onclick = ()=>{ state.day=1; render(); };
+initSheet();
+load();
+document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState==='visible') load(); });
+
+if('serviceWorker' in navigator){ navigator.serviceWorker.register('sw.js').catch(()=>{}); }
+</script>
+</body>
+</html>
