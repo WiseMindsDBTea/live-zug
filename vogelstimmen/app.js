@@ -23,7 +23,7 @@ const HAB = {
   feld:{label:"Feld & Wiese"}, berge:{label:"Berge"}, kueste:{label:"Küste"}
 };
 const FREQ = ["", "sehr häufig", "häufig", "verbreitet", "selten"];
-const KIND = { song:"Gesang", call:"Ruf", drum:"Trommeln", crow:"Krähen", clatter:"Klappern", wings:"Flügel", primary:"Aufnahme", secondary:"Aufnahme 2" };
+const KIND = { song:"Gesang", song2:"Gesang 2", call:"Ruf", drum:"Trommeln", crow:"Krähen", clatter:"Klappern", wings:"Flügel", primary:"Aufnahme", secondary:"Aufnahme 2" };
 const SHAPES = {
   floete:  {label:"flötet melodisch", svg:'<path d="M4 20c6-9 10-9 16-3s10 6 16-4M44 18c4-6 8-6 12 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>'},
   zwitscher:{label:"zwitschert, trillert", svg:[...Array(14)].map((_,i)=>`<path d="M${4+i*4} ${10+(i%3)*4}l2 -5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>`).join("")},
@@ -99,100 +99,199 @@ function toggle(bird, idx = 0, from = null){
 }
 function markLoading(key, on){ $$(`[data-play="${CSS.escape(key)}"]`).forEach(b => b.classList.toggle("loading", on)); }
 
-/* ================================================================ Lautschrift synchron */
+/* ================================================================ Lautschrift synchron (notengenau) */
 const ONO_CACHE = new Map();
+const LIT_TAIL = 0.035;                    // Nachleuchten nach Notenende (s)
 function onoText(b, c){
   const [song, call] = b.ono || [];
   if (c.kind === "call" || c.kind === "secondary") return call || song || "";
   return song || call || "";
 }
-function tokenize(t){ const out = []; t.replace(/([^\s-]+)([\s-]*)/g, (m, s, sep) => { out.push({ s, sep }); return m; }); return out; }
+function parsePattern(t){
+  const out = [];
+  t.replace(/([^\s-]+)([\s-]*)/g, (m, s) => { const rep = s.endsWith("*"); out.push({ s: rep ? s.slice(0, -1) : s, rep }); return m; });
+  return out;
+}
+/* Genau m Silben für eine Strophe mit m erkannten Noten */
+function expandPattern(p, m){
+  if (!p.length || m <= 0) return [];
+  const reps = p.filter(x => x.rep).length;
+  if (reps){
+    const fixed = p.length - reps;
+    if (m <= fixed){ const f = p.filter(x => !x.rep); return m === 1 ? [f[f.length - 1].s] : f.slice(0, m - 1).map(x => x.s).concat(f[f.length - 1].s); }
+    let fill = m - fixed; const out = []; let r = 0;
+    p.forEach(x => {
+      if (!x.rep){ out.push(x.s); return; }
+      const k = Math.ceil(fill / (reps - r)); r++; fill -= k;
+      for (let i = 0; i < k; i++) out.push(x.s);
+    });
+    return out;
+  }
+  if (m >= p.length) return Array.from({ length:m }, (_, i) => p[i % p.length].s);
+  return m === 1 ? [p[0].s] : p.slice(0, m - 1).map(x => x.s).concat(p[p.length - 1].s);
+}
 function onoModel(key){
   if (ONO_CACHE.has(key)) return ONO_CACHE.get(key);
-  const [id, i] = key.split(":"); const b = BY[id]; const c = clipsOf(b)[+i];
-  if (!b || !c || !c.ev || !c.ev.length){ ONO_CACHE.set(key, null); return null; }
-  const toks = tokenize(onoText(b, c)); const n = toks.length;
-  if (!n){ ONO_CACHE.set(key, null); return null; }
-  const ev = []; for (let k = 0; k + 1 < c.ev.length; k += 2) ev.push([c.ev[k] / 100, c.ev[k + 1] / 100]);
+  const [id, i] = key.split(":"); const b = BY[id]; const c = b && clipsOf(b)[+i];
+  if (!c || !c.ev || !c.ev.length){ ONO_CACHE.set(key, null); return null; }
+  const pat = parsePattern(onoText(b, c));
+  if (!pat.length){ ONO_CACHE.set(key, null); return null; }
+  const div = c.evu === "ms" ? 1000 : 100;
+  const units = [];
+  for (let k = 0; k + 1 < c.ev.length; k += 2) units.push({ t0:c.ev[k] / div, t1:c.ev[k + 1] / div });
   const gap = b.pg || 0.35, ph = [];
-  ev.forEach(e => { const last = ph[ph.length - 1]; if (last && e[0] - last.t1 < gap){ last.t1 = e[1]; last.ev.push(e); } else ph.push({ t0:e[0], t1:e[1], ev:[e] }); });
-  ph.forEach(p => { const m = p.ev.length; p.mode = m >= 2 * n ? "cyc" : m >= n ? "prop" : "time"; });
-  const model = { toks, n, ph };
+  units.forEach((u, k) => { const last = ph[ph.length - 1]; if (last && u.t0 - units[k - 1].t1 < gap) last.u.push(k); else ph.push({ u:[k] }); });
+  ph.forEach((p, pi) => { const toks = expandPattern(pat, p.u.length); p.u.forEach((k, j) => { units[k].tok = toks[j]; units[k].p = pi; units[k].j = j; }); p.toks = toks; });
+  const model = { units, ph, starts: units.map(u => u.t0) };
   ONO_CACHE.set(key, model);
   return model;
 }
-function onoAt(model, t){
-  const ph = model.ph;
-  let i = -1;
-  for (let k = 0; k < ph.length; k++){ if (ph[k].t0 - 0.03 <= t) i = k; else break; }
-  if (i < 0) return { i:-1, s:-1, live:false };
-  const p = ph[i], live = t <= p.t1 + 0.15;
-  let s;
-  if (p.mode === "time") s = Math.min(model.n - 1, Math.floor(Math.max(0, t - p.t0) / Math.max(0.05, p.t1 - p.t0) * model.n));
-  else {
-    let j = 0; for (let k = 0; k < p.ev.length; k++){ if (p.ev[k][0] - 0.02 <= t) j = k; else break; }
-    s = p.mode === "cyc" ? j % model.n : Math.min(model.n - 1, Math.floor(j * model.n / p.ev.length));
-  }
-  return { i, s, live };
+function unitAt(model, t){                 // letzte Note mit Beginn <= t (binäre Suche)
+  const s = model.starts; let lo = 0, hi = s.length - 1, r = -1;
+  while (lo <= hi){ const mid = (lo + hi) >> 1; if (s[mid] <= t){ r = mid; lo = mid + 1; } else hi = mid - 1; }
+  return r;
 }
-const tokHTML = toks => toks.map((x, k) => `<i data-s="${k}">${esc(x.s)}</i>${esc(x.sep)}`).join("");
 function onoTrackHTML(bird, idx = 0, win = 0){
   const c = clipsOf(bird)[idx]; if (!c) return "";
   const key = `${bird.id}:${idx}`, model = onoModel(key); if (!model) return "";
   const span = win && c.dur > win ? win : c.dur;
-  const words = model.ph.map((p, k) => p.t0 < span - 0.2 ? `<span class="ow" data-w="${k}" style="left:${(p.t0 / span * 100).toFixed(2)}%">${tokHTML(model.toks)}</span>` : "").join("");
-  return `<div class="ono-track" data-okey="${key}" aria-hidden="true">${words}</div>`;
+  let bars = "", labels = "";
+  model.units.forEach((u, k) => {
+    if (u.t0 >= span) return;
+    const x = (u.t0 / span * 100).toFixed(3), w = (Math.max(0.012, Math.min(u.t1, span) - u.t0) / span * 100).toFixed(3);
+    bars += `<b class="ob" data-u="${k}" style="left:${x}%;width:${w}%"></b>`;
+  });
+  return `<div class="ono-track" data-okey="${key}" aria-hidden="true"><div class="ob-row">${bars}</div></div>`;
+}
+const LUPE_PX = 150, LUPE_AT = 0.3;           // Pixel pro Sekunde, Position des Abspielstrichs
+function lupeHTML(bird, idx = 0, cls = ""){
+  const c = clipsOf(bird)[idx]; if (!c) return "";
+  const key = `${bird.id}:${idx}`, model = onoModel(key);
+  const W = Math.round(c.dur * LUPE_PX);
+  let labels = "";
+  if (model) model.units.forEach((u, k) => {
+    const x = (u.t0 * LUPE_PX).toFixed(1), w = Math.max(3, (u.t1 - u.t0) * LUPE_PX).toFixed(1);
+    labels += `<b class="lb" data-u="${k}" style="left:${x}px;width:${w}px"></b><span class="ll" data-u="${k}" style="left:${x}px">${esc(u.tok)}</span>`;
+  });
+  return `<div class="lupe ${cls}" data-lkey="${key}" aria-hidden="true">
+    <div class="lupe-rail" style="width:${W}px">
+      <div class="lupe-spec" style='--spec:url("${esc(c.zspec || c.spec)}")'></div>
+      <div class="lupe-ono">${labels}</div>
+    </div>
+    <i class="lupe-head"></i>
+  </div>`;
+}
+function layoutLupes(root = document){
+  $$(".lupe", root).forEach(lp => {
+    const right = [-1e9, -1e9];
+    $$(".ll", lp).forEach(l => {
+      l.classList.remove("r1", "hide");
+      const x = l.offsetLeft, w = l.offsetWidth;
+      if (x >= right[0] + 2) right[0] = x + w;
+      else if (x >= right[1] + 2){ l.classList.add("r1"); right[1] = x + w; }
+      else l.classList.add("hide");
+    });
+  });
+}
+function moveLupes(key, t){
+  $$(".lupe").forEach(lp => {
+    const on = lp.dataset.lkey === key;
+    const W = lp.clientWidth;
+    const x = on ? W * LUPE_AT - t * LUPE_PX : W * LUPE_AT;
+    lp.firstElementChild.style.transform = `translate3d(${x.toFixed(1)}px,0,0)`;
+  });
 }
 function onoNowHTML(bird, idx = 0, cls = ""){
   const c = clipsOf(bird)[idx]; if (!c) return "";
-  const key = `${bird.id}:${idx}`, model = onoModel(key);
-  const toks = model ? model.toks : tokenize(onoText(bird, c)); if (!toks.length) return "";
-  return `<div class="ono-now idle ${cls}" data-onow="${key}" aria-live="off"><span class="w">${tokHTML(toks)}</span></div>`;
+  const key = `${bird.id}:${idx}`;
+  const toks = parsePattern(onoText(bird, c)).map(x => x.s); if (!toks.length) return "";
+  return `<div class="ono-now idle ${cls}" data-onow="${key}" aria-hidden="true"><span class="w">${toks.map(t => `<i>${esc(t)}</i>`).join("-")}</span></div>`;
 }
 function layoutTracks(root = document){
   $$(".ono-track", root).forEach(tr => {
     const W = tr.clientWidth; if (!W) return;
     const right = [-1e9, -1e9];
-    $$(".ow", tr).forEach(w => {
-      w.classList.remove("r1", "mini");
-      w.style.removeProperty("margin-left"); w.style.removeProperty("--tick");
-      const l = w.offsetLeft, wd = w.offsetWidth;
-      const el = l + wd > W ? Math.max(0, W - wd) : l;           // am rechten Rand nach links schieben
-      if (el >= right[0] + 6) right[0] = el + wd;
-      else if (el >= right[1] + 6){ w.classList.add("r1"); right[1] = el + wd; }
-      else { w.classList.add("mini"); return; }
-      if (el !== l){ w.style.marginLeft = (el - l) + "px"; w.style.setProperty("--tick", (l - el) + "px"); }
+    $$(".ol", tr).forEach(l => {
+      l.classList.remove("r1", "hide"); l.style.removeProperty("margin-left");
+      const x = l.offsetLeft, wd = l.offsetWidth;
+      const el = x + wd > W ? Math.max(0, W - wd) : x;
+      if (el >= right[0] + 3) right[0] = el + wd;
+      else if (el >= right[1] + 3){ l.classList.add("r1"); right[1] = el + wd; }
+      else { l.classList.add("hide"); return; }
+      if (el !== x) l.style.marginLeft = (el - x) + "px";
     });
   });
 }
 let layoutT; window.addEventListener("resize", () => { clearTimeout(layoutT); layoutT = setTimeout(() => layoutTracks(), 150); });
+
+/* Glatte Zeit: currentTime springt in manchen Browsern in groben Schritten – dazwischen hochrechnen */
+const clock = { ct:-1, perf:0 };
+function smoothTime(){
+  const ct = audio.currentTime, now = performance.now();
+  if (audio.paused || ct !== clock.ct || clock.ct < 0){ clock.ct = ct; clock.perf = now; return ct; }
+  return Math.min(ct + (now - clock.perf) / 1000 * (audio.playbackRate || 1), clock.ct + 0.3);
+}
 const onoState = new Map();
+function renderNow(n, model, pi, u, on){
+  const p = model.ph[pi];
+  let toks = p.toks, off = 0, pre = "", post = "";
+  if (toks.length > 6){                     // lange Strophen: Fenster um die aktuelle Silbe
+    const j = u >= 0 ? model.units[u].j : 0;
+    off = Math.max(0, Math.min(toks.length - 6, j - 2));
+    pre = off > 0 ? "…" : ""; post = off + 6 < toks.length ? "…" : "";
+    toks = toks.slice(off, off + 6);
+  }
+  n.querySelector(".w").innerHTML = pre + toks.map((t, k) => `<i data-j="${k + off}">${esc(t)}</i>`).join("-") + post;
+  n.dataset.ph = pi; n.dataset.off = off;
+}
 function syncOno(key, t, playing){
+  onoState.forEach((st, k) => {
+    if (k === key) return;
+    $$(`[data-okey="${CSS.escape(k)}"] .on, [data-okey="${CSS.escape(k)}"] .past, [data-lkey="${CSS.escape(k)}"] .on, [data-lkey="${CSS.escape(k)}"] .past`).forEach(e => e.classList.remove("on", "past"));
+    $$(`[data-onow="${CSS.escape(k)}"]`).forEach(n => { n.classList.add("idle"); n.classList.remove("rest"); });
+    onoState.delete(k);
+  });
   const model = key && onoModel(key);
-  // alte Spuren zurücksetzen
-  onoState.forEach((st, k) => { if (k !== key){ $$(`[data-okey="${CSS.escape(k)}"] .ow`).forEach(w => w.classList.remove("on", "past")); $$(`[data-onow="${CSS.escape(k)}"]`).forEach(n => { n.classList.add("idle"); $$("i", n).forEach(x => x.className = ""); }); onoState.delete(k); } });
   if (!model) return;
-  const st = onoAt(model, t);
+  const u = unitAt(model, t);
+  const on = u >= 0 && t <= model.units[u].t1 + LIT_TAIL;
+  const pi = u >= 0 ? model.units[u].p : -1;
+  const pEnd = pi >= 0 ? model.units[model.ph[pi].u[model.ph[pi].u.length - 1]].t1 : 0;
+  const inPh = pi >= 0 && t <= pEnd + 0.4;
+  moveLupes(key, t);
+  const els = document.querySelectorAll(`[data-okey="${CSS.escape(key)}"],[data-onow="${CSS.escape(key)}"],[data-lkey="${CSS.escape(key)}"]`).length;
   const prev = onoState.get(key) || {};
-  const sig = `${st.i}|${st.s}|${st.live}`;
-  if (prev.sig === sig && prev.n === document.querySelectorAll(`[data-okey="${CSS.escape(key)}"],[data-onow="${CSS.escape(key)}"]`).length) return;
-  onoState.set(key, { sig, n: document.querySelectorAll(`[data-okey="${CSS.escape(key)}"],[data-onow="${CSS.escape(key)}"]`).length });
-  $$(`[data-okey="${CSS.escape(key)}"]`).forEach(tr => {
-    $$(".ow", tr).forEach(w => {
-      const k = +w.dataset.w;
-      w.classList.toggle("past", k < st.i || (k === st.i && !st.live));
-      w.classList.toggle("on", k === st.i && st.live);
-      $$("i", w).forEach(x => { const sI = +x.dataset.s; x.className = k === st.i && st.live ? (sI < st.s ? "past" : sI === st.s ? "on" : "") : ""; });
+  if (prev.u === u && prev.on === on && prev.inPh === inPh && prev.els === els) return;
+  onoState.set(key, { u, on, inPh, els, pi });
+  // Spur: jede Note einzeln
+  $$(`[data-okey="${CSS.escape(key)}"],[data-lkey="${CSS.escape(key)}"]`).forEach(tr => {
+    const lo = Math.min(prev.u ?? -1, u), hi = Math.max(prev.u ?? -1, u);
+    const full = prev.els !== els || Math.abs((prev.u ?? -1) - u) > 40;
+    $$("[data-u]", tr).forEach(e => {
+      const k = +e.dataset.u;
+      if (!full && (k < lo - 1 || k > hi + 1)) return;
+      e.classList.toggle("on", k === u && on);
+      e.classList.toggle("past", k < u || (k === u && !on));
     });
   });
+  // Mitlese-Wort
   $$(`[data-onow="${CSS.escape(key)}"]`).forEach(n => {
-    const newPhrase = prev.i !== st.i && st.i >= 0;
-    n.classList.toggle("idle", st.i < 0);
-    n.classList.toggle("rest", st.i >= 0 && !st.live);
-    $$("i", n).forEach(x => { const sI = +x.dataset.s; x.className = st.live ? (sI < st.s ? "past" : sI === st.s ? "on" : "") : ""; });
-    if (newPhrase && playing){ n.classList.remove("pop"); void n.offsetWidth; n.classList.add("pop"); }
+    if (pi < 0){ n.classList.add("idle"); return; }
+    const newPh = String(pi) !== n.dataset.ph || prev.els !== els;
+    const j = model.units[u].j;
+    if (newPh || (model.ph[pi].toks.length > 6 && (j < +n.dataset.off || j >= +n.dataset.off + 6))){
+      renderNow(n, model, pi, u, on);
+      if (newPh && playing){ n.classList.remove("pop"); void n.offsetWidth; n.classList.add("pop"); }
+    }
+    n.classList.remove("idle"); n.classList.toggle("rest", !inPh);
+    $$("i", n).forEach(x => {
+      const jj = +x.dataset.j;
+      const isOn = jj === j && on;
+      if (isOn && !x.classList.contains("on") && playing){ x.classList.remove("beat"); void x.offsetWidth; x.classList.add("beat"); }
+      x.classList.toggle("on", isOn);
+      x.classList.toggle("past", jj < j || (jj === j && !on));
+    });
   });
-  onoState.get(key).i = st.i;
 }
 
 let lastKey = null;
@@ -207,7 +306,7 @@ function frame(){
     el.style.setProperty("--p", pp.toFixed(4)); el.classList.toggle("playing", playing && pp < 1);
   });
   const bs = $("#pbSpec"); bs.style.setProperty("--p", p.toFixed(4)); bs.classList.toggle("playing", playing);
-  syncOno(A.key, audio.currentTime, playing);
+  syncOno(A.key, smoothTime(), playing);
   if (playing) requestAnimationFrame(frame);
 }
 function syncButtons(){
@@ -253,6 +352,16 @@ function playBtn(bird, idx = 0, cls = ""){
 document.addEventListener("click", e => {
   const pb = e.target.closest("[data-play]");
   if (pb){ e.preventDefault(); e.stopPropagation(); const [id, i] = pb.dataset.play.split(":"); toggle(BY[id], +i); return; }
+  const lp = e.target.closest(".lupe");
+  if (lp){
+    e.preventDefault(); e.stopPropagation();
+    const [id, i] = lp.dataset.lkey.split(":"); const c = clipsOf(BY[id])[+i];
+    const r = lp.getBoundingClientRect(); const tNow = A.key === lp.dataset.lkey ? audio.currentTime : 0;
+    const t = Math.max(0, Math.min(c.dur - 0.05, tNow + (e.clientX - r.left - r.width * LUPE_AT) / LUPE_PX));
+    if (A.key === lp.dataset.lkey){ audio.currentTime = t; if (audio.paused) audio.play(); }
+    else play(BY[id], +i, t / c.dur);
+    return;
+  }
   const sp = e.target.closest("[data-spec]");
   if (sp){
     e.preventDefault(); e.stopPropagation();
@@ -297,7 +406,7 @@ function renderView(v){
   m.innerHTML = `<div class="view">${VIEWS[v]()}</div>`;
   AFTER[v]?.();
   window.scrollTo(0, 0);
-  requestAnimationFrame(() => layoutTracks($("#main")));
+  requestAnimationFrame(() => { layoutTracks($("#main")); layoutLupes($("#main")); moveLupes(A.key, audio.currentTime); });
   if (A.bird && !audio.paused) $("#pbar").hidden = (v === "kinder" || v === "ueben");
   else if (v === "kinder" || v === "ueben") $("#pbar").hidden = true;
   syncButtons(); frame();
@@ -383,7 +492,7 @@ VIEWS.lexikon = () => {
       <p class="today-laut" style="margin-top:14px">${esc(b.laut)}</p>
     </div>
     <div>
-      <div class="today-row">${playBtn(b, 0, "big")}<div class="today-spec">${specHTML(b, 0, "", 12)}${onoTrackHTML(b, 0, 12)}</div></div>
+      <div class="today-row">${playBtn(b, 0, "big")}<div class="today-spec">${lupeHTML(b, 0, "small")}</div></div>
       <div class="today-meta" style="margin-top:12px">
         <span>Im ${MONTHS[NOW-1]} zu hören: <b>${present}</b> von ${BIRDS.length} Arten</span>
         <span>Singen gerade: <b>${sing}</b></span>
@@ -433,7 +542,7 @@ function openSheet(html){
   if (!sheet.open){ sheet.showModal(); document.documentElement.style.overflow = "hidden"; }
   $("#sheetBody").scrollTop = 0;
   syncButtons(); frame();
-  requestAnimationFrame(() => layoutTracks($("#sheetBody")));
+  requestAnimationFrame(() => { layoutTracks($("#sheetBody")); layoutLupes($("#sheetBody")); moveLupes(A.key, audio.currentTime); });
 }
 function closeSheet(){
   if (!sheet.open) return;
@@ -462,6 +571,7 @@ function listenHTML(b, idx){
   return `<div class="listen" id="listen">
     ${cl.length > 1 ? `<div class="seg" role="group" aria-label="Aufnahme wählen">${cl.map((x, i) => `<button type="button" data-clip="${i}" aria-pressed="${i === idx}">${KIND[x.kind] || "Aufnahme " + (i + 1)}</button>`).join("")}</div>` : ""}
     ${onoNowHTML(b, idx)}
+    ${lupeHTML(b, idx)}
     <div class="big-spec"><div class="spec-wrap"><div class="khz" aria-hidden="true"><span>${khz[0]}</span><span>${khz[1]}</span><span>${khz[2]} kHz</span></div>
       ${specHTML(b, idx)}</div>
       ${onoTrackHTML(b, idx)}
@@ -517,7 +627,7 @@ function wireListen(b){
   const w = $("#listenWrap"); if (!w) return;
   w.onclick = e => {
     const c = e.target.closest("[data-clip]");
-    if (c){ sheetIdx = +c.dataset.clip; w.innerHTML = listenHTML(b, sheetIdx); layoutTracks(w); syncButtons(); frame(); play(b, sheetIdx); return; }
+    if (c){ sheetIdx = +c.dataset.clip; w.innerHTML = listenHTML(b, sheetIdx); layoutTracks(w); layoutLupes(w); syncButtons(); frame(); play(b, sheetIdx); return; }
     if (e.target.closest("#slow")){ A.rate = A.rate < 1 ? 1 : 0.5; audio.playbackRate = A.rate; e.target.closest("#slow").setAttribute("aria-pressed", A.rate < 1); toast(A.rate < 1 ? "Zeitlupe: halbe Geschwindigkeit, gleiche Tonhöhe." : "Normale Geschwindigkeit."); }
     if (e.target.closest("#loop")){ A.loop = !A.loop; audio.loop = A.loop; e.target.closest("#loop").setAttribute("aria-pressed", A.loop); }
   };
@@ -526,7 +636,7 @@ function refreshRegister(){ if (route.view === "lexikon" && $("#reg")){ $("#reg"
 
 function openCompare(a, b){
   const item = x => `<div class="cmp-item"><div class="cmp-head">${photoHTML(x)}<a href="#/vogel/${x.id}" style="color:inherit;text-decoration:none"><b>${esc(x.de)}</b></a>${playBtn(x, 0)}</div>
-    ${specHTML(x, 0)}${onoTrackHTML(x, 0)}<p class="cmp-laut">${esc(x.laut)}</p></div>`;
+    ${lupeHTML(x, 0, "small")}${specHTML(x, 0)}${onoTrackHTML(x, 0)}<p class="cmp-laut">${esc(x.laut)}</p></div>`;
   openSheet(`<div class="d-bar solid" id="dbar"><button class="d-close" type="button" data-close aria-label="Schließen"><svg aria-hidden="true"><use href="#i-x"/></svg></button><span class="d-bar-name">Hörvergleich</span></div>
     <article class="d-body" style="margin-top:0;padding-top:calc(var(--safe-t) + 70px)">
       <h1 class="d-name" id="sheetTitle" style="font-size:clamp(30px,7vw,44px)">${esc(a.de)} oder ${esc(b.de)}?</h1>
@@ -874,7 +984,7 @@ function stopChorus(){
 async function saveOffline(){
   if (!("caches" in window)){ toast("Dieser Browser kann nichts offline speichern."); return; }
   const urls = [];
-  BIRDS.forEach(b => { clipsOf(b).forEach(c => urls.push(c.src, c.spec)); const i = imgOf(b); if (i) urls.push(i.thumb, i.src); });
+  BIRDS.forEach(b => { clipsOf(b).forEach(c => urls.push(c.src, c.spec, ...(c.zspec ? [c.zspec] : []))); const i = imgOf(b); if (i) urls.push(i.thumb, i.src); });
   $("#offbox").hidden = false;
   const cache = await caches.open("vogelohr-media-v1");
   let done = 0, fail = 0;

@@ -1,7 +1,7 @@
 /* Vogelohr Service Worker
    – Medien (Fotos, Stimmbilder, Aufnahmen) aus dem Cache, inkl. Range-Anfragen für Audio
    – alles andere zuerst aus dem Netz, bei Funkloch aus dem Cache */
-const SHELL = "vogelohr-shell-v1", MEDIA = "vogelohr-media-v1";
+const SHELL = "vogelohr-shell-v2", MEDIA = "vogelohr-media-v1";
 const CORE = ["./", "index.html", "app.css", "app.js", "data/birds.js", "media.json", "icon.svg", "manifest.webmanifest"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(SHELL).then(c => c.addAll(CORE)).catch(() => {})); self.skipWaiting(); });
 self.addEventListener("activate", e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith("vogelohr") && ![SHELL, MEDIA].includes(k)).map(k => caches.delete(k))))); self.clients.claim(); });

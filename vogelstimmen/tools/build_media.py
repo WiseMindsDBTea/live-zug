@@ -35,7 +35,7 @@ SPEC_H = 128
 BANDS = {
  "amsel":(1200,7000),"singdrossel":(1500,8000),"misteldrossel":(1500,7500),"wacholderdrossel":(1000,8000),
  "rotkehlchen":(2000,9500),"nachtigall":(1000,9000),"hausrotschwanz":(1500,9000),"gartenrotschwanz":(1800,9000),
- "kohlmeise":(2000,7500),"blaumeise":(2500,9500),"tannenmeise":(2500,9000),"schwanzmeise":(3000,10000),
+ "kohlmeise":(2000,7500),"blaumeise":(3800,9500),"tannenmeise":(2500,9000),"schwanzmeise":(3000,10000),
  "wintergoldhaehnchen":(4500,10500),"zaunkoenig":(2500,10000),"heckenbraunelle":(2500,9000),"buchfink":(1800,8500),
  "bergfink":(1500,7000),"gruenfink":(1500,8000),"stieglitz":(2000,9500),"girlitz":(3000,10000),"gimpel":(1000,4500),
  "kernbeisser":(3000,10000),"erlenzeisig":(2500,9500),"kreuzschnabel":(2000,7000),"haussperling":(1500,7000),
@@ -344,10 +344,12 @@ def make_clip(info, sid, n, tmp):
     ffmpeg("-i", mp3, "-ac", "1", "-ar", str(SR), wav)
     c = load_wav(wav)
     spec, fmin, fmax = sonagram(c, os.path.join(MEDIA, "s", base + ".webp"), lo, hi)
-    from events import detect as detect_events
-    ev = detect_events(c, lo, hi)
+    os.makedirs(os.path.join(MEDIA, "z"), exist_ok=True)
+    lupe_spec(c, os.path.join(MEDIA, "z", base + ".webp"), lo, hi)
+    from events import detect as detect_events, MIV, TONAL, TRILL, TRILL_IOI, UNRELIABLE
+    ev = [] if sid in UNRELIABLE or f"{sid}:{n}" in UNRELIABLE else detect_events(c, lo, hi, MIV.get(sid, 0.065), sid in TONAL, TRILL.get(sid, TRILL_IOI))
     return {
-        "kind": info["slot"], "src": f"media/a/{base}.mp3", "spec": f"media/s/{base}.webp",
+        "kind": info["slot"], "src": f"media/a/{base}.mp3", "spec": f"media/s/{base}.webp", "zspec": f"media/z/{base}.webp",
         "dur": round(len(c) / SR, 2), "fmin": fmin, "fmax": fmax,
         "artist": info["artist"], "license": info["license"], "page": info["page"],
         "title": info["title"], "from": round(st, 1), "ev": ev,
@@ -382,6 +384,35 @@ def sonagram(c, out, lo=1500, hi=9000):
 
 
 # ---------------------------------------------------------------- Foto
+LUPE_PXS = 150      # Pixel pro Sekunde für die mitlaufende Lupe
+def lupe_spec(c, out, lo=1500, hi=9000):
+    """Hochaufgelöstes Sonagramm (150 px/s, 96 px hoch) für die Lupe."""
+    fmin = max(0, int(lo * 0.7 // 100 * 100))
+    fmax = min(11000, int(-(-hi * 1.12 // 100) * 100))
+    span = fmax - fmin
+    nfft = 2048 if span < 1600 else 1024 if span < 4500 else 512
+    hop = 64
+    P = stft_power(c, nfft, hop)
+    f = np.fft.rfftfreq(nfft, 1 / SR)
+    db = 10 * np.log10(P + 1e-12)
+    rows = (f >= fmin) & (f <= fmax)
+    db = db[rows]
+    floor = np.percentile(db[:, ::8], 40, axis=1, keepdims=True)
+    D = np.clip(db - floor, 0, None)[::-1]
+    vmax = max(18.0, np.percentile(D[:, ::4], 99.7))
+    V = np.clip((D - 7.0) / (vmax - 7.0), 0, 1) ** 1.1
+    W = max(60, int(round(len(c) / SR * LUPE_PXS)))
+    T = V.shape[1]
+    # Spaltenzeit = Fenstermitte; auf exaktes Zeitraster abbilden
+    tcol = (np.arange(T) * hop + nfft / 2) / SR
+    tx = (np.arange(W) + 0.5) / LUPE_PXS
+    idx = np.clip(np.searchsorted(tcol, tx), 0, T - 1)
+    Vt = V[:, idx]
+    img = Image.fromarray((Vt * 255).astype(np.uint8), "L").resize((W, 96), Image.BILINEAR)
+    rgba = Image.merge("RGBA", [Image.new("L", img.size, 255)] * 3 + [img])
+    rgba.save(out, "WEBP", quality=40, alpha_quality=40, method=4)
+
+
 def make_photo(sid, wd, ov):
     titles = ov.get("img") and [ov["img"]] or wd.get("img", [])[:3]
     if not titles:

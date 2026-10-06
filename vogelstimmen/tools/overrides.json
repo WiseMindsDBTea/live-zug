@@ -28,5 +28,15 @@
    "call",
    "secondary"
   ]
+ },
+ "uhu": {
+  "clips": [
+   "Bubo bubo - Eurasian Eagle-Owl XC461330.mp3",
+   "Bubo bubo - Eurasian Eagle-Owl XC604112.mp3"
+  ],
+  "kinds": [
+   "song",
+   "secondary"
+  ]
  }
 }
