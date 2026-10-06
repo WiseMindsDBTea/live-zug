@@ -30,6 +30,34 @@ CLIP_MAX = 22.0       # Sekunden pro Clip
 PX_PER_S = 36         # Sonagramm-Breite
 SPEC_H = 128
 
+
+# Frequenzband der Stimme (Hz) – steuert Ausschnittwahl und Sonagramm-Bereich
+BANDS = {
+ "amsel":(1200,7000),"singdrossel":(1500,8000),"misteldrossel":(1500,7500),"wacholderdrossel":(1000,8000),
+ "rotkehlchen":(2000,9500),"nachtigall":(1000,9000),"hausrotschwanz":(1500,9000),"gartenrotschwanz":(1800,9000),
+ "kohlmeise":(2000,7500),"blaumeise":(2500,9500),"tannenmeise":(2500,9000),"schwanzmeise":(3000,10000),
+ "wintergoldhaehnchen":(4500,10500),"zaunkoenig":(2500,10000),"heckenbraunelle":(2500,9000),"buchfink":(1800,8500),
+ "bergfink":(1500,7000),"gruenfink":(1500,8000),"stieglitz":(2000,9500),"girlitz":(3000,10000),"gimpel":(1000,4500),
+ "kernbeisser":(3000,10000),"erlenzeisig":(2500,9500),"kreuzschnabel":(2000,7000),"haussperling":(1500,7000),
+ "feldsperling":(1500,7000),"star":(1000,9000),"elster":(500,7000),"eichelhaeher":(400,6000),"tannenhaeher":(400,5000),
+ "rabenkraehe":(400,4000),"saatkraehe":(400,4000),"kolkrabe":(200,3000),"dohle":(500,5000),"alpendohle":(1500,7000),
+ "ringeltaube":(200,1000),"tuerkentaube":(250,1000),"strassentaube":(200,1000),"turteltaube":(300,1000),
+ "kuckuck":(300,1400),"mauersegler":(3000,10000),"mehlschwalbe":(2000,8000),"rauchschwalbe":(2000,9000),
+ "bachstelze":(2500,9000),"gebirgsstelze":(3000,10000),"feldlerche":(2000,8500),"zilpzalp":(3000,7500),
+ "fitis":(2500,7500),"moenchsgrasmuecke":(1200,8000),"gartengrasmuecke":(1200,7000),"teichrohrsaenger":(1500,8000),
+ "drosselrohrsaenger":(800,6000),"kleiber":(1500,6500),"gartenbaumlaeufer":(3500,9500),"buntspecht":(500,6000),
+ "gruenspecht":(800,3000),"schwarzspecht":(700,4000),"kiebitz":(1000,6000),"rebhuhn":(1000,5000),"wachtel":(1500,5000),
+ "fasan":(500,4500),"haushuhn":(300,4000),"auerhuhn":(300,6000),"alpenschneehuhn":(300,3000),"weissstorch":(300,4000),
+ "graureiher":(300,3500),"kranich":(300,3000),"hoeckerschwan":(300,4000),"graugans":(300,2500),"nilgans":(300,3000),
+ "stockente":(300,3000),"blaesshuhn":(500,4500),"teichhuhn":(500,4500),"haubentaucher":(500,3500),"eisvogel":(3000,9000),
+ "wasseramsel":(2000,9000),"lachmoewe":(500,4000),"silbermoewe":(500,4000),"austernfischer":(1500,6000),
+ "kormoran":(200,2000),"rohrdommel":(80,500),"maeusebussard":(1500,5500),"rotmilan":(1500,5000),"sperber":(1500,5000),
+ "turmfalke":(2000,6000),"wanderfalke":(1000,5000),"steinadler":(1000,5000),"seeadler":(1000,5000),"bartgeier":(1000,6000),
+ "uhu":(150,800),"waldkauz":(400,2000),"waldohreule":(250,1200),"schleiereule":(1000,9000),"steinkauz":(600,3000),
+ "pirol":(800,4000),"wiedehopf":(300,1000),"neuntoeter":(1500,8000),"halsbandsittich":(1500,7000),"pfau":(500,3500),
+ "seidenschwanz":(3500,9500),"mauerlaeufer":(2500,9000),"goldammer":(2500,8500),
+}
+
 KW = {
     "song":   ["song", "gesang", "singing", "sings", "chant", "canto", "dawn chorus"],
     "call":   ["call", "calls", "ruf", "rufe", "alarm", "contact", "flight call", "scolding", "begging"],
@@ -182,6 +210,7 @@ def score(info, slot, sp, from_wd):
     if re.search(r"\band\b|\bwith\b|\bmit\b|chorus|mix", t) and "dawn chorus" not in t: s -= 2
     if info["size"] and info["size"] > 80e6: s -= 10
     if "mono" in t: s += 0.2
+    if info.get("artist") and "no machine-readable" not in info["artist"].lower(): s += 1
     return s
 
 
@@ -220,8 +249,12 @@ def choose(sp, wd, ov):
                 picks.append(info)
         return picks, cl
     p1 = sp["pref"]; p2 = SECOND[p1]
+    def ident(c):
+        m = re.search(r"xc\s?(\d+)", c["title"].lower())
+        return m.group(1) if m else re.sub(r"\.(ogg|mp3|wav|flac|oga|opus|webm)$", "", c["title"].lower())
+    used = set()
     for slot in (p1, p2):
-        ranked = sorted((c for c in cl if c not in picks),
+        ranked = sorted((c for c in cl if ident(c) not in used),
                         key=lambda c: -score(c, slot, sp, c.get("wd")))
         if ranked:
             best = ranked[0]
@@ -231,7 +264,8 @@ def choose(sp, wd, ov):
                 if not alt:
                     continue
                 best = alt[0]
-            best = dict(best); best["slot"] = slot
+            used.add(ident(best))
+            best = dict(best); best["slot"] = slot if (slot in kinds_of(best) or slot == "song" and not kinds_of(best)) else "primary"
             picks.append(best)
     return picks, cl
 
@@ -263,19 +297,19 @@ def stft_power(a, nfft=512, hop=128):
 
 
 def best_window(a, low=200, high=10500):
-    """Startzeit des energiereichsten Fensters im Vogel-Frequenzband."""
+    """Startzeit des Fensters mit dem stärksten Signal (über Rauschboden) im Stimmband der Art."""
     dur = len(a) / SR
     if dur <= CLIP_MAX + 1:
         return 0.0, dur
-    P = stft_power(a, 1024, 512)
-    f = np.fft.rfftfreq(1024, 1 / SR)
-    band = P[(f >= low) & (f <= high)].sum(0)
-    band = np.log10(band + 1e-9)
-    band = band - np.median(band)
-    band = np.clip(band, 0, None)
+    nfft = 2048 if high - low < 2500 else 1024
+    P = stft_power(a, nfft, 512)
+    f = np.fft.rfftfreq(nfft, 1 / SR)
+    db = 10 * np.log10(P[(f >= low) & (f <= high)] + 1e-12)
+    floor = np.percentile(db, 30, axis=1, keepdims=True)
+    contrast = np.clip(db - floor - 6, 0, None).sum(0)
     fps = SR / 512
     L = int(CLIP_MAX * fps)
-    cs = np.concatenate([[0], np.cumsum(band)])
+    cs = np.concatenate([[0], np.cumsum(contrast)])
     sums = cs[L:] - cs[:-L]
     st = int(np.argmax(sums)) / fps
     st = max(0.0, st - 0.4)
@@ -283,6 +317,7 @@ def best_window(a, low=200, high=10500):
 
 
 def make_clip(info, sid, n, tmp):
+    lo, hi = BANDS.get(sid, (1500, 9000))
     src = os.path.join(tmp, f"src_{sid}_{n}")
     with get(info["url"], stream=True) as r:
         with open(src, "wb") as fh:
@@ -291,7 +326,7 @@ def make_clip(info, sid, n, tmp):
     full = os.path.join(tmp, f"full_{sid}_{n}.wav")
     ffmpeg("-i", src, "-vn", "-ac", "1", "-ar", str(SR), "-af", "highpass=f=90", full)
     a = load_wav(full)
-    st, du = best_window(a)
+    st, du = best_window(a, lo, hi)
     base = f"{sid}-{n}"
     mp3 = os.path.join(MEDIA, "a", base + ".mp3")
     fo = max(0.0, du - 0.7)
@@ -306,7 +341,7 @@ def make_clip(info, sid, n, tmp):
     wav = os.path.join(tmp, f"clip_{sid}_{n}.wav")
     ffmpeg("-i", mp3, "-ac", "1", "-ar", str(SR), wav)
     c = load_wav(wav)
-    spec, fmin, fmax = sonagram(c, os.path.join(MEDIA, "s", base + ".webp"))
+    spec, fmin, fmax = sonagram(c, os.path.join(MEDIA, "s", base + ".webp"), lo, hi)
     return {
         "kind": info["slot"], "src": f"media/a/{base}.mp3", "spec": f"media/s/{base}.webp",
         "dur": round(len(c) / SR, 2), "fmin": fmin, "fmax": fmax,
@@ -315,25 +350,16 @@ def make_clip(info, sid, n, tmp):
     }
 
 
-def sonagram(c, out):
-    P = stft_power(c, 512, 96)
-    f = np.fft.rfftfreq(512, 1 / SR)
+def sonagram(c, out, lo=1500, hi=9000):
+    fmin = max(0, int(lo * 0.7 // 100 * 100))
+    fmax = min(11000, int(-(-hi * 1.12 // 100) * 100))
+    span = fmax - fmin
+    nfft, hop = (2048, 160) if span < 1600 else (1024, 128) if span < 4500 else (512, 96)
+    P = stft_power(c, nfft, hop)
+    f = np.fft.rfftfreq(nfft, 1 / SR)
     db = 10 * np.log10(P + 1e-12)
-    # Rauschboden je Frequenz abziehen (spektrale Subtraktion) -> klare Silben
     floor = np.percentile(db, 40, axis=1, keepdims=True)
     dn = np.clip(db - floor, 0, None)
-    # Frequenzbereich automatisch: wo liegt die Signalenergie?
-    m = (f >= 150) & (f <= 10500)
-    prof = (dn[m] ** 2).sum(1)
-    cum = np.cumsum(prof); cum = cum / (cum[-1] + 1e-12)
-    fm = f[m]
-    lo = fm[np.searchsorted(cum, 0.02)]
-    hi = fm[min(len(fm) - 1, np.searchsorted(cum, 0.985))]
-    fmin = max(0, math.floor((lo - 400) / 500) * 500)
-    fmax = min(11000, math.ceil((hi + 900) / 500) * 500)
-    if fmax - fmin < 3000:
-        mid = (fmax + fmin) / 2
-        fmin = max(0, int(mid - 1500) // 500 * 500); fmax = min(11000, fmin + 3000)
     rows = (f >= fmin) & (f <= fmax)
     D = dn[rows][::-1]  # hohe Frequenz oben
     vmax = max(18.0, np.percentile(D, 99.7))
@@ -385,6 +411,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", default="")
     ap.add_argument("--force", action="store_true")
+    ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument("--workers", type=int, default=5)
     args = ap.parse_args()
     raw = json.load(open(os.path.join(ROOT, "tools", "species.json")))
     species = [{"id": r[0], "lat": r[1], "pref": r[2], "syn": r[3] if len(r) > 3 else [],
@@ -397,42 +425,54 @@ def main():
     log("Wikidata …")
     wd = wikidata(species)
     report = []
-    with tempfile.TemporaryDirectory() as tmp:
-        for sp in species:
-            sid = sp["id"]
-            if only and sid not in only:
-                continue
-            if not only and not args.force and sid in media and media[sid].get("clips") and media[sid].get("img"):
-                continue
-            ov = overrides.get(sid, {})
-            w = wd.get(sid, {})
-            log(f"== {sid} ({sp['lat']}) wd-audio={len(w.get('audio', []))} img={len(w.get('img', []))}")
-            entry = {"clips": [], "img": None}
-            try:
-                picks, cands = choose(sp, w, ov)
-                report.append(f"\n## {sid} — {sp['lat']}  ({len(cands)} Kandidaten)")
-                for c in sorted(cands, key=lambda c: -score(c, sp['pref'], sp, c.get('wd')))[:8]:
-                    report.append(f"   cand {score(c, sp['pref'], sp, c.get('wd')):5.1f} {sorted(kinds_of(c))} {c.get('duration')}s  {c['title']}")
-                for n, info in enumerate(picks):
-                    try:
-                        clip = make_clip(info, sid, n, tmp)
-                        entry["clips"].append(clip)
-                        report.append(f"   PICK[{info['slot']}] {clip['dur']}s @{clip['from']}s {clip['fmin']}-{clip['fmax']}Hz  {info['title']}  | {info['artist']} | {info['license']}")
-                    except Exception as e:
-                        report.append(f"   FAIL clip {info['title']}: {e}")
-            except Exception as e:
-                report.append(f"   FAIL audio search: {e}")
-            try:
-                entry["img"] = make_photo(sid, w, ov)
-                if entry["img"]:
-                    report.append(f"   IMG {entry['img']['title']} tint={entry['img']['tint']} | {entry['img']['artist']}")
-                else:
-                    report.append("   IMG none")
-            except Exception as e:
-                report.append(f"   FAIL img: {e}")
+    todo = []
+    for sp in species:
+        sid = sp["id"]
+        if only and sid not in only: continue
+        if not only and not args.force and sid in media: continue
+        todo.append(sp)
+    if args.limit:
+        todo = todo[:args.limit]
+    log(f"{len(todo)} Arten zu bearbeiten")
+    import threading
+    from concurrent.futures import ThreadPoolExecutor
+    lock = threading.Lock()
+
+    def work(sp, tmp):
+        sid = sp["id"]
+        ov = overrides.get(sid, {})
+        w = wd.get(sid, {})
+        rep = [f"\n## {sid} — {sp['lat']}"]
+        entry = {"clips": [], "img": None}
+        try:
+            picks, cands = choose(sp, w, ov)
+            rep[0] += f"  ({len(cands)} Kandidaten)"
+            for c in sorted(cands, key=lambda c: -score(c, sp['pref'], sp, c.get('wd')))[:8]:
+                rep.append(f"   cand {score(c, sp['pref'], sp, c.get('wd')):5.1f} {sorted(kinds_of(c))} {c.get('duration')}s  {c['title']}")
+            for n, info in enumerate(picks):
+                try:
+                    clip = make_clip(info, sid, n, tmp)
+                    entry["clips"].append(clip)
+                    rep.append(f"   PICK[{info['slot']}] {clip['dur']}s @{clip['from']}s {clip['fmin']}-{clip['fmax']}Hz  {info['title']}  | {info['artist']} | {info['license']}")
+                except Exception as e:
+                    rep.append(f"   FAIL clip {info['title']}: {e}")
+        except Exception as e:
+            rep.append(f"   FAIL audio search: {e}")
+        try:
+            entry["img"] = make_photo(sid, w, ov)
+            rep.append(f"   IMG {entry['img']['title']} tint={entry['img']['tint']} | {entry['img']['artist']}" if entry["img"] else "   IMG none")
+        except Exception as e:
+            rep.append(f"   FAIL img: {e}")
+        with lock:
             media[sid] = entry
+            report.extend(rep)
             json.dump(media, open(OUT_JSON, "w"), ensure_ascii=False, indent=1)
-    with open(REPORT, "a" if only else "w") as fh:
+        log(f"== {sid}: {len(entry['clips'])} Clips, Foto {'ja' if entry['img'] else 'nein'}")
+
+    with tempfile.TemporaryDirectory() as tmp:
+        with ThreadPoolExecutor(args.workers) as ex:
+            list(ex.map(lambda sp: work(sp, tmp), todo))
+    with open(REPORT, "a" if (only or args.limit) else "w") as fh:
         fh.write("\n".join(report) + "\n")
     missing = [s["id"] for s in species if not media.get(s["id"], {}).get("clips")]
     log("Fertig. Ohne Aufnahme:", missing)

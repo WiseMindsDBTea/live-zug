@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Vogelohr – Vogelstimmen in Deutschland, Österreich und der Schweiz</title>
+<meta name="description" content="Über 100 Vogelstimmen aus Deutschland, Österreich und der Schweiz – mit echten Aufnahmen, Stimmbildern, Merksprüchen, Kindermodus, Ohr-Training und Morgenchor.">
+<meta name="theme-color" content="#eef1eb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d161c" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Vogelohr">
+<meta property="og:title" content="Vogelohr – Vogelstimmen in D-A-CH">
+<meta property="og:description" content="Hören, sehen, erkennen: über 100 Vogelstimmen mit Stimmbild.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,650;1,6..72,400;1,6..72,500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt</a>
+
+<header class="top" id="top">
+  <a class="brand" href="#/" aria-label="Vogelohr – Startseite">
+    <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><use href="#i-mark"/></svg>
+    <span class="brand-name">Vogelohr</span>
+  </a>
+  <nav class="tabs" aria-label="Bereiche">
+    <a href="#/" data-tab="lexikon"><svg aria-hidden="true"><use href="#i-book"/></svg><span>Lexikon</span></a>
+    <a href="#/bestimmen" data-tab="bestimmen"><svg aria-hidden="true"><use href="#i-ear"/></svg><span>Bestimmen</span></a>
+    <a href="#/ueben" data-tab="ueben"><svg aria-hidden="true"><use href="#i-target"/></svg><span>Üben</span></a>
+    <a href="#/kinder" data-tab="kinder"><svg aria-hidden="true"><use href="#i-kid"/></svg><span>Kinder</span></a>
+    <a href="#/morgen" data-tab="morgen"><svg aria-hidden="true"><use href="#i-sun"/></svg><span>Morgenchor</span></a>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1"></main>
+
+<div class="player-bar" id="pbar" hidden>
+  <button class="pb-play" id="pbPlay" type="button" aria-label="Pause"><svg aria-hidden="true"><use href="#i-pause"/></svg></button>
+  <button class="pb-info" id="pbInfo" type="button"><span class="pb-name" id="pbName"></span><span class="pb-kind" id="pbKind"></span></button>
+  <div class="pb-spec spec" id="pbSpec" aria-hidden="true"><i class="spec-ink"></i><i class="spec-done"></i><i class="spec-head"></i></div>
+  <button class="pb-close" id="pbClose" type="button" aria-label="Wiedergabe beenden"><svg aria-hidden="true"><use href="#i-x"/></svg></button>
+</div>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheetTitle"><div class="sheet-scroll" id="sheetBody"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-mark" viewBox="0 0 40 40"><path d="M20 4a16 16 0 1 0 0 32" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M20 11a9 9 0 1 0 0 18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M24 13c3 1 6 3 9 3M24 20h11M24 27c3-1 6-3 9-3" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" fill="none"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5zM20 5.5c0-.8-.7-1.5-1.5-1.5H13v16h5.5c.8 0 1.5-.7 1.5-1.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-ear" viewBox="0 0 24 24"><path d="M7 9a5 5 0 0 1 10 0c0 3-3 4-3 7a3 3 0 0 1-5.5 1.6M10 9.5a2 2 0 0 1 4 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M20 6c1 1.5 1.5 3 1.5 4.5M3.5 10.5C3.5 9 4 7.5 5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="i-kid" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="9" cy="10.5" r="1.1" fill="currentColor"/><circle cx="15" cy="10.5" r="1.1" fill="currentColor"/><path d="M8.5 14.5c1.8 2 5.2 2 7 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><path d="M3 17h18M6.5 17a5.5 5.5 0 0 1 11 0M12 5v3M5.2 8.2l2 2M18.8 8.2l-2 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-slow" viewBox="0 0 24 24"><path d="M4 16c0-4 3-7 7-7s6 3 6 6v1H4zM17 13h2.5a1.5 1.5 0 0 0 0-3H18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M7 16v2M14 16v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-loop" viewBox="0 0 24 24"><path d="M4 12a6 6 0 0 1 6-6h8m-3-3 3 3-3 3M20 12a6 6 0 0 1-6 6H6m3 3-3-3 3-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 15V4m0 0L8 8m4-4 4 4M6 12v7h12v-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3.5" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M7 7h11m-3-3 3 3-3 3M17 17H6m3-3-3 3 3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M19 14.5A7.5 7.5 0 0 1 9.5 5a7.5 7.5 0 1 0 9.5 9.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.3" fill="currentColor"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 19.5h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<script src="data/birds.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
