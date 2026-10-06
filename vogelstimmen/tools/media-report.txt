@@ -1416,3 +1416,282 @@
    PICK[call] 17.94s @0.0s 1400-7900Hz  Loxia curvirostra - Red Crossbill XC468917.mp3  | Anthony Wetherhill | CC BY-SA 4.0
    PICK[song] 22.0s @42.4s 1400-7900Hz  Loxia curvirostra - Red Crossbill XC607257.mp3  | Kendall Wiggins | CC BY-SA 4.0
    IMG Cruza-bico comum, fêmea, Red Crossbill, female (51692602998).jpg tint=#9f9779 | Luiz Lapa from Oeiras, Portugal
+
+## haussperling — Passer domesticus  (31 Kandidaten)
+   cand  11.0 ['call', 'song'] 80.18392290249433s  House Sparrows (Passer domesticus) (W1CDR0001537 BD13).ogg
+   cand   9.0 ['song'] 11.284897959183674s  Passer domesticus - House Sparrow - XC86749.ogg
+   cand   9.0 ['song'] 35.417749351856386s  Passer domesticus - House Sparrow XC543237.mp3
+   cand   9.0 ['song'] 31.030197137762915s  Passer domesticus - House Sparrow XC508461.mp3
+   cand   9.0 ['call', 'song'] 11.3185625s  Passer domesticus - House Sparrow XC86749.mp3
+   cand   9.0 ['call', 'song'] 45.458625s  Passer domesticus - House Sparrow XC536388.mp3
+   cand   9.0 ['song'] 26.290375s  Passer domesticus - House Sparrow XC108385.mp3
+   cand   9.0 ['call', 'song'] 35.9918s  Passer domesticus - House Sparrow XC433157.mp3
+   PICK[song] 22.0s @55.7s 1000-7900Hz  House Sparrows (Passer domesticus) (W1CDR0001537 BD13).ogg  |  | CC BY-SA 4.0
+   PICK[call] 11.28s @0.0s 1000-7900Hz  Passer domesticus - House Sparrow XC86749.mp3  | Jonathon Jongsma | CC BY-SA 3.0
+   IMG House sparrow male in Prospect Park (53532).jpg tint=#a5aa78 | Rhododendrites
+
+## feldsperling — Passer montanus  (3 Kandidaten)
+   cand  12.0 ['call'] 11s  Passer montanus.ogg
+   cand   9.0 ['call', 'song'] 25.43871875s  Passer montanus - Eurasian Tree Sparrow XC347807.mp3
+   cand   9.0 ['call', 'song'] 16.1265s  Passer montanus - Eurasian Tree Sparrow XC347806.mp3
+   PICK[call] 11.0s @0.0s 1000-7900Hz  Passer montanus.ogg  | Vladimir Yu. Arkhipov, Arkhivov | CC BY-SA 3.0
+   PICK[song] 22.0s @2.1s 1000-7900Hz  Passer montanus - Eurasian Tree Sparrow XC347807.mp3  | Derek Paulo | CC BY-SA 4.0
+   IMG Eurasian Tree Sparrow.jpg tint=#93ad71 | Yiwenyiwen
+
+## eichelhaeher — Garrulus glandarius  (22 Kandidaten)
+   cand  12.0 ['call'] 12.716166666666666s  Garrulus glandarius iphigenia.ogg
+   cand   9.0 ['call', 'song'] 31.90301877613099s  Garrulus glandarius - Eurasian Jay XC461843.mp3
+   cand   9.0 ['call', 'song'] 33.86145s  Garrulus glandarius - Eurasian Jay XC493584.mp3
+   cand   9.0 ['call', 'song'] 9.656s  Garrulus glandarius - Eurasian Jay XC401554.mp3
+   cand   9.0 ['call', 'song'] 32.73716666666667s  Garrulus glandarius - Eurasian Jay XC206059.mp3
+   cand   9.0 ['call', 'song'] 56.64390853288597s  Garrulus glandarius - Eurasian Jay XC395872.mp3
+   cand   9.0 ['call', 'song'] 60.09805s  Garrulus glandarius - Eurasian Jay XC334851.mp3
+   cand   9.0 ['call', 'song'] 17.169264091365797s  Garrulus glandarius - Eurasian Jay XC538961.mp3
+   PICK[call] 12.72s @0.0s 200-6800Hz  Garrulus glandarius iphigenia.ogg  | Vladimir Yu. Arkhipov, Arkhivov | CC BY-SA 3.0
+   PICK[song] 22.0s @9.4s 200-6800Hz  Garrulus glandarius - Eurasian Jay XC461843.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   IMG Garrulus glandarius 1 Luc Viatour.jpg tint=#616949 | Luc Viatour
+
+## star — Sturnus vulgaris  (15 Kandidaten)
+   cand   9.0 ['song'] 13.526625s  Sturnus vulgaris - Common Starling XC516954.mp3
+   cand   9.0 ['call', 'song'] 72.74761946751131s  Sturnus vulgaris - Common Starling XC473248.mp3
+   cand   9.0 ['song'] 36.952340630347976s  Sturnus vulgaris - Common Starling XC527723.mp3
+   cand   9.0 ['call', 'song'] 35.3486s  Sturnus vulgaris - Common Starling XC483803.mp3
+   cand   9.0 ['song', 'wings'] 28.89198743066493s  Sturnus vulgaris - Common Starling XC474427.mp3
+   cand   9.0 ['call', 'song'] 21.245743761285603s  Sturnus vulgaris - Common Starling XC401497.mp3
+   cand   9.0 ['call', 'song'] 34.964875s  Sturnus vulgaris - Common Starling XC478095.mp3
+   cand   9.0 ['call', 'song'] 9.624059553349875s  Sturnus vulgaris - Common Starling XC503745.mp3
+   PICK[song] 13.47s @0.0s 700-10100Hz  Sturnus vulgaris - Common Starling XC516954.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   PICK[call] 22.0s @10.7s 700-10100Hz  Common Starling (Sturnus vulgaris) (W1CDR0001431 BD8).ogg  |  | CC BY-SA 4.0
+   IMG Common Starling, Blyth (12598795653).jpg tint=#5e654d | marsupium photography
+
+## elster — Pica pica  (37 Kandidaten)
+   cand  11.0 ['call'] 91.33820861678005s  Eurasian Magpie (Pica pica) (W1CDR0001537 BD28).ogg
+   cand   9.0 ['call', 'song'] 52.24883333333333s  Pica pica - Eurasian Magpie XC537413.mp3
+   cand   9.0 ['call', 'song'] 108.453825s  Pica pica - Eurasian Magpie XC551758.mp3
+   cand   9.0 ['call', 'song'] 107.726025s  Pica pica - Eurasian Magpie XC432921.mp3
+   cand   9.0 ['call', 'crow', 'song'] 72.311325s  Pica pica - Eurasian Magpie XC475651.mp3
+   cand   7.5 ['call', 'song'] 211.534875s  Pica pica - Eurasian Magpie XC478076.mp3
+   cand   6.0 [] 26.456281179138323s  Pica pica.ogg
+   cand   3.0 [] 13.742520833333334s  Pica pica-2015-6-12-part2.flac
+   PICK[call] 22.0s @5.8s 300-7900Hz  Eurasian Magpie (Pica pica) (W1CDR0001537 BD28).ogg  |  | CC BY-SA 4.0
+   PICK[song] 22.0s @29.8s 300-7900Hz  Pica pica - Eurasian Magpie XC537413.mp3  | Benoît Van Hecke | CC BY-SA 4.0
+   IMG Eurasian magpie 2024 03 03 02.jpg tint=#a5a39f | Alexis Lours
+
+## tannenhaeher — Nucifraga caryocatactes  (6 Kandidaten)
+   cand  11.5 ['call'] 22.59591836734694s  XC249299-2015-05-31 05-38 NUC CAR.ogg
+   cand  10.5 ['call', 'song'] 7.226275s  Nucifraga caryocatactes - Spotted Nutcracker XC441534.mp3
+   cand   9.0 ['call', 'song'] 9.8375s  Nucifraga caryocatactes - Spotted Nutcracker XC503399.mp3
+   cand   9.0 ['call', 'song', 'wings'] 22.61925s  Nucifraga caryocatactes - Spotted Nutcracker XC249299.mp3
+   cand   7.5 ['call', 'song'] 7.940925s  Nucifraga caryocatactes - Spotted Nutcracker XC496673.mp3
+   cand  -3.0 [] 2.05s  De-Tannenhäher.ogg
+   PICK[call] 22.6s @0.0s 200-5700Hz  XC249299-2015-05-31 05-38 NUC CAR.ogg  | Zdeněk Vermouzek | CC BY-SA 4.0
+   PICK[song] 7.17s @0.0s 200-5700Hz  Nucifraga caryocatactes - Spotted Nutcracker XC441534.mp3  | Alexander Kürthy | CC BY-SA 4.0
+   IMG Nucifraga caryocatactes, Kotka, Finland 1.jpg tint=#909789 | Jyrki Salmi from Finland
+
+## saatkraehe — Corvus frugilegus  (5 Kandidaten)
+   cand   7.0 ['call'] 104.62764583333333s  Rooks in rookery and nests sounds.wav
+   cand   6.0 [] 21.441020833333333s  Corvus frugilegus.ogg
+   cand   1.5 [] 4.979166666666667s  Грач в Лаздинае.ogg
+   cand   1.5 [] 5.3841269841269845s  INaturalist observation-242592774 sound-1204664.wav
+   cand  -3.0 [] 2.15s  De-Saatkrähe.ogg
+   PICK[call] 22.0s @55.1s 200-4500Hz  Rooks in rookery and nests sounds.wav  | Alwayswonder | CC BY-SA 4.0
+   IMG Corvus frugilegus -Dartmoor, Devon, England-8.jpg tint=#8e9974 | Brian Snelson from Hockley, Essex, England
+
+## rabenkraehe — Corvus corone  (41 Kandidaten)
+   cand  11.0 ['call', 'crow'] 24.934943310657598s  Carrion Crow (Corvus corone) (W1CDR0001425 BD18).ogg
+   cand   9.0 ['call', 'crow', 'song'] 12.23975s  Corvus corone - Carrion Crow XC491082.mp3
+   cand   9.0 ['call', 'crow', 'song'] 32.55221791203404s  Corvus corone - Carrion Crow XC463677.mp3
+   cand   9.0 ['call', 'crow', 'song'] 8.206925s  Corvus corone - Carrion Crow XC509841.mp3
+   cand   9.0 ['call', 'crow', 'song'] 14.347434336306055s  Corvus corone - Carrion Crow XC463048.mp3
+   cand   9.0 ['call', 'crow', 'song'] 94.451625s  Corvus corone - Carrion Crow XC533764.mp3
+   cand   9.0 ['call', 'crow', 'song'] 11.637525s  Corvus corone - Carrion Crow XC511133.mp3
+   cand   9.0 ['call', 'crow', 'song'] 29.42062005205697s  Corvus corone - Carrion Crow XC461190.mp3
+   PICK[call] 22.0s @1.9s 200-4500Hz  Carrion Crow (Corvus corone) (W1CDR0001425 BD18).ogg  |  | CC BY-SA 4.0
+   PICK[song] 12.17s @0.0s 200-4500Hz  Corvus corone - Carrion Crow XC491082.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   IMG Carrion crow 2022 04 05 05 02.jpg tint=#a99f85 | Alexis Lours
+
+## kolkrabe — Corvus corax  (12 Kandidaten)
+   cand  12.0 ['call', 'song'] 82.49469387755101s  Corvus corax - Northern Raven - XC110257.ogg
+   cand  11.0 ['call'] 102.75371882086168s  Common Raven (Corvus corax) (W1CDR0001449 BD6).ogg
+   cand   9.0 ['call', 'wings'] 12.604s  Yellowstone sound library - Common Raven - 001.mp3
+   cand   9.0 ['call', 'song', 'wings'] 13.414625s  Corvus corax - Northern Raven XC101590.mp3
+   cand   9.0 ['call', 'song', 'wings'] 31.7515s  Corvus corax - Northern Raven XC496700.mp3
+   cand   9.0 ['call', 'song'] 47.313174889815336s  Corvus corax - Northern Raven XC488951.mp3
+   cand   9.0 ['call', 'song', 'wings'] 55.32s  Corvus corax - Northern Raven XC139573.ogg
+   cand   7.5 ['call'] 5.7011111111111115s  Common Raven Grand Teton National Park.ogg
+   PICK[call] 22.0s @1.4s 100-3400Hz  Corvus corax - Northern Raven - XC110257.ogg  | Jonathon Jongsma | CC BY-SA 3.0
+   PICK[song] 13.37s @0.0s 100-3400Hz  Corvus corax - Northern Raven XC101590.mp3  | Jonathon Jongsma | CC BY-SA 3.0
+   IMG Corvus corax ad berlin 090516.jpg tint=#a2a382 | Accipiter (R. Altenkamp, Berlin)
+
+## ringeltaube — Columba palumbus  (7 Kandidaten)
+   cand  12.0 ['song'] 11.634875283446712s  Columba palumbus birdsong.ogg
+   cand   9.0 ['song'] 102.710675s  Columba palumbus - Common Wood Pigeon XC561877.mp3
+   cand   9.0 ['song'] 60.1445s  Columba palumbus - Common Wood Pigeon XC108354.mp3
+   cand   1.5 [] 149.54666666666665s  Pigeon Preening.opus
+   cand   1.5 ['call'] 8.620354166666667s  Ringeltaube (ruft).ogg
+   cand  -3.0 [] 2.21s  De-Ringeltaube.ogg
+   cand  -4.5 ['call'] 3.1346938775510202s  Wood pigeon call 128.ogg
+   PICK[song] 11.63s @0.0s 100-1200Hz  Columba palumbus birdsong.ogg  | Oona Räisänen (Mysid) | Public domain
+   PICK[call] 8.62s @0.0s 100-1200Hz  Ringeltaube (ruft).ogg  | Sleepytomcat (Jens Kraglund) | Public domain
+   IMG Columba palumbus ssp. palumbus.jpg tint=#638b28 | Don Loarie
+
+## dohle — Coloeus monedula  (8 Kandidaten)
+   cand   9.0 ['call'] 13.08734693877551s  Corvus monedula calls.ogg
+   cand   9.0 ['call'] 10.29595s  Jackdaws (Coloeus monedula) calling - Bærum, Norway 2021-04-03 (01).mp3
+   cand   7.5 ['call', 'song'] 168.582775s  Coloeus monedula - Western Jackdaw XC436939.mp3
+   cand   6.0 [] 16.728s  European Jackdaw's croaking.ogg
+   cand   1.5 [] 6.4s  Jer-p'tite caûvette.ogg
+   cand   1.5 [] 151.008s  Kauwenslaapplaats - SoundCloud - luc de bruijn.ogg
+   cand  -3.0 [] 1.46s  De-Dohle2.ogg
+   cand  -3.0 [] 0.705125s  De-Dohle.ogg
+   PICK[call] 13.09s @0.0s 300-5700Hz  Corvus monedula calls.ogg  | Veljo Runnel | CC BY-SA 4.0
+   PICK[song] 22.0s @75.4s 300-5700Hz  Coloeus monedula - Western Jackdaw XC436939.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   IMG Corvus monedula-0002.jpg tint=#a0a3a5 | User:MatthiasKabel
+
+## tuerkentaube — Streptopelia decaocto  (8 Kandidaten)
+   cand   9.0 ['song'] 13.972879818594103s  Streptopelia decaocto - Eurasian Collared Dove - XC82758.ogg
+   cand   9.0 ['song'] 14.028702297169897s  Streptopelia decaocto - Eurasian Collared Dove XC82758.mp3
+   cand   9.0 ['call', 'song', 'wings'] 103.95845833333334s  Sonus naturalis - Soundscape XC254830.mp3
+   cand   9.0 ['song'] 14.027755102040816s  JMJ-20110703-070858-000380-USA-IA-DordtPrairie-MODO.ogg
+   cand   7.5 ['song'] 5.462539682539682s  Chant Tourterelle Turque domestiquée (Siffli).wav
+   cand   7.5 ['call', 'song'] 174.86367346938775s  Réveil des oiseaux.ogg
+   cand   6.0 [] 9.586875s  Кольчатая Горлица.ogg
+   cand   3.0 [] 9.552s  Tourterelle.ogg
+   PICK[song] 13.97s @0.0s 100-1200Hz  Streptopelia decaocto - Eurasian Collared Dove - XC82758.ogg  | Jonathon Jongsma | CC BY-SA 3.0
+   PICK[call] 22.0s @67.2s 100-1200Hz  Sonus naturalis - Soundscape XC254830.mp3  | Nikos Demetriou | CC BY-SA 4.0
+   IMG Streptopelia decaocto, Hărman, România (34881606270).jpg tint=#95987a | xulescu_g
+
+## alpendohle — Pyrrhocorax graculus  (6 Kandidaten)
+   cand   9.0 ['call', 'song', 'wings'] 19.4129s  Pyrrhocorax graculus - Alpine Chough XC496675.mp3
+   cand   9.0 ['call', 'song'] 43.142325s  Pyrrhocorax graculus - Alpine Chough XC589717.mp3
+   cand   9.0 ['call', 'song'] 68.51654166666667s  Pyrrhocorax graculus - Alpine Chough XC482782.mp3
+   cand   7.5 ['call', 'song'] 5.13695s  Pyrrhocorax graculus - Alpine Chough XC496698.mp3
+   cand   3.0 ['call', 'song', 'wings'] 2.99705s  Pyrrhocorax graculus - Alpine Chough XC496677.mp3
+   cand  -3.0 [] 1.98s  De-Alpendohle.ogg
+   PICK[call] 19.35s @0.0s 1000-7900Hz  Pyrrhocorax graculus - Alpine Chough XC496675.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   PICK[song] 22.0s @20.7s 1000-7900Hz  Pyrrhocorax graculus - Alpine Chough XC589717.mp3  | Pascal Christe | CC BY-SA 4.0
+   IMG Alpine Chough.jpg tint=#9ba465 | Pethan
+
+## strassentaube — Columba livia  (7 Kandidaten)
+   cand   9.0 ['call', 'song'] 28.884975s  Columba livia - Rock Dove XC541143.mp3
+   cand   9.0 ['call', 'song'] 38.73415s  Columba livia - Rock Dove XC539061.mp3
+   cand   3.0 [] 46.734920634920634s  Сизый Голубь.ogg
+   cand  -3.0 [] 1.8s  De-Haustaube.ogg
+   cand  -3.0 [] 0.9413333333333334s  LL-Q1860 (eng)-Persent101-rock dove.wav
+   cand  -3.8 [] 1711.104s  Palomar-eva2007-Columba livia8hz8btmono.ogg
+   cand  -4.0 [] 1715.3277097505668s  Palomar-eva2007-Columba livia.ogg
+   PICK[song] 22.0s @0.0s 100-1200Hz  Columba livia - Rock Dove XC541143.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   PICK[call] 22.0s @0.0s 100-1200Hz  Columba livia - Rock Dove XC539061.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   IMG Columba livia (Rock Dove, wild), Duncansby Head, Caithness, Scotland 1.jpg tint=#88806b | william_stephens
+
+## kuckuck — Cuculus canorus  (18 Kandidaten)
+   cand  11.0 ['song'] 40.34718820861678s  Common Cuckoo (Cuculus canorus) (W1CDR0001463 BD1).ogg
+   cand   9.0 ['song'] 21.04093111540644s  Cuculus canorus - Common Cuckoo XC552150.mp3
+   cand   9.0 ['song'] 24.096375s  Cuculus canorus - Common Cuckoo XC84060.mp3
+   cand   9.0 ['song'] 56.101250436730126s  Cuculus canorus - Common Cuckoo XC546155.mp3
+   cand   9.0 ['song'] 75.886797732112s  Cuculus canorus - Common Cuckoo XC457076.mp3
+   cand   9.0 ['song'] 39.13161009538951s  Cuculus canorus - Common Cuckoo XC554785.mp3
+   cand   9.0 ['call', 'song'] 18.09165s  Cuculus canorus - Common Cuckoo XC108332.mp3
+   cand   9.0 ['song'] 22.60774323237738s  Cuculus canorus - Common Cuckoo XC542432.mp3
+   PICK[song] 22.0s @1.9s 200-1600Hz  Common Cuckoo (Cuculus canorus) (W1CDR0001463 BD1).ogg  |  | CC BY-SA 4.0
+   PICK[call] 18.02s @0.0s 200-1600Hz  Cuculus canorus - Common Cuckoo XC108332.mp3  | Alexander Kurthy | CC BY-SA 4.0
+   IMG Cuculus canorus vogelartinfo chris romeiks CHR0791 cropped.jpg tint=#93aac7 | Cuculus_canorus_vogelartinfo_chris_romeiks_CHR0791.jpg: Vogelartinfo derivative work: Bogbumper (talk)
+
+## turteltaube — Streptopelia turtur  (4 Kandidaten)
+   cand  10.5 ['song'] 146.18540031954186s  Streptopelia turtur - European Turtle Dove XC582028.mp3
+   cand   9.0 ['song'] 20.4739s  Streptopelia turtur - European Turtle Dove XC481626.mp3
+   cand   0.5 ['call'] 88.0575283446712s  European Turtle Dove (Streptopelia turtur) (W STREPTOPELIA TURTUR R2 C3).ogg
+   cand  -3.0 [] 3.064875283446712s  Cukrů, cukrů.ogg
+   PICK[song] 22.0s @121.2s 200-1200Hz  Streptopelia turtur - European Turtle Dove XC582028.mp3  | Benoît Van Hecke | CC BY-SA 4.0
+   PICK[call] 22.0s @13.2s 200-1200Hz  European Turtle Dove (Streptopelia turtur) (W STREPTOPELIA TURTUR R2 C3).ogg  |  | CC BY 4.0
+   IMG European Turtle Dove (Streptopelia turtur).jpg tint=#6e6f5d | Yuvalr
+
+## mauersegler — Apus apus  (6 Kandidaten)
+   cand  12.0 ['call'] 19.11453514739229s  Mauersegler.ogg
+   cand   9.0 ['call', 'song', 'wings'] 10.233720275249423s  Apus apus - Common Swift XC554033.mp3
+   cand   3.0 [] 36.2368125s  Jerzyki głosy ze skrzynki lęgowej; Apus Apus; common swift's voice inside the nesting box.ogg
+   cand   1.5 [] 4.8125s  Чёрные стрижи в Лаздинае.ogg
+   cand   1.5 [] 4.3s  Jer-héthonde dé falaise.ogg
+   cand  -3.0 [] 1.1261678004535147s  De-Mauersegler.ogg
+   PICK[call] 19.03s @0.0s 2100-11000Hz  Mauersegler.ogg  | Jugrü | CC BY-SA 3.0
+   PICK[song] 10.18s @0.0s 2100-11000Hz  Apus apus - Common Swift XC554033.mp3  | Luis Alvarez Menendez | CC BY-SA 4.0
+   IMG Common Swift 2025 07 18 02 (cropped).jpg tint=#aaa59f | Alexis Lours
+
+## rauchschwalbe — Hirundo rustica  (14 Kandidaten)
+   cand  12.0 ['song'] 18.546938775510203s  Hirundo rustica - Barn Swallow - XC83449.ogg
+   cand   9.0 ['song'] 18.578559575017664s  Hirundo rustica - Barn Swallow XC83449.mp3
+   cand   9.0 ['call', 'song', 'wings'] 18.000225s  Hirundo rustica - Barn Swallow XC492101.mp3
+   cand   9.0 ['song'] 18.573061224489795s  JMJ-20110717-070140-000392-USA-MN-OldCedar-BARS.ogg
+   cand   9.0 ['call', 'song', 'wings'] 40.808625s  Hirundo rustica - Barn Swallow XC422028.mp3
+   cand   9.0 ['call', 'song'] 78.9845s  Hirundo rustica - Barn Swallow XC492100.mp3
+   cand   9.0 ['call', 'song', 'wings'] 44.825272310398134s  Hirundo rustica - Barn Swallow XC474135.mp3
+   cand   9.0 ['call', 'song'] 37.774625s  Hirundo rustica - Barn Swallow XC492099.mp3
+   PICK[song] 18.55s @0.0s 1400-10100Hz  Hirundo rustica - Barn Swallow - XC83449.ogg  | Jonathon Jongsma | CC BY-SA 3.0
+   PICK[call] 17.94s @0.0s 1400-10100Hz  Hirundo rustica - Barn Swallow XC492101.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   IMG Barn Swallow (95504589).jpeg tint=#c3af8d | Morhaf Aljanee
+
+## gebirgsstelze — Motacilla cinerea  (4 Kandidaten)
+   cand  10.5 ['call', 'song', 'wings'] 4.608979166666667s  Motacilla cinerea - Grey Wagtail XC128136.ogg
+   cand   9.0 ['call', 'song'] 22.61085s  Motacilla cinerea - Grey Wagtail XC596811.mp3
+   cand   3.0 [] 11.718843537414966s  Motacilla cinerea in Sant Cugat del Valles 20220212.ogg
+   cand   1.5 [] 215.76s  Grote gele kwikstaart in Utrecht - SoundCloud - luc de bruijn.ogg
+   PICK[call] 4.61s @0.0s 2100-11000Hz  Motacilla cinerea - Grey Wagtail XC128136.ogg  | Sudipto Roy | CC BY-SA 3.0
+   PICK[song] 22.6s @0.0s 2100-11000Hz  Motacilla cinerea - Grey Wagtail XC596811.mp3  | Pascal Christe | CC BY-SA 4.0
+   IMG Grey Wagtail Motacilla cinerea (39682090233).jpg tint=#756947 | gailhampshire from Cradley, Malvern, U.K
+
+## mehlschwalbe — Delichon urbicum  (4 Kandidaten)
+   cand  12.0 ['call'] 27.40244897959184s  Delichon urbicum contact call.ogg
+   cand   0.5 ['song'] 32.38947845804989s  Common House Martin (Delichon urbica) (W DELICHON URBICA R3 C3).ogg
+   cand  -3.0 [] 1.93s  De-Mehlschwalbe.ogg
+   cand  -3.0 [] 1.9s  Jer-blianche héthonde.ogg
+   PICK[call] 22.0s @4.9s 1400-9000Hz  Delichon urbicum contact call.ogg  | This image is created by user Justin Jansen at Waarneming.nl, a source of nature observations in the Netherlands. | CC BY 3.0
+   PICK[song] 22.0s @8.7s 1400-9000Hz  Common House Martin (Delichon urbica) (W DELICHON URBICA R3 C3).ogg  |  | CC BY 4.0
+   IMG Delichon urbica.jpg tint=#787462 | MPF
+
+## feldlerche — Alauda arvensis  (7 Kandidaten)
+   cand  11.0 ['song'] 48.340657596371884s  Eurasian Skylark (Alauda arvensis) (W1CDR0001421 BD2).ogg
+   cand   9.0 ['song'] 92.315375s  Alauda arvensis - Eurasian Skylark XC482777.mp3
+   cand   9.0 ['song', 'wings'] 35.059575s  Alauda arvensis - Eurasian Skylark XC484052.mp3
+   cand   9.0 ['song', 'wings'] 35.514625s  Alauda arvensis - Eurasian Skylark XC423566.mp3
+   cand   7.5 ['call', 'song', 'wings'] 6.347357014231163s  Alauda arvensis - Eurasian Skylark XC528350.mp3
+   cand   6.0 [] 54.03013605442177s  XN Alauda arvensis.ogg
+   cand   1.5 [] 121.64401774273041s  Skowronek-Wroclaw-2019-05-20-01h06.mp3
+   PICK[song] 22.0s @8.8s 1400-9600Hz  Eurasian Skylark (Alauda arvensis) (W1CDR0001421 BD2).ogg  |  | CC BY-SA 4.0
+   PICK[call] 6.31s @0.0s 1400-9600Hz  Alauda arvensis - Eurasian Skylark XC528350.mp3  | Jens Loose | CC BY-SA 4.0
+   IMG Alouette des champs Zaghouan001.jpg tint=#8d9a7b | El Golli Mohamed
+
+## bachstelze — Motacilla alba  (5 Kandidaten)
+   cand   9.0 ['call', 'song'] 26.8109375s  Motacilla alba - White Wagtail XC466458.mp3
+   cand   9.0 ['call', 'song'] 22.778376885729628s  Motacilla alba - White Wagtail XC501786.mp3
+   cand  -3.0 [] 1.85s  Jer-craûlant-tchu.ogg
+   cand  -3.0 [] 1.67s  De-Bachstelze.ogg
+   cand  -3.0 [] 2.55s  Jer-gliaineux.ogg
+   PICK[call] 22.0s @0.0s 1700-10100Hz  Motacilla alba - White Wagtail XC466458.mp3  | Pascal Christe | CC BY-SA 4.0
+   PICK[song] 22.75s @0.0s 1700-10100Hz  Motacilla alba - White Wagtail XC501786.mp3  | Hannu Varkki | CC BY-SA 4.0
+   IMG 20180415 015 Winterswijk Witte kwikstaart (40785272624).jpg tint=#86a063 | Jac. Janssen from BAARLO LB, NL
+
+## fitis — Phylloscopus trochilus  (13 Kandidaten)
+   cand  12.0 ['song'] 21.81142857142857s  Phylloscopus trochilus acredula.ogg
+   cand  11.0 ['song'] 68.48106575963719s  Willow Warbler (Phylloscopus trochilus) (W1CDR0001510 BD23).ogg
+   cand   9.0 ['song'] 57.77097827815465s  Phylloscopus trochilus - Willow Warbler XC552124.mp3
+   cand   9.0 ['call', 'song'] 17.115148603734383s  Phylloscopus trochilus - Willow Warbler XC489914.mp3
+   cand   9.0 ['call', 'song'] 66.623325s  Phylloscopus trochilus - Willow Warbler XC494148.mp3
+   cand   9.0 ['song'] 44.7539s  Phylloscopus trochilus - Willow Warbler XC176339.mp3
+   cand   9.0 ['song'] 14.613187848862898s  Phylloscopus trochilus - Willow Warbler XC468919.mp3
+   cand   9.0 ['song'] 19.06136054421769s  SongPhylloscopusTrochilusPhylloscopusCollybita.ogg
+   PICK[song] 21.81s @0.0s 1700-8400Hz  Phylloscopus trochilus acredula.ogg  | Vladimir Yu. Arkhipov, Arkhivov | CC BY-SA 3.0
+   PICK[call] 9.83s @0.0s 1700-8400Hz  OsloPhylloscopus.ogg  | L. Shyamal | CC BY 3.0
+   IMG Willow Warbler Phylloscopus trochilus.jpg tint=#93a7b7 | Andreas Trepte
+
+## zilpzalp — Phylloscopus collybita  (33 Kandidaten)
+   cand  12.0 ['song'] 25.376462585034012s  Phylloscopus collybita.ogg
+   cand  11.5 ['song'] 43.032s  XC171718-file0292 Zaunammer-gesang.wav
+   cand  11.0 ['song'] 45.362698412698414s  Chiffchaff (Phylloscopus collybita) (W1CDR0001497 BD9).ogg
+   cand   9.0 ['song'] 37.015510204081636s  Phylloscopus collybita - Common Chiffchaff XC125415.ogg
+   cand   9.0 ['call', 'song'] 47.297825s  Phylloscopus collybita - Common Chiffchaff XC384000.mp3
+   cand   9.0 ['song'] 22.02122448979592s  Phylloscopus collybita - Common Chiffchaff XC125867.ogg
+   cand   9.0 ['call', 'song'] 97.07553921460577s  Phylloscopus collybita - Common Chiffchaff XC469431.mp3
+   cand   9.0 ['call', 'song'] 43.1745s  Phylloscopus collybita - Common Chiffchaff XC492403.mp3
+   PICK[song] 22.0s @1.9s 2100-8400Hz  Phylloscopus collybita.ogg  | Oona Räisänen (Mysid) | Public domain
+   PICK[call] 22.0s @0.0s 2100-8400Hz  Phylloscopus collybita - Common Chiffchaff XC384000.mp3  | Jan Cibulka | CC BY-SA 4.0
+   IMG Common Chiffchaff 2025 04 04 01.jpg tint=#a08764 | Alexis Lours

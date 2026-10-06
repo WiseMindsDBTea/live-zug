@@ -982,5 +982,976 @@
    "page": "https://commons.wikimedia.org/wiki/File:Cruza-bico_comum,_f%C3%AAmea,_Red_Crossbill,_female_(51692602998).jpg",
    "title": "Cruza-bico comum, fêmea, Red Crossbill, female (51692602998).jpg"
   }
+ },
+ "haussperling": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/haussperling-0.mp3",
+    "spec": "media/s/haussperling-0.webp",
+    "dur": 22.0,
+    "fmin": 1000,
+    "fmax": 7900,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:House_Sparrows_(Passer_domesticus)_(W1CDR0001537_BD13).ogg",
+    "title": "House Sparrows (Passer domesticus) (W1CDR0001537 BD13).ogg",
+    "from": 55.7
+   },
+   {
+    "kind": "call",
+    "src": "media/a/haussperling-1.mp3",
+    "spec": "media/s/haussperling-1.webp",
+    "dur": 11.28,
+    "fmin": 1000,
+    "fmax": 7900,
+    "artist": "Jonathon Jongsma",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Passer_domesticus_-_House_Sparrow_XC86749.mp3",
+    "title": "Passer domesticus - House Sparrow XC86749.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/haussperling.webp",
+   "thumb": "media/p/haussperling-s.webp",
+   "w": 960,
+   "h": 746,
+   "tint": "#a5aa78",
+   "artist": "Rhododendrites",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:House_sparrow_male_in_Prospect_Park_(53532).jpg",
+   "title": "House sparrow male in Prospect Park (53532).jpg"
+  }
+ },
+ "feldsperling": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/feldsperling-0.mp3",
+    "spec": "media/s/feldsperling-0.webp",
+    "dur": 11.0,
+    "fmin": 1000,
+    "fmax": 7900,
+    "artist": "Vladimir Yu. Arkhipov, Arkhivov",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Passer_montanus.ogg",
+    "title": "Passer montanus.ogg",
+    "from": 0.0
+   },
+   {
+    "kind": "song",
+    "src": "media/a/feldsperling-1.mp3",
+    "spec": "media/s/feldsperling-1.webp",
+    "dur": 22.0,
+    "fmin": 1000,
+    "fmax": 7900,
+    "artist": "Derek Paulo",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Passer_montanus_-_Eurasian_Tree_Sparrow_XC347807.mp3",
+    "title": "Passer montanus - Eurasian Tree Sparrow XC347807.mp3",
+    "from": 2.1
+   }
+  ],
+  "img": {
+   "src": "media/p/feldsperling.webp",
+   "thumb": "media/p/feldsperling-s.webp",
+   "w": 960,
+   "h": 641,
+   "tint": "#93ad71",
+   "artist": "Yiwenyiwen",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Eurasian_Tree_Sparrow.jpg",
+   "title": "Eurasian Tree Sparrow.jpg"
+  }
+ },
+ "eichelhaeher": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/eichelhaeher-0.mp3",
+    "spec": "media/s/eichelhaeher-0.webp",
+    "dur": 12.72,
+    "fmin": 200,
+    "fmax": 6800,
+    "artist": "Vladimir Yu. Arkhipov, Arkhivov",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Garrulus_glandarius_iphigenia.ogg",
+    "title": "Garrulus glandarius iphigenia.ogg",
+    "from": 0.0
+   },
+   {
+    "kind": "song",
+    "src": "media/a/eichelhaeher-1.mp3",
+    "spec": "media/s/eichelhaeher-1.webp",
+    "dur": 22.0,
+    "fmin": 200,
+    "fmax": 6800,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Garrulus_glandarius_-_Eurasian_Jay_XC461843.mp3",
+    "title": "Garrulus glandarius - Eurasian Jay XC461843.mp3",
+    "from": 9.4
+   }
+  ],
+  "img": {
+   "src": "media/p/eichelhaeher.webp",
+   "thumb": "media/p/eichelhaeher-s.webp",
+   "w": 960,
+   "h": 656,
+   "tint": "#616949",
+   "artist": "Luc Viatour",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Garrulus_glandarius_1_Luc_Viatour.jpg",
+   "title": "Garrulus glandarius 1 Luc Viatour.jpg"
+  }
+ },
+ "star": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/star-0.mp3",
+    "spec": "media/s/star-0.webp",
+    "dur": 13.47,
+    "fmin": 700,
+    "fmax": 10100,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sturnus_vulgaris_-_Common_Starling_XC516954.mp3",
+    "title": "Sturnus vulgaris - Common Starling XC516954.mp3",
+    "from": 0.0
+   },
+   {
+    "kind": "call",
+    "src": "media/a/star-1.mp3",
+    "spec": "media/s/star-1.webp",
+    "dur": 22.0,
+    "fmin": 700,
+    "fmax": 10100,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Common_Starling_(Sturnus_vulgaris)_(W1CDR0001431_BD8).ogg",
+    "title": "Common Starling (Sturnus vulgaris) (W1CDR0001431 BD8).ogg",
+    "from": 10.7
+   }
+  ],
+  "img": {
+   "src": "media/p/star.webp",
+   "thumb": "media/p/star-s.webp",
+   "w": 960,
+   "h": 640,
+   "tint": "#5e654d",
+   "artist": "marsupium photography",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Common_Starling,_Blyth_(12598795653).jpg",
+   "title": "Common Starling, Blyth (12598795653).jpg"
+  }
+ },
+ "elster": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/elster-0.mp3",
+    "spec": "media/s/elster-0.webp",
+    "dur": 22.0,
+    "fmin": 300,
+    "fmax": 7900,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_(Pica_pica)_(W1CDR0001537_BD28).ogg",
+    "title": "Eurasian Magpie (Pica pica) (W1CDR0001537 BD28).ogg",
+    "from": 5.8
+   },
+   {
+    "kind": "song",
+    "src": "media/a/elster-1.mp3",
+    "spec": "media/s/elster-1.webp",
+    "dur": 22.0,
+    "fmin": 300,
+    "fmax": 7900,
+    "artist": "Benoît Van Hecke",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Pica_pica_-_Eurasian_Magpie_XC537413.mp3",
+    "title": "Pica pica - Eurasian Magpie XC537413.mp3",
+    "from": 29.8
+   }
+  ],
+  "img": {
+   "src": "media/p/elster.webp",
+   "thumb": "media/p/elster-s.webp",
+   "w": 960,
+   "h": 640,
+   "tint": "#a5a39f",
+   "artist": "Alexis Lours",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Eurasian_magpie_2024_03_03_02.jpg",
+   "title": "Eurasian magpie 2024 03 03 02.jpg"
+  }
+ },
+ "tannenhaeher": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/tannenhaeher-0.mp3",
+    "spec": "media/s/tannenhaeher-0.webp",
+    "dur": 22.6,
+    "fmin": 200,
+    "fmax": 5700,
+    "artist": "Zdeněk Vermouzek",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:XC249299-2015-05-31_05-38_NUC_CAR.ogg",
+    "title": "XC249299-2015-05-31 05-38 NUC CAR.ogg",
+    "from": 0.0
+   },
+   {
+    "kind": "song",
+    "src": "media/a/tannenhaeher-1.mp3",
+    "spec": "media/s/tannenhaeher-1.webp",
+    "dur": 7.17,
+    "fmin": 200,
+    "fmax": 5700,
+    "artist": "Alexander Kürthy",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Nucifraga_caryocatactes_-_Spotted_Nutcracker_XC441534.mp3",
+    "title": "Nucifraga caryocatactes - Spotted Nutcracker XC441534.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/tannenhaeher.webp",
+   "thumb": "media/p/tannenhaeher-s.webp",
+   "w": 960,
+   "h": 641,
+   "tint": "#909789",
+   "artist": "Jyrki Salmi from Finland",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Nucifraga_caryocatactes,_Kotka,_Finland_1.jpg",
+   "title": "Nucifraga caryocatactes, Kotka, Finland 1.jpg"
+  }
+ },
+ "saatkraehe": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/saatkraehe-0.mp3",
+    "spec": "media/s/saatkraehe-0.webp",
+    "dur": 22.0,
+    "fmin": 200,
+    "fmax": 4500,
+    "artist": "Alwayswonder",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Rooks_in_rookery_and_nests_sounds.wav",
+    "title": "Rooks in rookery and nests sounds.wav",
+    "from": 55.1
+   }
+  ],
+  "img": {
+   "src": "media/p/saatkraehe.webp",
+   "thumb": "media/p/saatkraehe-s.webp",
+   "w": 960,
+   "h": 668,
+   "tint": "#8e9974",
+   "artist": "Brian Snelson from Hockley, Essex, England",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Corvus_frugilegus_-Dartmoor,_Devon,_England-8.jpg",
+   "title": "Corvus frugilegus -Dartmoor, Devon, England-8.jpg"
+  }
+ },
+ "rabenkraehe": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/rabenkraehe-0.mp3",
+    "spec": "media/s/rabenkraehe-0.webp",
+    "dur": 22.0,
+    "fmin": 200,
+    "fmax": 4500,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Carrion_Crow_(Corvus_corone)_(W1CDR0001425_BD18).ogg",
+    "title": "Carrion Crow (Corvus corone) (W1CDR0001425 BD18).ogg",
+    "from": 1.9
+   },
+   {
+    "kind": "song",
+    "src": "media/a/rabenkraehe-1.mp3",
+    "spec": "media/s/rabenkraehe-1.webp",
+    "dur": 12.17,
+    "fmin": 200,
+    "fmax": 4500,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Corvus_corone_-_Carrion_Crow_XC491082.mp3",
+    "title": "Corvus corone - Carrion Crow XC491082.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/rabenkraehe.webp",
+   "thumb": "media/p/rabenkraehe-s.webp",
+   "w": 960,
+   "h": 640,
+   "tint": "#a99f85",
+   "artist": "Alexis Lours",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Carrion_crow_2022_04_05_05_02.jpg",
+   "title": "Carrion crow 2022 04 05 05 02.jpg"
+  }
+ },
+ "kolkrabe": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/kolkrabe-0.mp3",
+    "spec": "media/s/kolkrabe-0.webp",
+    "dur": 22.0,
+    "fmin": 100,
+    "fmax": 3400,
+    "artist": "Jonathon Jongsma",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Corvus_corax_-_Northern_Raven_-_XC110257.ogg",
+    "title": "Corvus corax - Northern Raven - XC110257.ogg",
+    "from": 1.4
+   },
+   {
+    "kind": "song",
+    "src": "media/a/kolkrabe-1.mp3",
+    "spec": "media/s/kolkrabe-1.webp",
+    "dur": 13.37,
+    "fmin": 100,
+    "fmax": 3400,
+    "artist": "Jonathon Jongsma",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Corvus_corax_-_Northern_Raven_XC101590.mp3",
+    "title": "Corvus corax - Northern Raven XC101590.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/kolkrabe.webp",
+   "thumb": "media/p/kolkrabe-s.webp",
+   "w": 960,
+   "h": 620,
+   "tint": "#a2a382",
+   "artist": "Accipiter (R. Altenkamp, Berlin)",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Corvus_corax_ad_berlin_090516.jpg",
+   "title": "Corvus corax ad berlin 090516.jpg"
+  }
+ },
+ "ringeltaube": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/ringeltaube-0.mp3",
+    "spec": "media/s/ringeltaube-0.webp",
+    "dur": 11.63,
+    "fmin": 100,
+    "fmax": 1200,
+    "artist": "Oona Räisänen (Mysid)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Columba_palumbus_birdsong.ogg",
+    "title": "Columba palumbus birdsong.ogg",
+    "from": 0.0
+   },
+   {
+    "kind": "call",
+    "src": "media/a/ringeltaube-1.mp3",
+    "spec": "media/s/ringeltaube-1.webp",
+    "dur": 8.62,
+    "fmin": 100,
+    "fmax": 1200,
+    "artist": "Sleepytomcat (Jens Kraglund)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Ringeltaube_(ruft).ogg",
+    "title": "Ringeltaube (ruft).ogg",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/ringeltaube.webp",
+   "thumb": "media/p/ringeltaube-s.webp",
+   "w": 960,
+   "h": 769,
+   "tint": "#638b28",
+   "artist": "Don Loarie",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Columba_palumbus_ssp._palumbus.jpg",
+   "title": "Columba palumbus ssp. palumbus.jpg"
+  }
+ },
+ "dohle": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/dohle-0.mp3",
+    "spec": "media/s/dohle-0.webp",
+    "dur": 13.09,
+    "fmin": 300,
+    "fmax": 5700,
+    "artist": "Veljo Runnel",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Corvus_monedula_calls.ogg",
+    "title": "Corvus monedula calls.ogg",
+    "from": 0.0
+   },
+   {
+    "kind": "song",
+    "src": "media/a/dohle-1.mp3",
+    "spec": "media/s/dohle-1.webp",
+    "dur": 22.0,
+    "fmin": 300,
+    "fmax": 5700,
+    "artist": "Joost van Bruggen",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Coloeus_monedula_-_Western_Jackdaw_XC436939.mp3",
+    "title": "Coloeus monedula - Western Jackdaw XC436939.mp3",
+    "from": 75.4
+   }
+  ],
+  "img": {
+   "src": "media/p/dohle.webp",
+   "thumb": "media/p/dohle-s.webp",
+   "w": 960,
+   "h": 640,
+   "tint": "#a0a3a5",
+   "artist": "User:MatthiasKabel",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Corvus_monedula-0002.jpg",
+   "title": "Corvus monedula-0002.jpg"
+  }
+ },
+ "tuerkentaube": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/tuerkentaube-0.mp3",
+    "spec": "media/s/tuerkentaube-0.webp",
+    "dur": 13.97,
+    "fmin": 100,
+    "fmax": 1200,
+    "artist": "Jonathon Jongsma",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Streptopelia_decaocto_-_Eurasian_Collared_Dove_-_XC82758.ogg",
+    "title": "Streptopelia decaocto - Eurasian Collared Dove - XC82758.ogg",
+    "from": 0.0
+   },
+   {
+    "kind": "call",
+    "src": "media/a/tuerkentaube-1.mp3",
+    "spec": "media/s/tuerkentaube-1.webp",
+    "dur": 22.0,
+    "fmin": 100,
+    "fmax": 1200,
+    "artist": "Nikos Demetriou",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Sonus_naturalis_-_Soundscape_XC254830.mp3",
+    "title": "Sonus naturalis - Soundscape XC254830.mp3",
+    "from": 67.2
+   }
+  ],
+  "img": {
+   "src": "media/p/tuerkentaube.webp",
+   "thumb": "media/p/tuerkentaube-s.webp",
+   "w": 960,
+   "h": 720,
+   "tint": "#95987a",
+   "artist": "xulescu_g",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Streptopelia_decaocto,_H%C4%83rman,_Rom%C3%A2nia_(34881606270).jpg",
+   "title": "Streptopelia decaocto, Hărman, România (34881606270).jpg"
+  }
+ },
+ "alpendohle": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/alpendohle-0.mp3",
+    "spec": "media/s/alpendohle-0.webp",
+    "dur": 19.35,
+    "fmin": 1000,
+    "fmax": 7900,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Pyrrhocorax_graculus_-_Alpine_Chough_XC496675.mp3",
+    "title": "Pyrrhocorax graculus - Alpine Chough XC496675.mp3",
+    "from": 0.0
+   },
+   {
+    "kind": "song",
+    "src": "media/a/alpendohle-1.mp3",
+    "spec": "media/s/alpendohle-1.webp",
+    "dur": 22.0,
+    "fmin": 1000,
+    "fmax": 7900,
+    "artist": "Pascal Christe",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Pyrrhocorax_graculus_-_Alpine_Chough_XC589717.mp3",
+    "title": "Pyrrhocorax graculus - Alpine Chough XC589717.mp3",
+    "from": 20.7
+   }
+  ],
+  "img": {
+   "src": "media/p/alpendohle.webp",
+   "thumb": "media/p/alpendohle-s.webp",
+   "w": 960,
+   "h": 720,
+   "tint": "#9ba465",
+   "artist": "Pethan",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Alpine_Chough.jpg",
+   "title": "Alpine Chough.jpg"
+  }
+ },
+ "strassentaube": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/strassentaube-0.mp3",
+    "spec": "media/s/strassentaube-0.webp",
+    "dur": 22.0,
+    "fmin": 100,
+    "fmax": 1200,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Columba_livia_-_Rock_Dove_XC541143.mp3",
+    "title": "Columba livia - Rock Dove XC541143.mp3",
+    "from": 0.0
+   },
+   {
+    "kind": "call",
+    "src": "media/a/strassentaube-1.mp3",
+    "spec": "media/s/strassentaube-1.webp",
+    "dur": 22.0,
+    "fmin": 100,
+    "fmax": 1200,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Columba_livia_-_Rock_Dove_XC539061.mp3",
+    "title": "Columba livia - Rock Dove XC539061.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/strassentaube.webp",
+   "thumb": "media/p/strassentaube-s.webp",
+   "w": 960,
+   "h": 720,
+   "tint": "#88806b",
+   "artist": "william_stephens",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Columba_livia_(Rock_Dove,_wild),_Duncansby_Head,_Caithness,_Scotland_1.jpg",
+   "title": "Columba livia (Rock Dove, wild), Duncansby Head, Caithness, Scotland 1.jpg"
+  }
+ },
+ "kuckuck": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/kuckuck-0.mp3",
+    "spec": "media/s/kuckuck-0.webp",
+    "dur": 22.0,
+    "fmin": 200,
+    "fmax": 1600,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Common_Cuckoo_(Cuculus_canorus)_(W1CDR0001463_BD1).ogg",
+    "title": "Common Cuckoo (Cuculus canorus) (W1CDR0001463 BD1).ogg",
+    "from": 1.9
+   },
+   {
+    "kind": "call",
+    "src": "media/a/kuckuck-1.mp3",
+    "spec": "media/s/kuckuck-1.webp",
+    "dur": 18.02,
+    "fmin": 200,
+    "fmax": 1600,
+    "artist": "Alexander Kurthy",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Cuculus_canorus_-_Common_Cuckoo_XC108332.mp3",
+    "title": "Cuculus canorus - Common Cuckoo XC108332.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/kuckuck.webp",
+   "thumb": "media/p/kuckuck-s.webp",
+   "w": 911,
+   "h": 638,
+   "tint": "#93aac7",
+   "artist": "Cuculus_canorus_vogelartinfo_chris_romeiks_CHR0791.jpg: Vogelartinfo derivative work: Bogbumper (talk)",
+   "license": "GFDL 1.2",
+   "page": "https://commons.wikimedia.org/wiki/File:Cuculus_canorus_vogelartinfo_chris_romeiks_CHR0791_cropped.jpg",
+   "title": "Cuculus canorus vogelartinfo chris romeiks CHR0791 cropped.jpg"
+  }
+ },
+ "turteltaube": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/turteltaube-0.mp3",
+    "spec": "media/s/turteltaube-0.webp",
+    "dur": 22.0,
+    "fmin": 200,
+    "fmax": 1200,
+    "artist": "Benoît Van Hecke",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Streptopelia_turtur_-_European_Turtle_Dove_XC582028.mp3",
+    "title": "Streptopelia turtur - European Turtle Dove XC582028.mp3",
+    "from": 121.2
+   },
+   {
+    "kind": "call",
+    "src": "media/a/turteltaube-1.mp3",
+    "spec": "media/s/turteltaube-1.webp",
+    "dur": 22.0,
+    "fmin": 200,
+    "fmax": 1200,
+    "artist": "",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:European_Turtle_Dove_(Streptopelia_turtur)_(W_STREPTOPELIA_TURTUR_R2_C3).ogg",
+    "title": "European Turtle Dove (Streptopelia turtur) (W STREPTOPELIA TURTUR R2 C3).ogg",
+    "from": 13.2
+   }
+  ],
+  "img": {
+   "src": "media/p/turteltaube.webp",
+   "thumb": "media/p/turteltaube-s.webp",
+   "w": 640,
+   "h": 960,
+   "tint": "#6e6f5d",
+   "artist": "Yuvalr",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:European_Turtle_Dove_(Streptopelia_turtur).jpg",
+   "title": "European Turtle Dove (Streptopelia turtur).jpg"
+  }
+ },
+ "mauersegler": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/mauersegler-0.mp3",
+    "spec": "media/s/mauersegler-0.webp",
+    "dur": 19.03,
+    "fmin": 2100,
+    "fmax": 11000,
+    "artist": "Jugrü",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mauersegler.ogg",
+    "title": "Mauersegler.ogg",
+    "from": 0.0
+   },
+   {
+    "kind": "song",
+    "src": "media/a/mauersegler-1.mp3",
+    "spec": "media/s/mauersegler-1.webp",
+    "dur": 10.18,
+    "fmin": 2100,
+    "fmax": 11000,
+    "artist": "Luis Alvarez Menendez",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Apus_apus_-_Common_Swift_XC554033.mp3",
+    "title": "Apus apus - Common Swift XC554033.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/mauersegler.webp",
+   "thumb": "media/p/mauersegler-s.webp",
+   "w": 956,
+   "h": 960,
+   "tint": "#aaa59f",
+   "artist": "Alexis Lours",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Common_Swift_2025_07_18_02_(cropped).jpg",
+   "title": "Common Swift 2025 07 18 02 (cropped).jpg"
+  }
+ },
+ "rauchschwalbe": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/rauchschwalbe-0.mp3",
+    "spec": "media/s/rauchschwalbe-0.webp",
+    "dur": 18.55,
+    "fmin": 1400,
+    "fmax": 10100,
+    "artist": "Jonathon Jongsma",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Hirundo_rustica_-_Barn_Swallow_-_XC83449.ogg",
+    "title": "Hirundo rustica - Barn Swallow - XC83449.ogg",
+    "from": 0.0
+   },
+   {
+    "kind": "call",
+    "src": "media/a/rauchschwalbe-1.mp3",
+    "spec": "media/s/rauchschwalbe-1.webp",
+    "dur": 17.94,
+    "fmin": 1400,
+    "fmax": 10100,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Hirundo_rustica_-_Barn_Swallow_XC492101.mp3",
+    "title": "Hirundo rustica - Barn Swallow XC492101.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/rauchschwalbe.webp",
+   "thumb": "media/p/rauchschwalbe-s.webp",
+   "w": 960,
+   "h": 638,
+   "tint": "#c3af8d",
+   "artist": "Morhaf Aljanee",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Barn_Swallow_(95504589).jpeg",
+   "title": "Barn Swallow (95504589).jpeg"
+  }
+ },
+ "gebirgsstelze": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/gebirgsstelze-0.mp3",
+    "spec": "media/s/gebirgsstelze-0.webp",
+    "dur": 4.61,
+    "fmin": 2100,
+    "fmax": 11000,
+    "artist": "Sudipto Roy",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Motacilla_cinerea_-_Grey_Wagtail_XC128136.ogg",
+    "title": "Motacilla cinerea - Grey Wagtail XC128136.ogg",
+    "from": 0.0
+   },
+   {
+    "kind": "song",
+    "src": "media/a/gebirgsstelze-1.mp3",
+    "spec": "media/s/gebirgsstelze-1.webp",
+    "dur": 22.6,
+    "fmin": 2100,
+    "fmax": 11000,
+    "artist": "Pascal Christe",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Motacilla_cinerea_-_Grey_Wagtail_XC596811.mp3",
+    "title": "Motacilla cinerea - Grey Wagtail XC596811.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/gebirgsstelze.webp",
+   "thumb": "media/p/gebirgsstelze-s.webp",
+   "w": 960,
+   "h": 694,
+   "tint": "#756947",
+   "artist": "gailhampshire from Cradley, Malvern, U.K",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Grey_Wagtail_Motacilla_cinerea_(39682090233).jpg",
+   "title": "Grey Wagtail Motacilla cinerea (39682090233).jpg"
+  }
+ },
+ "mehlschwalbe": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/mehlschwalbe-0.mp3",
+    "spec": "media/s/mehlschwalbe-0.webp",
+    "dur": 22.0,
+    "fmin": 1400,
+    "fmax": 9000,
+    "artist": "This image is created by user Justin Jansen at Waarneming.nl, a source of nature observations in the Netherlands.",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Delichon_urbicum_contact_call.ogg",
+    "title": "Delichon urbicum contact call.ogg",
+    "from": 4.9
+   },
+   {
+    "kind": "song",
+    "src": "media/a/mehlschwalbe-1.mp3",
+    "spec": "media/s/mehlschwalbe-1.webp",
+    "dur": 22.0,
+    "fmin": 1400,
+    "fmax": 9000,
+    "artist": "",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Common_House_Martin_(Delichon_urbica)_(W_DELICHON_URBICA_R3_C3).ogg",
+    "title": "Common House Martin (Delichon urbica) (W DELICHON URBICA R3 C3).ogg",
+    "from": 8.7
+   }
+  ],
+  "img": {
+   "src": "media/p/mehlschwalbe.webp",
+   "thumb": "media/p/mehlschwalbe-s.webp",
+   "w": 960,
+   "h": 792,
+   "tint": "#787462",
+   "artist": "MPF",
+   "license": "CC BY 2.5",
+   "page": "https://commons.wikimedia.org/wiki/File:Delichon_urbica.jpg",
+   "title": "Delichon urbica.jpg"
+  }
+ },
+ "feldlerche": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/feldlerche-0.mp3",
+    "spec": "media/s/feldlerche-0.webp",
+    "dur": 22.0,
+    "fmin": 1400,
+    "fmax": 9600,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Eurasian_Skylark_(Alauda_arvensis)_(W1CDR0001421_BD2).ogg",
+    "title": "Eurasian Skylark (Alauda arvensis) (W1CDR0001421 BD2).ogg",
+    "from": 8.8
+   },
+   {
+    "kind": "call",
+    "src": "media/a/feldlerche-1.mp3",
+    "spec": "media/s/feldlerche-1.webp",
+    "dur": 6.31,
+    "fmin": 1400,
+    "fmax": 9600,
+    "artist": "Jens Loose",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Alauda_arvensis_-_Eurasian_Skylark_XC528350.mp3",
+    "title": "Alauda arvensis - Eurasian Skylark XC528350.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/feldlerche.webp",
+   "thumb": "media/p/feldlerche-s.webp",
+   "w": 960,
+   "h": 640,
+   "tint": "#8d9a7b",
+   "artist": "El Golli Mohamed",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Alouette_des_champs_Zaghouan001.jpg",
+   "title": "Alouette des champs Zaghouan001.jpg"
+  }
+ },
+ "bachstelze": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/bachstelze-0.mp3",
+    "spec": "media/s/bachstelze-0.webp",
+    "dur": 22.0,
+    "fmin": 1700,
+    "fmax": 10100,
+    "artist": "Pascal Christe",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Motacilla_alba_-_White_Wagtail_XC466458.mp3",
+    "title": "Motacilla alba - White Wagtail XC466458.mp3",
+    "from": 0.0
+   },
+   {
+    "kind": "song",
+    "src": "media/a/bachstelze-1.mp3",
+    "spec": "media/s/bachstelze-1.webp",
+    "dur": 22.75,
+    "fmin": 1700,
+    "fmax": 10100,
+    "artist": "Hannu Varkki",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Motacilla_alba_-_White_Wagtail_XC501786.mp3",
+    "title": "Motacilla alba - White Wagtail XC501786.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/bachstelze.webp",
+   "thumb": "media/p/bachstelze-s.webp",
+   "w": 960,
+   "h": 640,
+   "tint": "#86a063",
+   "artist": "Jac. Janssen from BAARLO LB, NL",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:20180415_015_Winterswijk_Witte_kwikstaart_(40785272624).jpg",
+   "title": "20180415 015 Winterswijk Witte kwikstaart (40785272624).jpg"
+  }
+ },
+ "fitis": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/fitis-0.mp3",
+    "spec": "media/s/fitis-0.webp",
+    "dur": 21.81,
+    "fmin": 1700,
+    "fmax": 8400,
+    "artist": "Vladimir Yu. Arkhipov, Arkhivov",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Phylloscopus_trochilus_acredula.ogg",
+    "title": "Phylloscopus trochilus acredula.ogg",
+    "from": 0.0
+   },
+   {
+    "kind": "call",
+    "src": "media/a/fitis-1.mp3",
+    "spec": "media/s/fitis-1.webp",
+    "dur": 9.83,
+    "fmin": 1700,
+    "fmax": 8400,
+    "artist": "L. Shyamal",
+    "license": "CC BY 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:OsloPhylloscopus.ogg",
+    "title": "OsloPhylloscopus.ogg",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/fitis.webp",
+   "thumb": "media/p/fitis-s.webp",
+   "w": 960,
+   "h": 960,
+   "tint": "#93a7b7",
+   "artist": "Andreas Trepte",
+   "license": "CC BY-SA 2.5",
+   "page": "https://commons.wikimedia.org/wiki/File:Willow_Warbler_Phylloscopus_trochilus.jpg",
+   "title": "Willow Warbler Phylloscopus trochilus.jpg"
+  }
+ },
+ "zilpzalp": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/zilpzalp-0.mp3",
+    "spec": "media/s/zilpzalp-0.webp",
+    "dur": 22.0,
+    "fmin": 2100,
+    "fmax": 8400,
+    "artist": "Oona Räisänen (Mysid)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Phylloscopus_collybita.ogg",
+    "title": "Phylloscopus collybita.ogg",
+    "from": 1.9
+   },
+   {
+    "kind": "call",
+    "src": "media/a/zilpzalp-1.mp3",
+    "spec": "media/s/zilpzalp-1.webp",
+    "dur": 22.0,
+    "fmin": 2100,
+    "fmax": 8400,
+    "artist": "Jan Cibulka",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Phylloscopus_collybita_-_Common_Chiffchaff_XC384000.mp3",
+    "title": "Phylloscopus collybita - Common Chiffchaff XC384000.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/zilpzalp.webp",
+   "thumb": "media/p/zilpzalp-s.webp",
+   "w": 960,
+   "h": 640,
+   "tint": "#a08764",
+   "artist": "Alexis Lours",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Common_Chiffchaff_2025_04_04_01.jpg",
+   "title": "Common Chiffchaff 2025 04 04 01.jpg"
+  }
  }
 }
