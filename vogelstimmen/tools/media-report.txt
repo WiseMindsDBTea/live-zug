@@ -2304,3 +2304,4 @@
    PICK[call] 22.0s @0.1s 1000-7900Hz  Pyrrhocorax graculus - Alpine Chough XC482782.mp3  | Pascal Christe | CC BY-SA 4.0
    PICK[secondary] 22.0s @20.7s 1000-7900Hz  Pyrrhocorax graculus - Alpine Chough XC589717.mp3  | Pascal Christe | CC BY-SA 4.0
    IMG Alpine Chough.jpg tint=#9ba465 | Pethan
+
