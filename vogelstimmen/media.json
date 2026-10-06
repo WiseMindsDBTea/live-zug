@@ -3765,5 +3765,212 @@
    "page": "https://commons.wikimedia.org/wiki/File:Loriot_d%27Europe_by_Michel_Idre.jpg",
    "title": "Loriot d'Europe by Michel Idre.jpg"
   }
+ },
+ "pfau": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/pfau-0.mp3",
+    "spec": "media/s/pfau-0.webp",
+    "dur": 8.76,
+    "fmin": 300,
+    "fmax": 4000,
+    "artist": "Ke4roh",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Pavo_cristatus_(call).ogg",
+    "title": "Pavo cristatus (call).ogg",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/pfau.webp",
+   "thumb": "media/p/pfau-s.webp",
+   "w": 960,
+   "h": 601,
+   "tint": "#789069",
+   "artist": "Praveenp",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Indian_Peacock_in_Tholpetty_Wildlife_Sanctuary_01.JPG",
+   "title": "Indian Peacock in Tholpetty Wildlife Sanctuary 01.JPG"
+  }
+ },
+ "mauerlaeufer": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/mauerlaeufer-0.mp3",
+    "spec": "media/s/mauerlaeufer-0.webp",
+    "dur": 2.09,
+    "fmin": 1700,
+    "fmax": 10100,
+    "artist": "Jeuwre",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:De-Mauerl%C3%A4ufer.ogg",
+    "title": "De-Mauerläufer.ogg",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/mauerlaeufer.webp",
+   "thumb": "media/p/mauerlaeufer-s.webp",
+   "w": 960,
+   "h": 677,
+   "tint": "#c6a989",
+   "artist": "Pierre-Marie Epiney",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Tichodrome_%C3%A9chelette_Tichodroma_muraria_aDSC_1009_(50997238804).jpg",
+   "title": "Tichodrome échelette Tichodroma muraria aDSC 1009 (50997238804).jpg"
+  }
+ },
+ "halsbandsittich": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/halsbandsittich-0.mp3",
+    "spec": "media/s/halsbandsittich-0.webp",
+    "dur": 17.06,
+    "fmin": 1000,
+    "fmax": 7900,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Psittacula_krameri_-_Rose-ringed_Parakeet_XC474519.mp3",
+    "title": "Psittacula krameri - Rose-ringed Parakeet XC474519.mp3",
+    "from": 0.0
+   },
+   {
+    "kind": "song",
+    "src": "media/a/halsbandsittich-1.mp3",
+    "spec": "media/s/halsbandsittich-1.webp",
+    "dur": 10.53,
+    "fmin": 1000,
+    "fmax": 7900,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Psittacula_krameri_-_Rose-ringed_Parakeet_XC510543.mp3",
+    "title": "Psittacula krameri - Rose-ringed Parakeet XC510543.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/halsbandsittich.webp",
+   "thumb": "media/p/halsbandsittich-s.webp",
+   "w": 805,
+   "h": 960,
+   "tint": "#82abc4",
+   "artist": "mourad-harzallah",
+   "license": "CC BY 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:African_Rose-ringed_Parakeet,_Tamanrasset,_Algeria_1.jpg",
+   "title": "African Rose-ringed Parakeet, Tamanrasset, Algeria 1.jpg"
+  }
+ },
+ "seidenschwanz": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/seidenschwanz-0.mp3",
+    "spec": "media/s/seidenschwanz-0.webp",
+    "dur": 22.0,
+    "fmin": 2400,
+    "fmax": 10700,
+    "artist": "Bushman",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Bombycilla_garrulus_-_Bohemian_Waxwing_XC132884.ogg",
+    "title": "Bombycilla garrulus - Bohemian Waxwing XC132884.ogg",
+    "from": 36.7
+   }
+  ],
+  "img": {
+   "src": "media/p/seidenschwanz.webp",
+   "thumb": "media/p/seidenschwanz-s.webp",
+   "w": 960,
+   "h": 734,
+   "tint": "#bd9c7c",
+   "artist": "Frank Vassen from Brussels, Belgium",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bohemian_waxwing_(Bombycilla_garrulus),_Uitkerke,_Belgium_(16366736689).jpg",
+   "title": "Bohemian waxwing (Bombycilla garrulus), Uitkerke, Belgium (16366736689).jpg"
+  }
+ },
+ "neuntoeter": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/neuntoeter-0.mp3",
+    "spec": "media/s/neuntoeter-0.webp",
+    "dur": 22.0,
+    "fmin": 1000,
+    "fmax": 9000,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Lanius_collurio_-_Red-backed_Shrike_XC493670.mp3",
+    "title": "Lanius collurio - Red-backed Shrike XC493670.mp3",
+    "from": 8.9
+   },
+   {
+    "kind": "song",
+    "src": "media/a/neuntoeter-1.mp3",
+    "spec": "media/s/neuntoeter-1.webp",
+    "dur": 22.0,
+    "fmin": 1000,
+    "fmax": 9000,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Lanius_collurio_-_Red-backed_Shrike_XC493745.mp3",
+    "title": "Lanius collurio - Red-backed Shrike XC493745.mp3",
+    "from": 19.8
+   }
+  ],
+  "img": {
+   "src": "media/p/neuntoeter.webp",
+   "thumb": "media/p/neuntoeter-s.webp",
+   "w": 960,
+   "h": 675,
+   "tint": "#bdc5d8",
+   "artist": "Zeynel Cebeci",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Lanius_collurio_-_Red-backed_shrike_09.jpg",
+   "title": "Lanius collurio - Red-backed shrike 09.jpg"
+  }
+ },
+ "goldammer": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/goldammer-0.mp3",
+    "spec": "media/s/goldammer-0.webp",
+    "dur": 22.0,
+    "fmin": 1700,
+    "fmax": 9600,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Yellowhammer_(Emberiza_citrinella)_(W1CDR0001422_BD1).ogg",
+    "title": "Yellowhammer (Emberiza citrinella) (W1CDR0001422 BD1).ogg",
+    "from": 23.9
+   },
+   {
+    "kind": "call",
+    "src": "media/a/goldammer-1.mp3",
+    "spec": "media/s/goldammer-1.webp",
+    "dur": 22.0,
+    "fmin": 1700,
+    "fmax": 9600,
+    "artist": "Hannu Varkki",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Emberiza_citrinella_-_Yellowhammer_XC457380.mp3",
+    "title": "Emberiza citrinella - Yellowhammer XC457380.mp3",
+    "from": 9.4
+   }
+  ],
+  "img": {
+   "src": "media/p/goldammer.webp",
+   "thumb": "media/p/goldammer-s.webp",
+   "w": 960,
+   "h": 943,
+   "tint": "#768238",
+   "artist": "Ómar Runólfsson",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Emberiza_citrinella_-Midtjylland,_Denmark_-male-8.jpg",
+   "title": "Emberiza citrinella -Midtjylland, Denmark -male-8.jpg"
+  }
  }
 }

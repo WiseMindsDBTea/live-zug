@@ -2203,3 +2203,63 @@
    PICK[song] 22.0s @9.6s 500-4500Hz  Oriolus oriolus - Eurasian Golden Oriole XC431707.mp3  | Joost van Bruggen | CC BY-SA 4.0
    PICK[call] 21.21s @0.0s 500-4500Hz  Pirol Nähe Dahme-Mark (Andreas Plank, 21.05.2011).ogg  | Andreas Plank | CC BY-SA 3.0
    IMG Loriot d'Europe by Michel Idre.jpg tint=#647334 | Michel Idre from Plaisance du Touch, France
+
+## pfau — Pavo cristatus  (9 Kandidaten)
+   cand   9.0 ['call'] 8.759229166666668s  Pavo cristatus (call).ogg
+   cand   9.0 ['call'] 10.95015873015873s  DM550170 Pavo cristatus call in farm Slovakia.oga
+   cand   9.0 ['call'] 16.404897959183675s  Indian Peafowl.ogg
+   cand   7.5 ['call'] 7.967142857142857s  MalePeacockCall.ogg
+   cand   3.0 ['call'] 2.76859410430839s  Peacock2.ogg
+   cand   3.0 ['call'] 0.9910884353741497s  Peacock1.ogg
+   cand   3.0 ['call'] 2.566984126984127s  Peacock3.ogg
+   cand   3.0 [] 14.7310625s  Pavo+cristatus.wav
+   PICK[call] 8.76s @0.0s 300-4000Hz  Pavo cristatus (call).ogg  | Ke4roh | Public domain
+   IMG Indian Peacock in Tholpetty Wildlife Sanctuary 01.JPG tint=#789069 | Praveenp
+
+## mauerlaeufer — Tichodroma muraria  (1 Kandidaten)
+   cand  -3.0 [] 2.09s  De-Mauerläufer.ogg
+   PICK[song] 2.09s @0.0s 1700-10100Hz  De-Mauerläufer.ogg  | Jeuwre | CC BY-SA 4.0
+   IMG Tichodrome échelette Tichodroma muraria aDSC 1009 (50997238804).jpg tint=#c6a989 | Pierre-Marie Epiney
+
+## halsbandsittich — Psittacula krameri  (12 Kandidaten)
+   cand   9.0 ['call', 'song'] 17.13677678819518s  Psittacula krameri - Rose-ringed Parakeet XC474519.mp3
+   cand   9.0 ['call', 'song', 'wings'] 10.5813s  Psittacula krameri - Rose-ringed Parakeet XC510543.mp3
+   cand   9.0 ['call', 'song'] 53.709875s  Psittacula krameri - Rose-ringed Parakeet XC511968.mp3
+   cand   9.0 ['call', 'song'] 25.0455s  Psittacula krameri - Rose-ringed Parakeet XC516404.mp3
+   cand   9.0 ['call', 'song', 'wings'] 25.045675s  Psittacula krameri - Rose-ringed Parakeet XC516402.mp3
+   cand   9.0 ['call', 'song'] 83.509625s  Psittacula krameri - Rose-ringed Parakeet XC27160.mp3
+   cand   9.0 ['call'] 9.517278911564626s  Perruche.ogg
+   cand   7.5 ['call', 'song', 'wings'] 6.651375s  Psittacula krameri - Rose-ringed Parakeet XC35091.mp3
+   PICK[call] 17.06s @0.0s 1000-7900Hz  Psittacula krameri - Rose-ringed Parakeet XC474519.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   PICK[song] 10.53s @0.0s 1000-7900Hz  Psittacula krameri - Rose-ringed Parakeet XC510543.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   IMG African Rose-ringed Parakeet, Tamanrasset, Algeria 1.jpg tint=#82abc4 | mourad-harzallah
+
+## seidenschwanz — Bombycilla garrulus  (2 Kandidaten)
+   cand  12.0 ['call', 'song', 'wings'] 60.08163265306123s  Bombycilla garrulus - Bohemian Waxwing XC132884.ogg
+   cand  -3.0 [] 2.3s  De-Seidenschwanz2.ogg
+   PICK[call] 22.0s @36.7s 2400-10700Hz  Bombycilla garrulus - Bohemian Waxwing XC132884.ogg  | Bushman | CC BY-SA 3.0
+   IMG Bohemian waxwing (Bombycilla garrulus), Uitkerke, Belgium (16366736689).jpg tint=#bd9c7c | Frank Vassen from Brussels, Belgium
+
+## neuntoeter — Lanius collurio  (6 Kandidaten)
+   cand   9.0 ['call', 'song'] 53.400075s  Lanius collurio - Red-backed Shrike XC493670.mp3
+   cand   9.0 ['call', 'song'] 42.888875s  Lanius collurio - Red-backed Shrike XC493745.mp3
+   cand   3.0 [] 21.672s  Lanius collurio (Rotrückenwürger - Neuntöter - Red-backed Shrike).ogg
+   cand  -3.0 [] 2.52s  De-Rotrückenwürger.ogg
+   cand  -3.0 [] 2.54s  De-Rotrückenwürger2.ogg
+   cand  -3.0 [] 2.15s  De-Neuntöter.ogg
+   PICK[call] 22.0s @8.9s 1000-9000Hz  Lanius collurio - Red-backed Shrike XC493670.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   PICK[song] 22.0s @19.8s 1000-9000Hz  Lanius collurio - Red-backed Shrike XC493745.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   IMG Lanius collurio - Red-backed shrike 09.jpg tint=#bdc5d8 | Zeynel Cebeci
+
+## goldammer — Emberiza citrinella  (10 Kandidaten)
+   cand  11.0 ['song'] 57.03943310657596s  Yellowhammer (Emberiza citrinella) (W1CDR0001422 BD1).ogg
+   cand   9.0 ['song'] 50.682093225605975s  Emberiza citrinella - Yellowhammer XC531170.mp3
+   cand   9.0 ['call', 'song'] 31.92433051121705s  Emberiza citrinella - Yellowhammer XC457380.mp3
+   cand   9.0 ['song'] 52.3136299834552s  Emberiza citrinella - Yellowhammer XC531169.mp3
+   cand   9.0 ['song'] 11.6643125s  Emberiza citrinella.ogg
+   cand   3.0 ['song'] 3.3876s  Emberiza citrinella - Yellowhammer XC481630.mp3
+   cand   3.0 ['song'] 2.500714638157895s  Emberiza citrinella - Yellowhammer XC571973.mp3
+   cand   3.0 ['song'] 3.043401360544218s  XN Emberiza citrinella.ogg
+   PICK[song] 22.0s @23.9s 1700-9600Hz  Yellowhammer (Emberiza citrinella) (W1CDR0001422 BD1).ogg  |  | CC BY-SA 4.0
+   PICK[call] 22.0s @9.4s 1700-9600Hz  Emberiza citrinella - Yellowhammer XC457380.mp3  | Hannu Varkki | CC BY-SA 4.0
+   IMG Emberiza citrinella -Midtjylland, Denmark -male-8.jpg tint=#768238 | Ómar Runólfsson
