@@ -2263,3 +2263,44 @@
    PICK[song] 22.0s @23.9s 1700-9600Hz  Yellowhammer (Emberiza citrinella) (W1CDR0001422 BD1).ogg  |  | CC BY-SA 4.0
    PICK[call] 22.0s @9.4s 1700-9600Hz  Emberiza citrinella - Yellowhammer XC457380.mp3  | Hannu Varkki | CC BY-SA 4.0
    IMG Emberiza citrinella -Midtjylland, Denmark -male-8.jpg tint=#768238 | Ómar Runólfsson
+
+## mauerlaeufer — Tichodroma muraria  (0 Kandidaten)
+   IMG Tichodrome échelette Tichodroma muraria aDSC 1009 (50997238804).jpg tint=#c6a989 | Pierre-Marie Epiney
+
+## seeadler — Haliaeetus albicilla  (0 Kandidaten)
+   IMG Adult White-tailed Eagle defending prey, Rezerwat Gostynin-Wloclawek, Poland.jpg tint=#838962 | Original: Andreas Weith. This edit: MPF.
+
+## buntspecht — Dendrocopos major  (14 Kandidaten)
+   cand   9.0 ['drum', 'song'] 95.2085s  Dendrocopos major - Great Spotted Woodpecker XC560950.mp3
+   cand   9.0 ['drum'] 10.339541666666667s  Dendrocopos major.ogg
+   cand   8.0 ['drum'] 31.805147392290248s  Great Spotted Woodpecker (Picoides major) (W1CDR0001405 BD15).ogg
+   cand   7.5 ['drum'] 5.65156462585034s  Great Spotted Woodpecker drum.ogg
+   cand   4.0 ['call', 'song'] 35.31755102040816s  XC47350 - Grote Bonte Specht - Dendrocopos major.ogg
+   cand   3.0 [] 15.48124716553288s  Buntspecht (Dendrocopos major), bettelnde Jungvögel.ogg
+   cand   1.5 ['call', 'song'] 20.97s  Dendrocopos major - Great Spotted Woodpecker XC309807.mp3
+   cand   1.5 ['call', 'song'] 35.361875s  Dendrocopos major - Great Spotted Woodpecker XC47350.mp3
+   PICK[drum] 10.34s @0.0s 300-6800Hz  Dendrocopos major.ogg  | Vladimir Yu. Arkhipov, Arkhivov | CC BY-SA 3.0
+   PICK[call] 22.0s @4.3s 300-6800Hz  XC47350 - Grote Bonte Specht - Dendrocopos major.ogg  | Sander Pieterse | CC BY-SA 4.0
+   IMG Дятел большой пёстрый KR 01.jpg tint=#516436 | Плешков Алексей
+
+## schleiereule — Tyto alba  (8 Kandidaten)
+   cand   9.0 ['call', 'song', 'wings'] 65.1234529559122s  Tyto alba - Western Barn Owl XC592539.mp3
+   cand   9.0 ['call', 'song', 'wings'] 15.232475s  Tyto alba - Western Barn Owl XC432000.mp3
+   cand   9.0 ['call', 'song', 'wings'] 31.887325s  Tyto alba - Western Barn Owl XC433736.mp3
+   cand   9.0 ['call', 'song'] 91.625775s  Tyto alba - Western Barn Owl XC345927.mp3
+   cand   7.5 ['call', 'song', 'wings'] 7.389995665476798s  Tyto alba - Western Barn Owl XC545944.mp3
+   cand   7.5 ['call', 'song', 'wings'] 6.97475s  Tyto alba - Western Barn Owl XC436948.mp3
+   cand   7.5 ['call', 'song', 'wings'] 7.911325s  Tyto alba - Western Barn Owl XC436946.mp3
+   cand   5.0 [] 12.386666666666667s  Barn Owl (Tyto alba) (W TYTO ALBA R1 C16).ogg
+   PICK[call] 15.18s @0.0s 700-10100Hz  Tyto alba - Western Barn Owl XC432000.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   PICK[secondary] 22.0s @2.8s 700-10100Hz  Tyto alba - Western Barn Owl XC433736.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   IMG Tyto alba tylluan wen detail.jpg tint=#998562 | User:Alun Williams333
+
+## alpendohle — Pyrrhocorax graculus  (4 Kandidaten)
+   cand   9.0 ['call', 'song', 'wings'] 19.4129s  Pyrrhocorax graculus - Alpine Chough XC496675.mp3
+   cand   9.0 ['call', 'song'] 43.142325s  Pyrrhocorax graculus - Alpine Chough XC589717.mp3
+   cand   9.0 ['call', 'song'] 68.51654166666667s  Pyrrhocorax graculus - Alpine Chough XC482782.mp3
+   cand   7.5 ['call', 'song'] 5.13695s  Pyrrhocorax graculus - Alpine Chough XC496698.mp3
+   PICK[call] 22.0s @0.1s 1000-7900Hz  Pyrrhocorax graculus - Alpine Chough XC482782.mp3  | Pascal Christe | CC BY-SA 4.0
+   PICK[secondary] 22.0s @20.7s 1000-7900Hz  Pyrrhocorax graculus - Alpine Chough XC589717.mp3  | Pascal Christe | CC BY-SA 4.0
+   IMG Alpine Chough.jpg tint=#9ba465 | Pethan

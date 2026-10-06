@@ -1468,17 +1468,17 @@
     "kind": "call",
     "src": "media/a/alpendohle-0.mp3",
     "spec": "media/s/alpendohle-0.webp",
-    "dur": 19.35,
+    "dur": 22.0,
     "fmin": 1000,
     "fmax": 7900,
-    "artist": "Marie-Lan Taÿ Pamart",
+    "artist": "Pascal Christe",
     "license": "CC BY-SA 4.0",
-    "page": "https://commons.wikimedia.org/wiki/File:Pyrrhocorax_graculus_-_Alpine_Chough_XC496675.mp3",
-    "title": "Pyrrhocorax graculus - Alpine Chough XC496675.mp3",
-    "from": 0.0
+    "page": "https://commons.wikimedia.org/wiki/File:Pyrrhocorax_graculus_-_Alpine_Chough_XC482782.mp3",
+    "title": "Pyrrhocorax graculus - Alpine Chough XC482782.mp3",
+    "from": 0.1
    },
    {
-    "kind": "song",
+    "kind": "secondary",
     "src": "media/a/alpendohle-1.mp3",
     "spec": "media/s/alpendohle-1.webp",
     "dur": 22.0,
@@ -2275,14 +2275,14 @@
     "kind": "drum",
     "src": "media/a/buntspecht-0.mp3",
     "spec": "media/s/buntspecht-0.webp",
-    "dur": 22.0,
+    "dur": 10.34,
     "fmin": 300,
     "fmax": 6800,
-    "artist": "Olivier Grimm",
-    "license": "CC BY-SA 4.0",
-    "page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major_-_Great_Spotted_Woodpecker_XC560950.mp3",
-    "title": "Dendrocopos major - Great Spotted Woodpecker XC560950.mp3",
-    "from": 38.9
+    "artist": "Vladimir Yu. Arkhipov, Arkhivov",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Dendrocopos_major.ogg",
+    "title": "Dendrocopos major.ogg",
+    "from": 0.0
    },
    {
     "kind": "call",
@@ -3273,21 +3273,7 @@
   }
  },
  "seeadler": {
-  "clips": [
-   {
-    "kind": "primary",
-    "src": "media/a/seeadler-0.mp3",
-    "spec": "media/s/seeadler-0.webp",
-    "dur": 1.85,
-    "fmin": 700,
-    "fmax": 5700,
-    "artist": "Jeuwre",
-    "license": "CC BY-SA 4.0",
-    "page": "https://commons.wikimedia.org/wiki/File:De-Seeadler.ogg",
-    "title": "De-Seeadler.ogg",
-    "from": 0.0
-   }
-  ],
+  "clips": [],
   "img": {
    "src": "media/p/seeadler.webp",
    "thumb": "media/p/seeadler-s.webp",
@@ -3608,19 +3594,6 @@
     "kind": "call",
     "src": "media/a/schleiereule-0.mp3",
     "spec": "media/s/schleiereule-0.webp",
-    "dur": 22.0,
-    "fmin": 700,
-    "fmax": 10100,
-    "artist": "Jens Loose",
-    "license": "CC BY-SA 4.0",
-    "page": "https://commons.wikimedia.org/wiki/File:Tyto_alba_-_Western_Barn_Owl_XC592539.mp3",
-    "title": "Tyto alba - Western Barn Owl XC592539.mp3",
-    "from": 1.8
-   },
-   {
-    "kind": "song",
-    "src": "media/a/schleiereule-1.mp3",
-    "spec": "media/s/schleiereule-1.webp",
     "dur": 15.18,
     "fmin": 700,
     "fmax": 10100,
@@ -3629,6 +3602,19 @@
     "page": "https://commons.wikimedia.org/wiki/File:Tyto_alba_-_Western_Barn_Owl_XC432000.mp3",
     "title": "Tyto alba - Western Barn Owl XC432000.mp3",
     "from": 0.0
+   },
+   {
+    "kind": "secondary",
+    "src": "media/a/schleiereule-1.mp3",
+    "spec": "media/s/schleiereule-1.webp",
+    "dur": 22.0,
+    "fmin": 700,
+    "fmax": 10100,
+    "artist": "Joost van Bruggen",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Tyto_alba_-_Western_Barn_Owl_XC433736.mp3",
+    "title": "Tyto alba - Western Barn Owl XC433736.mp3",
+    "from": 2.8
    }
   ],
   "img": {
@@ -3795,21 +3781,7 @@
   }
  },
  "mauerlaeufer": {
-  "clips": [
-   {
-    "kind": "song",
-    "src": "media/a/mauerlaeufer-0.mp3",
-    "spec": "media/s/mauerlaeufer-0.webp",
-    "dur": 2.09,
-    "fmin": 1700,
-    "fmax": 10100,
-    "artist": "Jeuwre",
-    "license": "CC BY-SA 4.0",
-    "page": "https://commons.wikimedia.org/wiki/File:De-Mauerl%C3%A4ufer.ogg",
-    "title": "De-Mauerläufer.ogg",
-    "from": 0.0
-   }
-  ],
+  "clips": [],
   "img": {
    "src": "media/p/mauerlaeufer.webp",
    "thumb": "media/p/mauerlaeufer-s.webp",
