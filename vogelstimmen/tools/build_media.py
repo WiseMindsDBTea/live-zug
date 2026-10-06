@@ -436,6 +436,8 @@ def main():
     if args.limit:
         todo = todo[:args.limit]
     log(f"{len(todo)} Arten zu bearbeiten")
+    if not todo:
+        sys.exit(3)
     import threading
     from concurrent.futures import ThreadPoolExecutor
     lock = threading.Lock()
