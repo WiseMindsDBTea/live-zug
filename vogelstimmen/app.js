@@ -105,7 +105,11 @@ function frame(){
   const playing = !audio.paused && !audio.ended;
   if (lastKey && lastKey !== A.key) $$(`.spec[data-key="${CSS.escape(lastKey)}"]`).forEach(el => { el.style.setProperty("--p", 0); el.classList.remove("playing"); });
   lastKey = A.key;
-  if (A.key) $$(`.spec[data-key="${CSS.escape(A.key)}"]`).forEach(el => { el.style.setProperty("--p", p.toFixed(4)); el.classList.toggle("playing", playing); });
+  if (A.key) $$(`.spec[data-key="${CSS.escape(A.key)}"]`).forEach(el => {
+    const w = +el.dataset.win || 0;
+    const pp = w ? Math.min(1, audio.currentTime / w) : p;
+    el.style.setProperty("--p", pp.toFixed(4)); el.classList.toggle("playing", playing && pp < 1);
+  });
   const bs = $("#pbSpec"); bs.style.setProperty("--p", p.toFixed(4)); bs.classList.toggle("playing", playing);
   if (playing) requestAnimationFrame(frame);
 }
@@ -137,11 +141,12 @@ $("#pbClose").onclick = () => { audio.pause(); $("#pbar").hidden = true; };
 $("#pbInfo").onclick = () => { if (A.bird) go(`#/vogel/${A.bird.id}`); };
 $("#pbSpec").onclick = e => { const r = e.currentTarget.getBoundingClientRect(); if (audio.duration) audio.currentTime = (e.clientX - r.left) / r.width * audio.duration; };
 
-function specHTML(bird, idx = 0, cls = ""){
+function specHTML(bird, idx = 0, cls = "", win = 0){
   const c = clipsOf(bird)[idx];
   const key = `${bird.id}:${idx}`;
   if (!c) return `<div class="spec ${cls}" aria-hidden="true"></div>`;
-  return `<div class="spec has ${cls}" data-key="${key}" data-spec="${bird.id}:${idx}" style='--spec:url("${esc(c.spec)}")' role="button" tabindex="-1" aria-label="${esc(bird.de)}: ${KIND[c.kind] || "Aufnahme"} abspielen"><i class="spec-ink"></i><i class="spec-done"></i><i class="spec-head"></i></div>`;
+  const w = win && c.dur > win ? win : 0;
+  return `<div class="spec has ${cls}" data-key="${key}" data-spec="${bird.id}:${idx}" ${w ? `data-win="${w}"` : ""} style='--spec:url("${esc(c.spec)}");--zoom:${w ? (c.dur / w).toFixed(3) : 1}' role="button" tabindex="-1" aria-label="${esc(bird.de)}: ${KIND[c.kind] || "Aufnahme"} abspielen"><i class="spec-ink"></i><i class="spec-done"></i><i class="spec-head"></i></div>`;
 }
 function playBtn(bird, idx = 0, cls = ""){
   const has = !!clipsOf(bird)[idx];
@@ -156,7 +161,9 @@ document.addEventListener("click", e => {
     e.preventDefault(); e.stopPropagation();
     const [id, i] = sp.dataset.spec.split(":");
     const r = sp.getBoundingClientRect();
-    const f = Math.max(0, Math.min(.98, (e.clientX - r.left) / r.width));
+    let f = Math.max(0, Math.min(.98, (e.clientX - r.left) / r.width));
+    const w = +sp.dataset.win || 0, c = clipsOf(BY[id])[+i];
+    if (w && c) f = f * w / c.dur;
     const key = `${id}:${i}`;
     if (A.key === key) toggle(BY[id], +i, f); else play(BY[id], +i, f < .12 ? 0 : f);
   }
@@ -202,7 +209,7 @@ function renderView(v){
 /* ================================================================ Lexikon */
 const LX = { q:"", chip:"alle", sort:"gruppe" };
 function dayBird(){
-  const pool = BIRDS.filter(b => b.freq <= 2 && presentNow(b) && clipsOf(b).length);
+  const pool = BIRDS.filter(b => b.freq <= 2 && presentNow(b) && !b.night && clipsOf(b).length && b.snd.some(x => ["floete","zwitscher","motiv","name","lach"].includes(x)));
   const list = pool.length ? pool : BIRDS;
   const d = new Date(); const seed = d.getFullYear() * 400 + d.getMonth() * 31 + d.getDate();
   const singing = list.filter(singsNow);
@@ -228,7 +235,7 @@ function rowHTML(b){
     ${isHeard(b.id) ? '<span class="heard-dot" title="Schon gehört"><svg><use href="#i-check"/></svg></span>' : ""}
     <span><span class="row-name">${esc(b.de)}${singsNow(b) ? '<span class="row-tag" title="singt jetzt" aria-label="singt jetzt">♪</span>' : ""}</span>
     <span class="row-sub">${sub ? `auch „${esc(sub)}“` : `<span class="lat">${esc(b.lat)}</span>`}</span></span>
-    ${specHTML(b, 0)}
+    ${specHTML(b, 0, "", 9)}
   </a>`;
 }
 function groupsFor(list){
@@ -278,7 +285,7 @@ VIEWS.lexikon = () => {
       <p class="today-laut" style="margin-top:14px">${esc(b.laut)}</p>
     </div>
     <div>
-      <div class="today-row">${playBtn(b, 0, "big")}${specHTML(b, 0)}</div>
+      <div class="today-row">${playBtn(b, 0, "big")}${specHTML(b, 0, "", 12)}</div>
       <div class="today-meta" style="margin-top:12px">
         <span>Im ${MONTHS[NOW-1]} zu hören: <b>${present}</b> von ${BIRDS.length} Arten</span>
         <span>Singen gerade: <b>${sing}</b></span>
@@ -301,7 +308,7 @@ VIEWS.lexikon = () => {
     <p>Jede Aufnahme steht neben ihrem <b>Stimmbild</b> (Sonagramm): links nach rechts die Zeit, unten nach oben die Tonhöhe. So sieht man, ob ein Vogel Motive wiederholt, trillert oder flötet – und erkennt die Form wieder.</p>
     <p><b>Gesang</b> ist die Reviermelodie (meist Männchen, vor allem im Frühjahr). <b>Rufe</b> sind kurze Alltagslaute – Kontakt, Warnung, Flug – und das ganze Jahr zu hören.</p>
     <h2 style="margin-top:18px">Für unterwegs</h2>
-    <p>Alle Aufnahmen auf dem Gerät speichern (etwa 30 MB), damit Vogelohr auch im Wald ohne Netz funktioniert.</p>
+    <p>Alle Aufnahmen auf dem Gerät speichern (etwa 40 MB), damit Vogelohr auch im Wald ohne Netz funktioniert.</p>
     <button class="btn" id="offline" type="button"><svg aria-hidden="true"><use href="#i-down"/></svg>Offline speichern</button>
     <div class="offline-box" id="offbox" hidden><div class="progress"><i id="offbar"></i></div><span id="offtxt"></span></div>
     <h2 style="margin-top:22px">Quellen</h2>
