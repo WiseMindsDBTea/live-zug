@@ -4,7 +4,7 @@ const BIRDS = window.BIRDS, HAB = window.HABITATS;
 const MONTHS = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
 const M1 = ["J","F","M","A","M","J","J","A","S","O","N","D"];
 const NOW = new Date().getMonth() + 1;
-const CACHE_KEY = "vsm-meta-v2";
+const CACHE_KEY = "vsm-meta-v3";
 const CACHE_TTL = 14 * 864e5;
 const COMMONS = "https://commons.wikimedia.org/w/api.php";
 // Synonyme, unter denen Wikidata die Art führen könnte
@@ -179,9 +179,9 @@ async function commonsInfo(titles){
   for (let i = 0; i < titles.length; i += 40){
     const chunk = titles.slice(i, i + 40);
     const p = new URLSearchParams({
-      action:"query", format:"json", origin:"*", prop:"videoinfo",
-      viprop:"url|mime|derivatives|extmetadata", viurlwidth:"480",
-      viextmetadatafilter:"Artist|LicenseShortName",
+      action:"query", format:"json", origin:"*", prop:"imageinfo|videoinfo",
+      iiprop:"url|mime|extmetadata", iiurlwidth:"480", iiextmetadatafilter:"Artist|LicenseShortName",
+      viprop:"derivatives",
       titles: chunk.map(t => "File:" + t).join("|")
     });
     const d = await fetchJSON(COMMONS + "?" + p);
@@ -191,19 +191,19 @@ async function commonsInfo(titles){
     chunk.forEach(t => {
       const want = norm["File:" + t] || "File:" + t;
       const pg = pages.find(x => x.title === want);
-      const vi = pg?.videoinfo?.[0];
-      if (vi) out[t] = toInfo(pg.title, vi);
+      if (pg && (pg.imageinfo || pg.videoinfo)) out[t] = toInfo(pg);
     });
   }
   return out;
 }
-function toInfo(title, vi){
-  const em = vi.extmetadata || {};
+function toInfo(pg){
+  const ii = pg.imageinfo?.[0] || {}, vi = pg.videoinfo?.[0] || {};
+  const em = ii.extmetadata || vi.extmetadata || {};
   return {
-    title: title.replace(/^File:/, ""),
-    url: vi.url, thumb: vi.thumburl || null, mime: vi.mime,
+    title: pg.title.replace(/^File:/, ""),
+    url: ii.url || vi.url, thumb: ii.thumburl || vi.thumburl || null, mime: ii.mime || vi.mime,
     derivatives: (vi.derivatives || []).map(d => ({src:d.src, type:d.type})),
-    page: vi.descriptionurl,
+    page: ii.descriptionurl || vi.descriptionurl,
     artist: strip(em.Artist?.value), license: strip(em.LicenseShortName?.value)
   };
 }
@@ -239,7 +239,7 @@ async function loadMeta(force){
       };
     });
     meta = next;
-    store.set(CACHE_KEY, { ts: Date.now(), data: next });
+    if (Object.keys(next).length) store.set(CACHE_KEY, { ts: Date.now(), data: next });
     refreshThumbs();
   } catch (err){
     if (!Object.keys(meta).length) setStatus("Fotos/Aufnahmen konnten nicht vorgeladen werden – Abspielen versucht es erneut.");
@@ -259,12 +259,13 @@ async function searchAudio(id){
   const p = new URLSearchParams({
     action:"query", format:"json", origin:"*", generator:"search",
     gsrsearch:`filetype:audio "${b.lat}"`, gsrnamespace:"6", gsrlimit:"8",
-    prop:"videoinfo", viprop:"url|mime|derivatives|extmetadata", viextmetadatafilter:"Artist|LicenseShortName"
+    prop:"imageinfo|videoinfo", iiprop:"url|mime|extmetadata", iiextmetadatafilter:"Artist|LicenseShortName",
+    viprop:"derivatives"
   });
   try {
     const d = await fetchJSON(COMMONS + "?" + p);
     const pages = Object.values(d.query?.pages || {}).sort((a,b) => (a.index||0) - (b.index||0));
-    const list = pages.filter(pg => pg.videoinfo?.[0]).map(pg => toInfo(pg.title, pg.videoinfo[0]));
+    const list = pages.filter(pg => pg.imageinfo?.[0]?.url).map(toInfo);
     searchCache[id] = list;
     return list;
   } catch { return []; }
