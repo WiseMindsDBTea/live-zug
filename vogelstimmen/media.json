@@ -1,0 +1,986 @@
+{
+ "wacholderdrossel": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/wacholderdrossel-0.mp3",
+    "spec": "media/s/wacholderdrossel-0.webp",
+    "dur": 15.76,
+    "fmin": 700,
+    "fmax": 9000,
+    "artist": "Benoît Van Hecke",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Turdus_pilaris_-_Fieldfare_XC531160.mp3",
+    "title": "Turdus pilaris - Fieldfare XC531160.mp3",
+    "from": 0.0
+   },
+   {
+    "kind": "song",
+    "src": "media/a/wacholderdrossel-1.mp3",
+    "spec": "media/s/wacholderdrossel-1.webp",
+    "dur": 22.0,
+    "fmin": 700,
+    "fmax": 9000,
+    "artist": "Alexander Kürthy",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Turdus_pilaris_-_Fieldfare_XC403028.mp3",
+    "title": "Turdus pilaris - Fieldfare XC403028.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/wacholderdrossel.webp",
+   "thumb": "media/p/wacholderdrossel-s.webp",
+   "w": 960,
+   "h": 831,
+   "tint": "#708443",
+   "artist": "Frankie Fouganthin",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bj%C3%B6rktrast_(Turdus_pilaris)-4.jpg",
+   "title": "Björktrast (Turdus pilaris)-4.jpg"
+  }
+ },
+ "amsel": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/amsel-0.mp3",
+    "spec": "media/s/amsel-0.webp",
+    "dur": 22.0,
+    "fmin": 800,
+    "fmax": 7900,
+    "artist": "Oona Räisänen (Mysid)",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File:Turdus_merula_2.ogg",
+    "title": "Turdus merula 2.ogg",
+    "from": 1.0
+   },
+   {
+    "kind": "call",
+    "src": "media/a/amsel-1.mp3",
+    "spec": "media/s/amsel-1.webp",
+    "dur": 22.0,
+    "fmin": 800,
+    "fmax": 7900,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Common_Blackbird_(Turdus_merula)_(W1CDR0001525_BD22).ogg",
+    "title": "Common Blackbird (Turdus merula) (W1CDR0001525 BD22).ogg",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/amsel.webp",
+   "thumb": "media/p/amsel-s.webp",
+   "w": 960,
+   "h": 638,
+   "tint": "#af9c7e",
+   "artist": "Hobbyfotowiki",
+   "license": "CC0",
+   "page": "https://commons.wikimedia.org/wiki/File:Amselm%C3%A4nnchen_der_Unterart_T._m._azorensis_auf_Terceira.jpg",
+   "title": "Amselmännchen der Unterart T. m. azorensis auf Terceira.jpg"
+  }
+ },
+ "misteldrossel": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/misteldrossel-0.mp3",
+    "spec": "media/s/misteldrossel-0.webp",
+    "dur": 22.0,
+    "fmin": 1000,
+    "fmax": 8400,
+    "artist": "",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Mistle_Thrush_(Turdus_viscivorus)_(W1CDR0000636_BD11).ogg",
+    "title": "Mistle Thrush (Turdus viscivorus) (W1CDR0000636 BD11).ogg",
+    "from": 30.7
+   },
+   {
+    "kind": "call",
+    "src": "media/a/misteldrossel-1.mp3",
+    "spec": "media/s/misteldrossel-1.webp",
+    "dur": 22.26,
+    "fmin": 1000,
+    "fmax": 8400,
+    "artist": "Alexander Kurthy",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Turdus_viscivorus_-_Mistle_Thrush_XC108362.mp3",
+    "title": "Turdus viscivorus - Mistle Thrush XC108362.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/misteldrossel.webp",
+   "thumb": "media/p/misteldrossel-s.webp",
+   "w": 960,
+   "h": 819,
+   "tint": "#7a694f",
+   "artist": "Alun Williams333",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Turdus_viscivorus_Brych_y_coed.jpg",
+   "title": "Turdus viscivorus Brych y coed.jpg"
+  }
+ },
+ "rotkehlchen": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/rotkehlchen-0.mp3",
+    "spec": "media/s/rotkehlchen-0.webp",
+    "dur": 22.0,
+    "fmin": 1400,
+    "fmax": 10700,
+    "artist": "Sander Pieterse",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:XC27161_-_Roodborst_-_Erithacus_rubecula.ogg",
+    "title": "XC27161 - Roodborst - Erithacus rubecula.ogg",
+    "from": 61.6
+   },
+   {
+    "kind": "call",
+    "src": "media/a/rotkehlchen-1.mp3",
+    "spec": "media/s/rotkehlchen-1.webp",
+    "dur": 22.0,
+    "fmin": 1400,
+    "fmax": 10700,
+    "artist": "Klaus-Jürgen Papke",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Erithacus_rubecula_-_European_Robin_XC604462.mp3",
+    "title": "Erithacus rubecula - European Robin XC604462.mp3",
+    "from": 63.6
+   }
+  ],
+  "img": {
+   "src": "media/p/rotkehlchen.webp",
+   "thumb": "media/p/rotkehlchen-s.webp",
+   "w": 960,
+   "h": 768,
+   "tint": "#958577",
+   "artist": "Francis C. Franklin",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Erithacus_rubecula_with_cocked_head.jpg",
+   "title": "Erithacus rubecula with cocked head.jpg"
+  }
+ },
+ "singdrossel": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/singdrossel-0.mp3",
+    "spec": "media/s/singdrossel-0.webp",
+    "dur": 22.0,
+    "fmin": 1000,
+    "fmax": 9000,
+    "artist": "Benoît Van Hecke",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC541198.mp3",
+    "title": "Turdus philomelos - Song Thrush XC541198.mp3",
+    "from": 33.2
+   },
+   {
+    "kind": "call",
+    "src": "media/a/singdrossel-1.mp3",
+    "spec": "media/s/singdrossel-1.webp",
+    "dur": 22.0,
+    "fmin": 1000,
+    "fmax": 9000,
+    "artist": "Joost van Bruggen",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_-_Song_Thrush_XC436363.mp3",
+    "title": "Turdus philomelos - Song Thrush XC436363.mp3",
+    "from": 7.4
+   }
+  ],
+  "img": {
+   "src": "media/p/singdrossel.webp",
+   "thumb": "media/p/singdrossel-s.webp",
+   "w": 741,
+   "h": 960,
+   "tint": "#839165",
+   "artist": "Charles J. Sharp",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Song_thrush_(Turdus_philomelos_philomelos).jpg",
+   "title": "Song thrush (Turdus philomelos philomelos).jpg"
+  }
+ },
+ "nachtigall": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/nachtigall-0.mp3",
+    "spec": "media/s/nachtigall-0.webp",
+    "dur": 22.0,
+    "fmin": 700,
+    "fmax": 10100,
+    "artist": "Sander Pieterse",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:XC138451_-_Nachtegaal_-_Luscinia_megarhynchos.ogg",
+    "title": "XC138451 - Nachtegaal - Luscinia megarhynchos.ogg",
+    "from": 22.0
+   },
+   {
+    "kind": "call",
+    "src": "media/a/nachtigall-1.mp3",
+    "spec": "media/s/nachtigall-1.webp",
+    "dur": 22.0,
+    "fmin": 700,
+    "fmax": 10100,
+    "artist": "Joost van Bruggen",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Luscinia_megarhynchos_-_Common_Nightingale_XC431489.mp3",
+    "title": "Luscinia megarhynchos - Common Nightingale XC431489.mp3",
+    "from": 3.7
+   }
+  ],
+  "img": {
+   "src": "media/p/nachtigall.webp",
+   "thumb": "media/p/nachtigall-s.webp",
+   "w": 960,
+   "h": 640,
+   "tint": "#709197",
+   "artist": "Արարատ Թրվանց",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:%D5%80%D5%A1%D6%80%D5%A1%D5%BE%D5%A1%D5%B5%D5%AB%D5%B6_%D5%BD%D5%B8%D5%AD%D5%A1%D5%AF.jpg",
+   "title": "Հարավային սոխակ.jpg"
+  }
+ },
+ "blaumeise": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/blaumeise-0.mp3",
+    "spec": "media/s/blaumeise-0.webp",
+    "dur": 11.06,
+    "fmin": 1700,
+    "fmax": 10700,
+    "artist": "Benoît Van Hecke",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Cyanistes_caeruleus_-_Eurasian_Blue_Tit_XC538220.mp3",
+    "title": "Cyanistes caeruleus - Eurasian Blue Tit XC538220.mp3",
+    "from": 0.0
+   },
+   {
+    "kind": "call",
+    "src": "media/a/blaumeise-1.mp3",
+    "spec": "media/s/blaumeise-1.webp",
+    "dur": 22.0,
+    "fmin": 1700,
+    "fmax": 10700,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Blue_Tit_(Cyanistes_caeruleus)_(W1CDR0001535_BD30).ogg",
+    "title": "Blue Tit (Cyanistes caeruleus) (W1CDR0001535 BD30).ogg",
+    "from": 28.0
+   }
+  ],
+  "img": {
+   "src": "media/p/blaumeise.webp",
+   "thumb": "media/p/blaumeise-s.webp",
+   "w": 800,
+   "h": 600,
+   "tint": "#9f9578",
+   "artist": "Sławek Staszczuk",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Parus_caeruleus1.jpg",
+   "title": "Parus caeruleus1.jpg"
+  }
+ },
+ "hausrotschwanz": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/hausrotschwanz-0.mp3",
+    "spec": "media/s/hausrotschwanz-0.webp",
+    "dur": 22.0,
+    "fmin": 1000,
+    "fmax": 10100,
+    "artist": "",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Black_Redstart_(Phoenicurus_ochruros)_(W1CDR0000253_BD17).ogg",
+    "title": "Black Redstart (Phoenicurus ochruros) (W1CDR0000253 BD17).ogg",
+    "from": 54.5
+   },
+   {
+    "kind": "call",
+    "src": "media/a/hausrotschwanz-1.mp3",
+    "spec": "media/s/hausrotschwanz-1.webp",
+    "dur": 22.0,
+    "fmin": 1000,
+    "fmax": 10100,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Phoenicurus_ochruros_-_Black_Redstart_XC560014.mp3",
+    "title": "Phoenicurus ochruros - Black Redstart XC560014.mp3",
+    "from": 44.0
+   }
+  ],
+  "img": {
+   "src": "media/p/hausrotschwanz.webp",
+   "thumb": "media/p/hausrotschwanz-s.webp",
+   "w": 960,
+   "h": 601,
+   "tint": "#676246",
+   "artist": "Siva301in",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Black_Redstart_bird.jpg",
+   "title": "Black Redstart bird.jpg"
+  }
+ },
+ "kohlmeise": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/kohlmeise-0.mp3",
+    "spec": "media/s/kohlmeise-0.webp",
+    "dur": 22.0,
+    "fmin": 1400,
+    "fmax": 8400,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Great_Tit_(Parus_major)_(W1CDR0001393_BD1).ogg",
+    "title": "Great Tit (Parus major) (W1CDR0001393 BD1).ogg",
+    "from": 28.5
+   },
+   {
+    "kind": "call",
+    "src": "media/a/kohlmeise-1.mp3",
+    "spec": "media/s/kohlmeise-1.webp",
+    "dur": 22.0,
+    "fmin": 1400,
+    "fmax": 8400,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Parus_major_-_Great_Tit_XC518420.mp3",
+    "title": "Parus major - Great Tit XC518420.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/kohlmeise.webp",
+   "thumb": "media/p/kohlmeise-s.webp",
+   "w": 960,
+   "h": 720,
+   "tint": "#857252",
+   "artist": "Frank Vassen from Brussels, Belgium",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Great_tit_(Parus_major),_Parc_de_Woluw%C3%A9,_Brussels_(13042792905).jpg",
+   "title": "Great tit (Parus major), Parc de Woluwé, Brussels (13042792905).jpg"
+  }
+ },
+ "gartenrotschwanz": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/gartenrotschwanz-0.mp3",
+    "spec": "media/s/gartenrotschwanz-0.webp",
+    "dur": 22.0,
+    "fmin": 1200,
+    "fmax": 10100,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Common_Redstart_(Phoenicurus_phoenicurus)_(W1CDR0001505_BD3).ogg",
+    "title": "Common Redstart (Phoenicurus phoenicurus) (W1CDR0001505 BD3).ogg",
+    "from": 1.6
+   },
+   {
+    "kind": "call",
+    "src": "media/a/gartenrotschwanz-1.mp3",
+    "spec": "media/s/gartenrotschwanz-1.webp",
+    "dur": 22.0,
+    "fmin": 1200,
+    "fmax": 10100,
+    "artist": "W.carter",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Redstart_warning_call_(cat)_in_Tuntorp,_Brastad.ogg",
+    "title": "Redstart warning call (cat) in Tuntorp, Brastad.ogg",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/gartenrotschwanz.webp",
+   "thumb": "media/p/gartenrotschwanz-s.webp",
+   "w": 960,
+   "h": 960,
+   "tint": "#647345",
+   "artist": "Aconcagua (talk)",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Gartenrotschwanz_1.jpg",
+   "title": "Gartenrotschwanz 1.jpg"
+  }
+ },
+ "schwanzmeise": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/schwanzmeise-0.mp3",
+    "spec": "media/s/schwanzmeise-0.webp",
+    "dur": 22.0,
+    "fmin": 2100,
+    "fmax": 11000,
+    "artist": "Jonathon Jongsma",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Aegithalos_caudatus_-_Long-tailed_Tit_XC114614.mp3",
+    "title": "Aegithalos caudatus - Long-tailed Tit XC114614.mp3",
+    "from": 0.0
+   },
+   {
+    "kind": "song",
+    "src": "media/a/schwanzmeise-1.mp3",
+    "spec": "media/s/schwanzmeise-1.webp",
+    "dur": 16.44,
+    "fmin": 2100,
+    "fmax": 11000,
+    "artist": "Jochem verweij",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Aegithalos_caudatus_-_Long-tailed_Tit_XC512590.mp3",
+    "title": "Aegithalos caudatus - Long-tailed Tit XC512590.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/schwanzmeise.webp",
+   "thumb": "media/p/schwanzmeise-s.webp",
+   "w": 783,
+   "h": 960,
+   "tint": "#8e7364",
+   "artist": "Rhododendrites",
+   "license": "CC BY-SA 4.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Long-tailed_tit_(74940).jpg",
+   "title": "Long-tailed tit (74940).jpg"
+  }
+ },
+ "tannenmeise": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/tannenmeise-0.mp3",
+    "spec": "media/s/tannenmeise-0.webp",
+    "dur": 12.29,
+    "fmin": 1700,
+    "fmax": 10100,
+    "artist": "Vladimir Yu. Arkhipov, Arkhivov",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Periparus_ater.ogg",
+    "title": "Periparus ater.ogg",
+    "from": 0.0
+   },
+   {
+    "kind": "call",
+    "src": "media/a/tannenmeise-1.mp3",
+    "spec": "media/s/tannenmeise-1.webp",
+    "dur": 22.0,
+    "fmin": 1700,
+    "fmax": 10100,
+    "artist": "Jacobo Ramil MIllarengo",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Periparus_ater_-_Coal_Tit_XC569135.mp3",
+    "title": "Periparus ater - Coal Tit XC569135.mp3",
+    "from": 80.2
+   }
+  ],
+  "img": {
+   "src": "media/p/tannenmeise.webp",
+   "thumb": "media/p/tannenmeise-s.webp",
+   "w": 960,
+   "h": 640,
+   "tint": "#9f9774",
+   "artist": "soumyajit nandy from Kolkata, India",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Coal_Tit_-_Dugalbitta,_Uttarakhand,_India_(15143483976).jpg",
+   "title": "Coal Tit - Dugalbitta, Uttarakhand, India (15143483976).jpg"
+  }
+ },
+ "zaunkoenig": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/zaunkoenig-0.mp3",
+    "spec": "media/s/zaunkoenig-0.webp",
+    "dur": 19.64,
+    "fmin": 1700,
+    "fmax": 11000,
+    "artist": "Grantus4504",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Troglodytes_troglodytes_song.ogg",
+    "title": "Troglodytes troglodytes song.ogg",
+    "from": 0.0
+   },
+   {
+    "kind": "call",
+    "src": "media/a/zaunkoenig-1.mp3",
+    "spec": "media/s/zaunkoenig-1.webp",
+    "dur": 22.0,
+    "fmin": 1700,
+    "fmax": 11000,
+    "artist": "Benoît Van Hecke",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Troglodytes_troglodytes_-_Eurasian_Wren_XC554784.mp3",
+    "title": "Troglodytes troglodytes - Eurasian Wren XC554784.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/zaunkoenig.webp",
+   "thumb": "media/p/zaunkoenig-s.webp",
+   "w": 960,
+   "h": 960,
+   "tint": "#c9b297",
+   "artist": "Alpsdake",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Troglodytes_troglodytes_fumigatus.JPG",
+   "title": "Troglodytes troglodytes fumigatus.JPG"
+  }
+ },
+ "wintergoldhaehnchen": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/wintergoldhaehnchen-0.mp3",
+    "spec": "media/s/wintergoldhaehnchen-0.webp",
+    "dur": 22.0,
+    "fmin": 3100,
+    "fmax": 11000,
+    "artist": "Alexander Kurthy",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Regulus_regulus_-_Goldcrest_XC108347.mp3",
+    "title": "Regulus regulus - Goldcrest XC108347.mp3",
+    "from": 9.3
+   },
+   {
+    "kind": "call",
+    "src": "media/a/wintergoldhaehnchen-1.mp3",
+    "spec": "media/s/wintergoldhaehnchen-1.webp",
+    "dur": 22.0,
+    "fmin": 3100,
+    "fmax": 11000,
+    "artist": "Sander Pieterse",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:XC164989-Eurasian_Nuthatch_call_Oostermaet_NL_2014.ogg",
+    "title": "XC164989-Eurasian Nuthatch call Oostermaet NL 2014.ogg",
+    "from": 4.1
+   }
+  ],
+  "img": {
+   "src": "media/p/wintergoldhaehnchen.webp",
+   "thumb": "media/p/wintergoldhaehnchen-s.webp",
+   "w": 960,
+   "h": 641,
+   "tint": "#607352",
+   "artist": "Missy Osborn from New Forest, England",
+   "license": "CC BY-SA 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Regulus_regulus_-Marwell_Wildlife,_Hampshire,_England-8.jpg",
+   "title": "Regulus regulus -Marwell Wildlife, Hampshire, England-8.jpg"
+  }
+ },
+ "heckenbraunelle": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/heckenbraunelle-0.mp3",
+    "spec": "media/s/heckenbraunelle-0.webp",
+    "dur": 22.0,
+    "fmin": 1700,
+    "fmax": 10100,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Dunnock_(Prunella_modularis)_(W1CDR0001422_BD6).ogg",
+    "title": "Dunnock (Prunella modularis) (W1CDR0001422 BD6).ogg",
+    "from": 38.6
+   },
+   {
+    "kind": "call",
+    "src": "media/a/heckenbraunelle-1.mp3",
+    "spec": "media/s/heckenbraunelle-1.webp",
+    "dur": 22.0,
+    "fmin": 1700,
+    "fmax": 10100,
+    "artist": "Benoît Van Hecke",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Prunella_modularis_-_Dunnock_XC546169.mp3",
+    "title": "Prunella modularis - Dunnock XC546169.mp3",
+    "from": 0.6
+   }
+  ],
+  "img": {
+   "src": "media/p/heckenbraunelle.webp",
+   "thumb": "media/p/heckenbraunelle-s.webp",
+   "w": 960,
+   "h": 733,
+   "tint": "#88886a",
+   "artist": "Smalljim",
+   "license": "CC BY 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Dunnock_crop2.jpg",
+   "title": "Dunnock crop2.jpg"
+  }
+ },
+ "gruenfink": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/gruenfink-0.mp3",
+    "spec": "media/s/gruenfink-0.webp",
+    "dur": 10.6,
+    "fmin": 1000,
+    "fmax": 9000,
+    "artist": "Vladimir Yu. Arkhipov, Arkhivov",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Carduelis_chloris.ogg",
+    "title": "Carduelis chloris.ogg",
+    "from": 0.0
+   },
+   {
+    "kind": "call",
+    "src": "media/a/gruenfink-1.mp3",
+    "spec": "media/s/gruenfink-1.webp",
+    "dur": 8.3,
+    "fmin": 1000,
+    "fmax": 9000,
+    "artist": "Jan Cibulka",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Chloris_chloris_-_European_Greenfinch_XC484483.mp3",
+    "title": "Chloris chloris - European Greenfinch XC484483.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/gruenfink.webp",
+   "thumb": "media/p/gruenfink-s.webp",
+   "w": 960,
+   "h": 640,
+   "tint": "#8f7f5e",
+   "artist": "Andreas Trepte",
+   "license": "CC BY-SA 2.5",
+   "page": "https://commons.wikimedia.org/wiki/File:Greenfinch_Carduelis_chloris.jpg",
+   "title": "Greenfinch Carduelis chloris.jpg"
+  }
+ },
+ "bergfink": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/bergfink-0.mp3",
+    "spec": "media/s/bergfink-0.webp",
+    "dur": 22.0,
+    "fmin": 1000,
+    "fmax": 7900,
+    "artist": "Alexander Kurthy",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Fringilla_montifringilla_-_Brambling_XC108349.mp3",
+    "title": "Fringilla montifringilla - Brambling XC108349.mp3",
+    "from": 2.5
+   },
+   {
+    "kind": "song",
+    "src": "media/a/bergfink-1.mp3",
+    "spec": "media/s/bergfink-1.webp",
+    "dur": 13.64,
+    "fmin": 1000,
+    "fmax": 7900,
+    "artist": "Vladimir Yu. Arkhipov, Arkhivov",
+    "license": "CC BY-SA 3.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Fringilla_montifringilla.ogg",
+    "title": "Fringilla montifringilla.ogg",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/bergfink.webp",
+   "thumb": "media/p/bergfink-s.webp",
+   "w": 900,
+   "h": 600,
+   "tint": "#726256",
+   "artist": "mmlolek",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Fringilla_montifringilla_-Poland_-male-8.jpg",
+   "title": "Fringilla montifringilla -Poland -male-8.jpg"
+  }
+ },
+ "buchfink": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/buchfink-0.mp3",
+    "spec": "media/s/buchfink-0.webp",
+    "dur": 22.0,
+    "fmin": 1200,
+    "fmax": 9600,
+    "artist": "Sander Pieterse",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:XC176182_-_Vink_-_Fringilla_coelebs.ogg",
+    "title": "XC176182 - Vink - Fringilla coelebs.ogg",
+    "from": 0.4
+   },
+   {
+    "kind": "call",
+    "src": "media/a/buchfink-1.mp3",
+    "spec": "media/s/buchfink-1.webp",
+    "dur": 22.0,
+    "fmin": 1200,
+    "fmax": 9600,
+    "artist": "Alvaro Ortiz Troncoso",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_-_Common_Chaffinch_XC489277.mp3",
+    "title": "Fringilla coelebs - Common Chaffinch XC489277.mp3",
+    "from": 33.5
+   }
+  ],
+  "img": {
+   "src": "media/p/buchfink.webp",
+   "thumb": "media/p/buchfink-s.webp",
+   "w": 680,
+   "h": 960,
+   "tint": "#6a6539",
+   "artist": "MichaelMaggs – Edited (sharpened, down-sampled, contrast corrected, noise removed) by: Arad",
+   "license": "CC BY-SA 2.5",
+   "page": "https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_chaffinch_male_edit2.jpg",
+   "title": "Fringilla coelebs chaffinch male edit2.jpg"
+  }
+ },
+ "stieglitz": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/stieglitz-0.mp3",
+    "spec": "media/s/stieglitz-0.webp",
+    "dur": 22.0,
+    "fmin": 1400,
+    "fmax": 10700,
+    "artist": "Sander Pieterse",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:XC101464_-_Putter_-_Carduelis_carduelis.ogg",
+    "title": "XC101464 - Putter - Carduelis carduelis.ogg",
+    "from": 12.0
+   },
+   {
+    "kind": "call",
+    "src": "media/a/stieglitz-1.mp3",
+    "spec": "media/s/stieglitz-1.webp",
+    "dur": 22.0,
+    "fmin": 1400,
+    "fmax": 10700,
+    "artist": "Ewithu",
+    "license": "CC BY 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Carduelis_carduelis_-_Spring_call.oga",
+    "title": "Carduelis carduelis - Spring call.oga",
+    "from": 28.1
+   }
+  ],
+  "img": {
+   "src": "media/p/stieglitz.webp",
+   "thumb": "media/p/stieglitz-s.webp",
+   "w": 960,
+   "h": 641,
+   "tint": "#938468",
+   "artist": "Pierre Dalous",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Carduelis_carduelis_(2012).jpg",
+   "title": "Carduelis carduelis (2012).jpg"
+  }
+ },
+ "kernbeisser": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/kernbeisser-0.mp3",
+    "spec": "media/s/kernbeisser-0.webp",
+    "dur": 4.31,
+    "fmin": 2100,
+    "fmax": 11000,
+    "artist": "Benoît Van Hecke",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Coccothraustes_coccothraustes_-_Hawfinch_XC541308.mp3",
+    "title": "Coccothraustes coccothraustes - Hawfinch XC541308.mp3",
+    "from": 0.0
+   },
+   {
+    "kind": "song",
+    "src": "media/a/kernbeisser-1.mp3",
+    "spec": "media/s/kernbeisser-1.webp",
+    "dur": 19.18,
+    "fmin": 2100,
+    "fmax": 11000,
+    "artist": "Alexander Kurthy",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Coccothraustes_coccothraustes_-_Hawfinch_XC107638.mp3",
+    "title": "Coccothraustes coccothraustes - Hawfinch XC107638.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/kernbeisser.webp",
+   "thumb": "media/p/kernbeisser-s.webp",
+   "w": 633,
+   "h": 415,
+   "tint": "#676953",
+   "artist": "Marek Szczepanek",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Coccothraustes_coccothraustes_1_(Marek_Szczepanek).jpg",
+   "title": "Coccothraustes coccothraustes 1 (Marek Szczepanek).jpg"
+  }
+ },
+ "girlitz": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/girlitz-0.mp3",
+    "spec": "media/s/girlitz-0.webp",
+    "dur": 22.0,
+    "fmin": 2100,
+    "fmax": 11000,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Serinus_serinus_-_European_Serin_XC483089.mp3",
+    "title": "Serinus serinus - European Serin XC483089.mp3",
+    "from": 29.9
+   },
+   {
+    "kind": "call",
+    "src": "media/a/girlitz-1.mp3",
+    "spec": "media/s/girlitz-1.webp",
+    "dur": 22.0,
+    "fmin": 2100,
+    "fmax": 11000,
+    "artist": "Marie-Lan Taÿ Pamart",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Serinus_serinus_-_European_Serin_XC471334.mp3",
+    "title": "Serinus serinus - European Serin XC471334.mp3",
+    "from": 22.8
+   }
+  ],
+  "img": {
+   "src": "media/p/girlitz.webp",
+   "thumb": "media/p/girlitz-s.webp",
+   "w": 960,
+   "h": 756,
+   "tint": "#8d874d",
+   "artist": "Ghislain38",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Serin_cini_mars.JPG",
+   "title": "Serin cini mars.JPG"
+  }
+ },
+ "gimpel": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/gimpel-0.mp3",
+    "spec": "media/s/gimpel-0.webp",
+    "dur": 22.0,
+    "fmin": 700,
+    "fmax": 5100,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Bullfinch_(Pyrrhula_pyrrhula)_(W1CDR0001509_BD14).ogg",
+    "title": "Bullfinch (Pyrrhula pyrrhula) (W1CDR0001509 BD14).ogg",
+    "from": 22.8
+   },
+   {
+    "kind": "song",
+    "src": "media/a/gimpel-1.mp3",
+    "spec": "media/s/gimpel-1.webp",
+    "dur": 19.12,
+    "fmin": 700,
+    "fmax": 5100,
+    "artist": "Benoît Van Hecke",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Pyrrhula_pyrrhula_-_Eurasian_Bullfinch_XC539302.mp3",
+    "title": "Pyrrhula pyrrhula - Eurasian Bullfinch XC539302.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/gimpel.webp",
+   "thumb": "media/p/gimpel-s.webp",
+   "w": 960,
+   "h": 686,
+   "tint": "#615249",
+   "artist": "Francis Franklin",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Bullfinch_male.jpg",
+   "title": "Bullfinch male.jpg"
+  }
+ },
+ "erlenzeisig": {
+  "clips": [
+   {
+    "kind": "song",
+    "src": "media/a/erlenzeisig-0.mp3",
+    "spec": "media/s/erlenzeisig-0.webp",
+    "dur": 22.0,
+    "fmin": 1700,
+    "fmax": 10700,
+    "artist": "",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Eurasian_Siskin_(Carduelis_spinus)_(W1CDR0001494_BD4).ogg",
+    "title": "Eurasian Siskin (Carduelis spinus) (W1CDR0001494 BD4).ogg",
+    "from": 91.7
+   },
+   {
+    "kind": "call",
+    "src": "media/a/erlenzeisig-1.mp3",
+    "spec": "media/s/erlenzeisig-1.webp",
+    "dur": 15.71,
+    "fmin": 1700,
+    "fmax": 10700,
+    "artist": "Benoît Van Hecke",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Spinus_spinus_-_Eurasian_Siskin_XC539301.mp3",
+    "title": "Spinus spinus - Eurasian Siskin XC539301.mp3",
+    "from": 0.0
+   }
+  ],
+  "img": {
+   "src": "media/p/erlenzeisig.webp",
+   "thumb": "media/p/erlenzeisig-s.webp",
+   "w": 526,
+   "h": 351,
+   "tint": "#a1936b",
+   "artist": "Sławek Staszczuk (photoss [AT] hotmail.co.uk)",
+   "license": "CC BY-SA 3.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Carduelis_spinus_male.jpg",
+   "title": "Carduelis spinus male.jpg"
+  }
+ },
+ "kreuzschnabel": {
+  "clips": [
+   {
+    "kind": "call",
+    "src": "media/a/kreuzschnabel-0.mp3",
+    "spec": "media/s/kreuzschnabel-0.webp",
+    "dur": 17.94,
+    "fmin": 1400,
+    "fmax": 7900,
+    "artist": "Anthony Wetherhill",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Loxia_curvirostra_-_Red_Crossbill_XC468917.mp3",
+    "title": "Loxia curvirostra - Red Crossbill XC468917.mp3",
+    "from": 0.0
+   },
+   {
+    "kind": "song",
+    "src": "media/a/kreuzschnabel-1.mp3",
+    "spec": "media/s/kreuzschnabel-1.webp",
+    "dur": 22.0,
+    "fmin": 1400,
+    "fmax": 7900,
+    "artist": "Kendall Wiggins",
+    "license": "CC BY-SA 4.0",
+    "page": "https://commons.wikimedia.org/wiki/File:Loxia_curvirostra_-_Red_Crossbill_XC607257.mp3",
+    "title": "Loxia curvirostra - Red Crossbill XC607257.mp3",
+    "from": 42.4
+   }
+  ],
+  "img": {
+   "src": "media/p/kreuzschnabel.webp",
+   "thumb": "media/p/kreuzschnabel-s.webp",
+   "w": 960,
+   "h": 668,
+   "tint": "#9f9779",
+   "artist": "Luiz Lapa from Oeiras, Portugal",
+   "license": "CC BY 2.0",
+   "page": "https://commons.wikimedia.org/wiki/File:Cruza-bico_comum,_f%C3%AAmea,_Red_Crossbill,_female_(51692602998).jpg",
+   "title": "Cruza-bico comum, fêmea, Red Crossbill, female (51692602998).jpg"
+  }
+ }
+}
