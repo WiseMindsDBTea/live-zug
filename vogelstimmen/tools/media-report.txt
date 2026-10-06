@@ -1959,3 +1959,247 @@
    PICK[call] 22.0s @4.8s 300-5100Hz  Fulica atra - Eurasian Coot XC432890.mp3  | Joost van Bruggen | CC BY-SA 4.0
    PICK[song] 21.99s @0.0s 300-5100Hz  Fulica atra - Eurasian Coot XC434599.mp3  | Joost van Bruggen | CC BY-SA 4.0
    IMG Eurasian Coot.jpg tint=#726034 | Noodle snacks
+
+## wasseramsel — Cinclus cinclus  (2 Kandidaten)
+   cand  11.0 ['song'] 12.526780045351474s  European Dipper (Cinclus cinclus) (W1CDR0001383 BD8).ogg
+   cand  -3.0 [] 2.16s  De-Wasseramsel.ogg
+   PICK[song] 12.53s @0.0s 1400-10100Hz  European Dipper (Cinclus cinclus) (W1CDR0001383 BD8).ogg  |  | CC BY-SA 4.0
+   IMG Cinclus cinclus bronwen y dwr.jpg tint=#6b645e | Alun Williams333
+
+## eisvogel — Alcedo atthis  (5 Kandidaten)
+   cand   9.0 ['call', 'song', 'wings'] 17.95245s  Alcedo atthis - Common Kingfisher XC476785.mp3
+   cand   1.5 [] 180.672s  Ijsvogel in Nieuwegein - SoundCloud - luc de bruijn.ogg
+   cand   1.5 [] 4.8s  Jer-pêtcheux d'St. Martîn.ogg
+   cand  -3.0 [] 2.14s  De-Eisvogel.ogg
+   cand  -3.0 [] 2.19s  De-Eisvögel.ogg
+   PICK[call] 17.89s @0.0s 2100-10100Hz  Alcedo atthis - Common Kingfisher XC476785.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   IMG Alcedo Atthis.jpg tint=#5e6c57 | Artemy Voikhansky
+
+## teichhuhn — Gallinula chloropus  (15 Kandidaten)
+   cand  12.0 ['call', 'song', 'wings'] 9.47095s  Gallinula chloropus - Common Moorhen XC432931.mp3
+   cand   9.0 ['call', 'song', 'wings'] 22.31085s  Gallinula chloropus - Common Moorhen XC559362.mp3
+   cand   9.0 ['call', 'song', 'wings'] 10.700270514717975s  Gallinula chloropus - Common Moorhen XC545002.mp3
+   cand   9.0 ['call', 'song', 'wings'] 20.931473204929667s  Gallinula chloropus - Common Moorhen XC471079.mp3
+   cand   9.0 ['call', 'song', 'wings'] 8.571222375676548s  Gallinula chloropus - Common Moorhen XC553223.mp3
+   cand   9.0 ['call', 'song', 'wings'] 9.836375s  Gallinula chloropus - Common Moorhen XC436938.mp3
+   cand   9.0 ['call', 'song', 'wings'] 9.382703530329628s  Gallinula chloropus - Common Moorhen XC549213.mp3
+   cand   9.0 ['call', 'song'] 54.88066666666667s  Gallinula chloropus - Common Moorhen XC424197.mp3
+   PICK[call] 9.41s @0.0s 300-5100Hz  Gallinula chloropus - Common Moorhen XC432931.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   PICK[song] 22.25s @0.0s 300-5100Hz  Gallinula chloropus - Common Moorhen XC559362.mp3  | Benoît Van Hecke | CC BY-SA 4.0
+   IMG Common Moorhen (Gallinula chloropus pyrrhorrhoa), Mauritius.jpg tint=#75892c | gailhampshire from Cradley, Malvern, U.K
+
+## kormoran — Phalacrocorax carbo  (2 Kandidaten)
+   cand   3.0 [] 13.351024168236034s  Cormorán grande (Phalacrocorax carbo).mp3
+   cand  -3.0 [] 2.08s  De-Kormoran.ogg
+   PICK[primary] 13.3s @0.0s 100-2300Hz  Cormorán grande (Phalacrocorax carbo).mp3  | Sonothèque ADVL | CC0
+   IMG 2021-05-05 Phalacrocorax carbo carbo, Killingworth Lake, Northumberland 1-2.jpg tint=#8c9089 | MPF
+
+## haubentaucher — Podiceps cristatus  (4 Kandidaten)
+   cand  11.0 ['call'] 54.55780045351474s  Great Crested Grebe (Podiceps cristatus) (W1CDR0001488 BD4).ogg
+   cand   9.0 ['call', 'song'] 55.01387755102041s  Southern-crested-grebe-song.wav
+   cand  -3.0 [] 2.35s  Jer-grand' poutchette.ogg
+   cand  -3.0 [] 1.87s  De-Haubentaucher.ogg
+   PICK[call] 22.0s @30.8s 300-4000Hz  Great Crested Grebe (Podiceps cristatus) (W1CDR0001488 BD4).ogg  |  | CC BY-SA 4.0
+   PICK[song] 22.0s @28.1s 300-4000Hz  Southern-crested-grebe-song.wav  | Unknown authorUnknown author | CC BY 4.0
+   IMG Great Crested Grebe (52909695022).jpg tint=#a79e93 | caroline legg
+
+## lachmoewe — Chroicocephalus ridibundus  (23 Kandidaten)
+   cand  11.0 ['call'] 57.71861678004535s  Black-headed Gulls (Larus ridibundus) (W1CDR0001402 BD19).ogg
+   cand   9.0 ['call', 'song'] 96.616725s  Chroicocephalus ridibundus - Black-headed Gull XC432995.mp3
+   cand   9.0 ['call', 'song'] 32.674075s  Chroicocephalus ridibundus - Black-headed Gull XC512864.mp3
+   cand   9.0 ['call', 'song'] 21.780525s  Chroicocephalus ridibundus - Black-headed Gull XC516970.mp3
+   cand   9.0 ['call', 'song'] 16.963975s  Chroicocephalus ridibundus - Black-headed Gull XC511438.mp3
+   cand   9.0 ['call', 'song'] 33.510025s  Chroicocephalus ridibundus - Black-headed Gull XC516972.mp3
+   cand   9.0 ['call', 'song'] 50.881425s  Chroicocephalus ridibundus - Black-headed Gull XC512863.mp3
+   cand   7.5 ['call', 'song', 'wings'] 206.6291875s  Chroicocephalus ridibundus - Black-headed Gull XC310408.mp3
+   PICK[call] 22.0s @33.1s 300-4500Hz  Black-headed Gulls (Larus ridibundus) (W1CDR0001402 BD19).ogg  |  | CC BY-SA 4.0
+   PICK[song] 22.0s @2.0s 300-4500Hz  Chroicocephalus ridibundus - Black-headed Gull XC432995.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   IMG Black-headed Gull - St James's Park, London - Nov 2006.jpg tint=#51492e | Diliff
+
+## austernfischer — Haematopus ostralegus  (7 Kandidaten)
+   cand   9.0 ['call', 'song'] 24.2523125s  Haematopus ostralegus - Eurasian Oystercatcher XC466474.mp3
+   cand   9.0 ['call', 'song'] 10.680458333333334s  Haematopus ostralegus - Eurasian Oystercatcher XC503632.mp3
+   cand   8.0 ['call'] 66.92802721088435s  Eurasian Oystercatcher (Haematopus ostralegus) (W HAEMATOPUS OSTRALEGUS R4 C7).ogg
+   cand   1.5 ['song'] 34.57595s  Haematopus ostralegus - Eurasian Oystercatcher XC561038.mp3
+   cand   1.5 ['song'] 24.4086875s  Haematopus ostralegus - Eurasian Oystercatcher XC466472.mp3
+   cand   1.5 ['song'] 21.995102040816327s  Oystercatcher.ogg
+   cand  -3.0 [] 2.9759583333333333s  Austernfischer (Haematopus ostralegus) - Hjartarstaðir Guesthouse - 2022-07-15 00 43 17.wav
+   PICK[call] 22.0s @1.8s 1000-6800Hz  Haematopus ostralegus - Eurasian Oystercatcher XC466474.mp3  | Pascal Christe | CC BY-SA 4.0
+   PICK[song] 10.66s @0.0s 1000-6800Hz  Haematopus ostralegus - Eurasian Oystercatcher XC503632.mp3  | Jochem verweij | CC BY-SA 4.0
+   IMG Haematopus ostralegus He.jpg tint=#848083 | Andreas Trepte
+
+## silbermoewe — Larus argentatus  (9 Kandidaten)
+   cand  11.5 ['call', 'wings'] 19.485466169156396s  XC707075 - European Herring Gull - Larus argentatus.mp3
+   cand   9.5 ['call'] 182.81902494331067s  Herring Gull (Larus argentatus) (W1CDR0001420 BD12).ogg
+   cand   9.0 ['call', 'song', 'wings'] 33.669375s  Larus argentatus - European Herring Gull XC488995.mp3
+   cand   9.0 ['call', 'song', 'wings'] 43.383675s  Larus argentatus - European Herring Gull XC436943.mp3
+   cand   5.0 [] 11.447437641723356s  BioAcoustica Lyme Gulls.flac
+   cand   3.0 [] 55.94848072562358s  Larus argentatus in Szczecin, 15th January 2020.wav
+   cand   3.0 ['call'] 1.6021768707482993s  Möwengeschrei.ogg
+   cand  -3.0 [] 0.85s  Jer-Mauve.ogg
+   PICK[call] 19.45s @0.0s 300-4500Hz  XC707075 - European Herring Gull - Larus argentatus.mp3  | Sonothèque ADVL | CC0
+   PICK[song] 22.0s @2.9s 300-4500Hz  Larus argentatus - European Herring Gull XC488995.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   IMG Larus argentatus01.jpg tint=#76919c | Kulac
+
+## rohrdommel — Botaurus stellaris  (6 Kandidaten)
+   cand   9.0 ['call', 'song', 'wings'] 15.062425s  Botaurus stellaris - Eurasian Bittern XC431823.mp3
+   cand   9.0 ['song'] 14.3319375s  Botaurus stellaris - Eurasian Bittern XC362697.mp3
+   cand   9.0 ['call', 'song', 'wings'] 103.47277144821544s  Botaurus stellaris - Eurasian Bittern XC603768.mp3
+   cand   9.0 ['call', 'song', 'wings'] 16.334775s  Botaurus stellaris - Eurasian Bittern XC434683.mp3
+   cand   3.5 ['call'] 80.68024943310658s  Eurasian Bittern (Botaurus stellaris) (W BOTAURUS STELLARIS R1 C1).ogg
+   cand  -3.0 [] 1.78s  De-Rohrdommel.ogg
+   PICK[song] 15.02s @0.0s 0-600Hz  Botaurus stellaris - Eurasian Bittern XC431823.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   PICK[call] 22.0s @52.7s 0-600Hz  Eurasian Bittern (Botaurus stellaris) (W BOTAURUS STELLARIS R1 C1).ogg  |  | CC BY-SA 4.0
+   IMG Eurasian Bittern - Torrile - Italy 4528 (15409347121).jpg tint=#777937 | Francesco Veronesi from Italy
+
+## rotmilan — Milvus milvus  (4 Kandidaten)
+   cand   1.5 ['song'] 32.80804166666667s  Milvus milvus - Red Kite XC576967.mp3
+   cand   1.5 ['song'] 29.725208333333335s  Milvus milvus - Red Kite XC518958.mp3
+   cand  -3.0 [] 2.19s  De-Rotmilan.ogg
+   cand  -3.0 [] 1.88s  De-Milan.ogg
+   PICK[primary] 22.0s @9.6s 1000-5700Hz  Milvus milvus - Red Kite XC576967.mp3  | Pascal Christe | CC BY-SA 4.0
+   PICK[song] 22.0s @7.3s 1000-5700Hz  Milvus milvus - Red Kite XC518958.mp3  | Pascal Christe | CC BY-SA 4.0
+   IMG Milvus milvus Jura.jpg tint=#6a869c | Noel Reynolds
+
+## turmfalke — Falco tinnunculus  (9 Kandidaten)
+   cand   9.0 ['call', 'song', 'wings'] 30.665135945548542s  Falco tinnunculus - Common Kestrel XC468409.mp3
+   cand   9.0 ['call', 'song', 'wings'] 14.109625s  Falco tinnunculus - Common Kestrel XC485216.mp3
+   cand   9.0 ['call', 'song'] 49.990875s  Falco tinnunculus - Common Kestrel XC478472.mp3
+   cand   9.0 ['call', 'song'] 29.068836492742072s  Falco tinnunculus - Common Kestrel XC468403.mp3
+   cand   9.0 ['call', 'song', 'wings'] 68.44259176070064s  Falco tinnunculus - Common Kestrel XC474122.mp3
+   cand   7.5 ['call', 'crow', 'song'] 123.4811s  Falco tinnunculus - Common Kestrel XC478287.mp3
+   cand   7.5 ['call', 'song', 'wings'] 130.22254119969418s  Falco tinnunculus - Common Kestrel XC474112.mp3
+   cand   7.5 ['call', 'song'] 6.754075s  Falco tinnunculus - Common Kestrel XC589714.mp3
+   PICK[call] 22.0s @0.0s 1400-6800Hz  Falco tinnunculus - Common Kestrel XC468409.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   PICK[song] 14.05s @0.0s 1400-6800Hz  Falco tinnunculus - Common Kestrel XC485216.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   IMG Common kestrel falco tinnunculus.jpg tint=#6a6535 | Andreas Trepte
+
+## seeadler — Haliaeetus albicilla  (1 Kandidaten)
+   cand  -3.0 [] 1.85s  De-Seeadler.ogg
+   PICK[primary] 1.85s @0.0s 700-5700Hz  De-Seeadler.ogg  | Jeuwre | CC BY-SA 4.0
+   IMG Adult White-tailed Eagle defending prey, Rezerwat Gostynin-Wloclawek, Poland.jpg tint=#838962 | Original: Andreas Weith. This edit: MPF.
+
+## wanderfalke — Falco peregrinus  (4 Kandidaten)
+   cand   3.0 [] 61.44s  매(Falco peregrinus Tunstall).ogg
+   cand   1.5 ['song'] 14.84s  Halcón peregrino.ogg
+   cand  -3.0 [] 1.35s  Jer-êcouffl'ye.ogg
+   cand  -3.0 [] 2.1s  De-Wanderfalke.ogg
+   PICK[primary] 22.0s @1.2s 700-5700Hz  매(Falco peregrinus Tunstall).ogg  | Unknown authorUnknown author | KOGL Type 1
+   PICK[song] 14.84s @0.0s 700-5700Hz  Halcón peregrino.ogg  | Sternanita3 | CC BY-SA 4.0
+   IMG Faucon pelerin 7 mai.jpg tint=#9d9587 | Georges Lignier (georges.lignier@wanadoo.fr)
+
+## maeusebussard — Buteo buteo  (4 Kandidaten)
+   cand   9.0 ['call', 'song'] 57.84835079299126s  Buteo buteo - Common Buzzard XC538678.mp3
+   cand   9.0 ['call', 'song'] 61.87336019081556s  Buteo buteo - Common Buzzard XC538277.mp3
+   cand  -3.0 [] 0.809795918367347s  Buteo buteo warning the fledglings 7643.ogg
+   cand  -3.0 [] 1.85s  De-Mäusebussard.ogg
+   PICK[call] 22.0s @8.3s 1000-6200Hz  Buteo buteo - Common Buzzard XC538678.mp3  | Benoît Van Hecke | CC BY-SA 4.0
+   PICK[song] 22.0s @12.1s 1000-6200Hz  Buteo buteo - Common Buzzard XC538277.mp3  | Benoît Van Hecke | CC BY-SA 4.0
+   IMG Common Buzzard by caroline legg (cropped).jpg tint=#88804c | caroline legg
+
+## sperber — Accipiter nisus  (5 Kandidaten)
+   cand  12.0 ['call', 'song'] 71.4341875s  Accipiter nisus - Eurasian Sparrowhawk XC380491.mp3
+   cand   9.0 ['call', 'song'] 71.332175s  Accipiter nisus - Eurasian Sparrowhawk XC234158.mp3
+   cand   9.0 ['call', 'crow', 'song'] 10.187484680225s  Accipiter nisus - Eurasian Sparrowhawk XC467097.mp3
+   cand   3.0 [] 71.27746031746032s  Accipiter nisus.ogg
+   cand  -3.0 [] 1.66s  De-Sperber.ogg
+   PICK[call] 22.0s @45.3s 1000-5700Hz  Accipiter nisus - Eurasian Sparrowhawk XC380491.mp3  | Jan Cibulka | CC BY-SA 3.0
+   PICK[song] 22.0s @48.8s 1000-5700Hz  Accipiter nisus - Eurasian Sparrowhawk XC234158.mp3  | Steven Wilson | CC BY-SA 3.0
+   IMG Accipiter nisus Meneer Zjeroen.jpg tint=#5c6655 | Meneer Zjeroen
+
+## steinadler — Aquila chrysaetos  (3 Kandidaten)
+   cand  11.0 ['call'] 25.14392290249433s  Golden Eagle (Aquila chrysaetos) (W1CDR0001387 BD6).ogg
+   cand  -3.0 [] 3.830657596371882s  Golden eagle.ogg
+   cand  -3.0 [] 2.04s  De-Steinadler.ogg
+   PICK[call] 22.0s @1.8s 700-5700Hz  Golden Eagle (Aquila chrysaetos) (W1CDR0001387 BD6).ogg  |  | CC BY-SA 4.0
+   IMG Maakotka (Aquila chrysaetos) by Jarkko Järvinen.jpg tint=#6c6051 | Jarkko Järvinen
+
+## bartgeier — Gypaetus barbatus  (1 Kandidaten)
+   cand  -0.5 [] 395.05124716553286s  Birds and All Nature 1898-08 01 various.ogg
+   PICK[primary] 22.0s @363.0s 700-6800Hz  Birds and All Nature 1898-08 01 various.ogg  | W. E. Watt; performed by Joe Selah | Public domain
+   IMG Bearded Vulture - Catalan Pyrenees - Spain (25098398432).jpg tint=#6b6756 | Francesco Veronesi from Italy
+
+## waldkauz — Strix aluco  (41 Kandidaten)
+   cand   9.0 ['call', 'song'] 41.947675s  Strix aluco - Tawny Owl XC494801.mp3
+   cand   9.0 ['call', 'song'] 106.04695s  Strix aluco - Tawny Owl XC500923.mp3
+   cand   9.0 ['call', 'song'] 33.089875s  Strix aluco - Tawny Owl XC497317.mp3
+   cand   9.0 ['song'] 11.92655s  Strix aluco - Tawny Owl XC404476.mp3
+   cand   9.0 ['song'] 119.22516347492918s  Strix aluco - Tawny Owl XC471318.mp3
+   cand   9.0 ['call', 'song'] 57.29278442386939s  Strix aluco - Tawny Owl XC583838.mp3
+   cand   9.0 ['call', 'song'] 41.74576273324132s  Strix aluco - Tawny Owl XC457399.mp3
+   cand   9.0 ['call', 'song'] 13.18924987810824s  Strix aluco - Tawny Owl XC603209.mp3
+   PICK[song] 22.0s @0.0s 200-2300Hz  Strix aluco - Tawny Owl XC494801.mp3  | Alvaro Ortiz Troncoso | CC BY-SA 4.0
+   PICK[call] 16.0s @0.0s 200-2300Hz  Waldkauz.ogg  | Jugrü | CC BY-SA 3.0
+   IMG Strix aluco aluco.jpg tint=#8f7a58 | Chrumps
+
+## uhu — Bubo bubo  (3 Kandidaten)
+   cand   9.0 ['song'] 61.16012893503014s  Bubo bubo - Eurasian Eagle-Owl XC604112.mp3
+   cand   9.0 ['call', 'song'] 37.01725s  Bubo bubo - Eurasian Eagle-Owl XC461330.mp3
+   cand   0.0 ['call'] 124.97066666666667s  BuboBuboMariankaSlovakia2012.ogg
+   PICK[song] 22.0s @11.2s 100-900Hz  Bubo bubo - Eurasian Eagle-Owl XC604112.mp3  | Robert Petersen | CC BY-SA 4.0
+   PICK[call] 22.0s @14.4s 100-900Hz  Bubo bubo - Eurasian Eagle-Owl XC461330.mp3  | Mirko Tomasi | CC BY-SA 4.0
+   IMG Hubro (Bubo bubo).JPG tint=#5d5d5d | Marton Berntsen
+
+## waldohreule — Asio otus  (11 Kandidaten)
+   cand   9.0 ['song'] 88.91415625s  Asio otus - Long-eared Owl XC513604.mp3
+   cand   9.0 ['call', 'song'] 60.912125s  Asio otus - Long-eared Owl XC528380.mp3
+   cand   9.0 ['song', 'wings'] 60.334025s  Asio otus - Long-eared Owl XC108293.mp3
+   cand   9.0 ['song'] 54.48475s  Asio otus - Long-eared Owl XC513605.mp3
+   cand   9.0 ['song', 'wings'] 19.58749779881838s  Asio otus - Long-eared Owl XC571684.mp3
+   cand   9.0 ['song'] 50.54028125s  Asio otus - Long-eared Owl XC513602.mp3
+   cand   9.0 ['song', 'wings'] 60.34285714285714s  DM550073AsioOtus.ogg
+   cand   7.5 ['call', 'song'] 312.909525s  Asio otus - Long-eared Owl XC423552.mp3
+   PICK[song] 22.0s @18.3s 100-1400Hz  Asio otus - Long-eared Owl XC513604.mp3  | JACOB Hervé | CC BY-SA 4.0
+   PICK[call] 22.0s @8.1s 100-1400Hz  Asio otus - Long-eared Owl XC528380.mp3  | Benjamin Mayer | CC BY-SA 4.0
+   IMG Asio otus Downsview Park Toronto2.jpg tint=#7e91bb | Mykola Swarnyk
+
+## schleiereule — Tyto alba  (9 Kandidaten)
+   cand   9.0 ['call', 'song', 'wings'] 65.1234529559122s  Tyto alba - Western Barn Owl XC592539.mp3
+   cand   9.0 ['call', 'song', 'wings'] 15.232475s  Tyto alba - Western Barn Owl XC432000.mp3
+   cand   9.0 ['call', 'song', 'wings'] 31.887325s  Tyto alba - Western Barn Owl XC433736.mp3
+   cand   9.0 ['call', 'song'] 91.625775s  Tyto alba - Western Barn Owl XC345927.mp3
+   cand   7.5 ['call', 'song', 'wings'] 7.389995665476798s  Tyto alba - Western Barn Owl XC545944.mp3
+   cand   7.5 ['call', 'song', 'wings'] 6.97475s  Tyto alba - Western Barn Owl XC436948.mp3
+   cand   7.5 ['call', 'song', 'wings'] 7.911325s  Tyto alba - Western Barn Owl XC436946.mp3
+   cand   5.0 [] 12.386666666666667s  Barn Owl (Tyto alba) (W TYTO ALBA R1 C16).ogg
+   PICK[call] 22.0s @1.8s 700-10100Hz  Tyto alba - Western Barn Owl XC592539.mp3  | Jens Loose | CC BY-SA 4.0
+   PICK[song] 15.18s @0.0s 700-10100Hz  Tyto alba - Western Barn Owl XC432000.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   IMG Tyto alba tylluan wen detail.jpg tint=#998562 | User:Alun Williams333
+
+## wiedehopf — Upupa epops  (7 Kandidaten)
+   cand   9.0 ['song'] 39.72s  Upupa epops · XC135728.ogg
+   cand   9.0 ['song'] 29.5582s  Upupa epops - Eurasian Hoopoe XC108366.mp3
+   cand   9.0 ['song'] 20.16s  Abubilla.ogg
+   cand   3.0 ['call'] 7.158625s  Upupa epops.ogg
+   cand   1.5 ['call'] 29.544s  LS110175UpupaEpops.ogg
+   cand  -3.0 [] 1.75s  De-Hupatz.ogg
+   cand  -3.0 [] 1.78s  De-Wiedehopf.ogg
+   PICK[song] 22.0s @4.6s 200-1200Hz  Upupa epops · XC135728.ogg  | Fernand DEROUSSEN | CC BY-SA 3.0
+   PICK[call] 7.16s @0.0s 200-1200Hz  Upupa epops.ogg  | Vladimir Yu. Arkhipov, Arkhivov | CC BY-SA 3.0
+   IMG Common Hoopoe Photograph By Shantanu Kuveskar.jpg tint=#a4925e | Shantanu Kuveskar
+
+## steinkauz — Athene noctua  (12 Kandidaten)
+   cand  10.5 ['call', 'song'] 253.69885s  Athene noctua - Little Owl XC309481.mp3
+   cand   9.0 ['call'] 65.57024943310658s  Steinkauz.OGG
+   cand   3.0 [] 75.134s  Little owl, steenuil.wav
+   cand   3.0 [] 12.722229166666667s  Cri chevêche d'Athéna (2).wav
+   cand   3.0 ['call'] 1.12s  Kcg-a̱nywan (little owl).ogg
+   cand   3.0 [] 11.222229166666667s  Cri chevêche d'Athéna.wav
+   cand   1.5 ['song'] 16.43015s  Athene noctua - Little Owl XC432927.mp3
+   cand   1.5 ['song'] 12.711225s  Athene noctua - Little Owl XC431980.mp3
+   PICK[call] 22.0s @196.2s 400-3400Hz  Athene noctua - Little Owl XC309481.mp3  | Nikolaos Sarikakis | CC BY-SA 4.0
+   PICK[song] 16.39s @0.0s 400-3400Hz  Athene noctua - Little Owl XC432927.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   IMG Athene noctua, Ambula, Montenegro 1.jpg tint=#635e4c | Frank Vassen from Brussels, Belgium
+
+## pirol — Oriolus oriolus  (12 Kandidaten)
+   cand   9.0 ['song'] 80.104875s  Oriolus oriolus - Eurasian Golden Oriole XC431707.mp3
+   cand   9.0 ['call', 'song'] 17.179475966884297s  Oriolus oriolus - Eurasian Golden Oriole XC563031.mp3
+   cand   9.0 ['call', 'song'] 53.10755s  Oriolus oriolus - Eurasian Golden Oriole XC488226.mp3
+   cand   9.0 ['call', 'song'] 94.6149s  Oriolus oriolus - Eurasian Golden Oriole XC269069.mp3
+   cand   9.0 ['call', 'song'] 41.429375s  Oriolus oriolus - Eurasian Golden Oriole XC342192.mp3
+   cand   9.0 ['song'] 32.2477s  Oriolus oriolus - Eurasian Golden Oriole XC431993.mp3
+   cand   9.0 ['call', 'song'] 96.26993197278911s  Golden oriole song.ogg
+   cand   9.0 ['call', 'song'] 15.64225s  Oriolus oriolus voice.ogg
+   PICK[song] 22.0s @9.6s 500-4500Hz  Oriolus oriolus - Eurasian Golden Oriole XC431707.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   PICK[call] 21.21s @0.0s 500-4500Hz  Pirol Nähe Dahme-Mark (Andreas Plank, 21.05.2011).ogg  | Andreas Plank | CC BY-SA 3.0
+   IMG Loriot d'Europe by Michel Idre.jpg tint=#647334 | Michel Idre from Plaisance du Touch, France
