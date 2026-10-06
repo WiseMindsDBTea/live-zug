@@ -344,11 +344,13 @@ def make_clip(info, sid, n, tmp):
     ffmpeg("-i", mp3, "-ac", "1", "-ar", str(SR), wav)
     c = load_wav(wav)
     spec, fmin, fmax = sonagram(c, os.path.join(MEDIA, "s", base + ".webp"), lo, hi)
+    from events import detect as detect_events
+    ev = detect_events(c, lo, hi)
     return {
         "kind": info["slot"], "src": f"media/a/{base}.mp3", "spec": f"media/s/{base}.webp",
         "dur": round(len(c) / SR, 2), "fmin": fmin, "fmax": fmax,
         "artist": info["artist"], "license": info["license"], "page": info["page"],
-        "title": info["title"], "from": round(st, 1),
+        "title": info["title"], "from": round(st, 1), "ev": ev,
     }
 
 

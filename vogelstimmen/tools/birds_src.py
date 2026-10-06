@@ -1065,8 +1065,56 @@ bird("goldammer","Goldammer","Emberiza citrinella","Ammern",["feld"],2,"1-12","2
  kultur="Eine Legende erzählt, das Anfangsmotiv von Beethovens 5. Sinfonie gehe auf den Goldammer-Ruf zurück – belegt ist das nicht.")
 
 
+
+# ============================================================ Lautschrift für die synchrone Anzeige
+# [Gesang, Ruf] – Silben mit „-“, Wörter mit Leerzeichen. Optional dritter Wert: Strophenpause in s.
+ONO = {
+ "amsel":["tü-dü-lü-lü-dü","tix-tix-tix"], "singdrossel":["di-di-dü di-di-dü","zipp"],
+ "misteldrossel":["trü-lü-ri-ü","zerrrr"], "wacholderdrossel":["schwätz-schwätz","schack-schack-schack"],
+ "rotkehlchen":["tsii-tri-li-lü","tick-tick"], "nachtigall":["lü-lü-lü-lü","huit"],
+ "hausrotschwanz":["jirr-titi-krschsch","hüid tek-tek"], "gartenrotschwanz":["hüit-tüi-tüi-tüi","huit"],
+ "kohlmeise":["zi-zi-bä","pink"], "blaumeise":["zi-zi-sirrrr","zerretet"], "tannenmeise":["sitü-sitü-sitü","sit"],
+ "schwanzmeise":["sri-sri-sri","sri-sri trrr"], "wintergoldhaehnchen":["si-si-sisi-sisi","srii-srii"],
+ "zaunkoenig":["tirili-trrrr-tirili","teck-teck"], "heckenbraunelle":["tili-tili-tüli","tiih"],
+ "buchfink":["tsi-tsi-tsi-ziwiwi-tschuih","pink-pink"], "bergfink":["dsäää","wääh"],
+ "gruenfink":["dschwuiiih","gigigig"], "stieglitz":["stiglitt-didlit","stiglitt"], "girlitz":["sirr-sirr-girrlitt","girrlitt"],
+ "gimpel":["djü","djü"], "kernbeisser":["zicks","zicks"], "erlenzeisig":["tsüje-dziii","tsüje"],
+ "kreuzschnabel":["kip-kip-kip","kip-kip"], "haussperling":["tschilp","tschilp"], "feldsperling":["tschett","tettet"],
+ "star":["wiuuu","rrää"], "elster":["schak-schak-schak","schak-schak-schak"], "eichelhaeher":["rätsch","rätsch"],
+ "tannenhaeher":["krrrä","krrrä"], "rabenkraehe":["krah","krah"], "saatkraehe":["gaah","gaah"], "kolkrabe":["korrk","korrk"],
+ "dohle":["kjack","kjack"], "alpendohle":["zirrr","zirrr"],
+ "ringeltaube":["gru-gruuu-gru gru-gru","gru-gruuu-gru",0.6], "tuerkentaube":["gu-guuu-gu","chwääh",0.6],
+ "strassentaube":["gurr-gu-guuh","gurr-gu-guuh",0.5], "turteltaube":["turrr-turrr","turrr",0.5],
+ "kuckuck":["ku-kuck","kwi-kwi-kwi-kwi",0.25], "mauersegler":["srieh","srieh"], "mehlschwalbe":["prrit","prrit"],
+ "rauchschwalbe":["witt-witt zerrr","witt-witt"], "bachstelze":["zi-litt","zi-litt"], "gebirgsstelze":["zississ","zit-zit"],
+ "feldlerche":["tirili-tirili","trlit"], "zilpzalp":["zilp-zalp","hüit"], "fitis":["hüi-hüi-düe-düe-dü","hu-iit"],
+ "moenchsgrasmuecke":["tschitscher-tü-lü-dü","tack-tack"], "gartengrasmuecke":["trülü-trülü-trülü","tschek"],
+ "teichrohrsaenger":["tiri-tiri tschä-tschä zerr-zerr","tsch"], "drosselrohrsaenger":["karre-karre-kiet-kiet","krrr"],
+ "kleiber":["wi-wi-wi-wi","twit"], "gartenbaumlaeufer":["tüt-tüt-teroi-tit","tiit"],
+ "buntspecht":["trrrrrr","kick"], "gruenspecht":["klü-klü-klü-klü","kjück"], "schwarzspecht":["kwi-kwi-kwi","krrü-krrü kliöh"],
+ "kiebitz":["kiu-witt","kiu-witt"], "rebhuhn":["kirr-ek","kirr-ek"], "wachtel":["pick-wer-wick","pick-wer-wick"],
+ "fasan":["gö-gock","gö-gock"], "haushuhn":["ki-ke-ri-ki","gock-gock-gooock"], "auerhuhn":["klick-klick-plopp-wetz","gock"],
+ "alpenschneehuhn":["arrr-ka-ka","arrr-ka-ka"], "weissstorch":["klapper-klapper","klapper-klapper"], "graureiher":["kräik","kräik"],
+ "kranich":["krruuu","krruuu"], "hoeckerschwan":["wium-wium","zisch"], "graugans":["gang-gang-gang","gang-gang"],
+ "nilgans":["hää-hää-hää","hää-hää"], "stockente":["quaak-quak-quak","quaak-quak-quak"], "blaesshuhn":["pix","kött"],
+ "teichhuhn":["kürrk","kürrk"], "haubentaucher":["kroa-kroa","kroa-kroa"], "eisvogel":["tiiit","tiiit"],
+ "wasseramsel":["zrits-zwitscher","zrits"], "lachmoewe":["kriääh","kriääh"], "silbermoewe":["kiau-kau-kau","kiau"],
+ "austernfischer":["kliep-kliep-kliep","kliep"], "kormoran":["ko-ko-ko","ko-ko"], "rohrdommel":["uh-prumb","uh-prumb",0.8],
+ "maeusebussard":["hiääh","hiääh"], "rotmilan":["hiiä-hiä-hiä","hiiä-hiä-hiä"], "sperber":["kjekjekje","kjekjekje"],
+ "turmfalke":["kikikiki","kikikiki"], "wanderfalke":["kek-kek-kek","kek-kek-kek"], "steinadler":["kjäk","kjäk"],
+ "seeadler":["kja-kja-kja","kja-kja-kja"], "bartgeier":["piii","piii"], "uhu":["u-hu","chräh",0.5],
+ "waldkauz":["huu hu-hu-huuu","ku-witt"], "waldohreule":["huh","pfiieh"], "schleiereule":["chrrrüüh","chrrrüüh"],
+ "steinkauz":["guhk","kuwitt"], "pirol":["dü-dlio","kräh"], "wiedehopf":["hup-hup-hup","hup-hup-hup",0.25],
+ "neuntoeter":["tschek","tschek"], "halsbandsittich":["kii-ak","kii-ak"], "pfau":["mi-ääu","kie-aah"],
+ "seidenschwanz":["sirrrr","sirrrr"], "mauerlaeufer":["ti-tüü-zrüih","tüi"], "goldammer":["zi-zi-zi-zi-zi-düüh","zick"],
+}
+
 # ============================================================ Ausgabe
 ids = {b["id"] for b in B}
+for b in B:
+    o = ONO[b["id"]]
+    b["ono"] = o[:2]
+    if len(o) > 2: b["pg"] = o[2]
 for b in B:
     for v in b.get("verw", []):
         assert v in ids, (b["id"], v)
