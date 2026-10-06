@@ -1695,3 +1695,267 @@
    PICK[song] 22.0s @1.9s 2100-8400Hz  Phylloscopus collybita.ogg  | Oona Räisänen (Mysid) | Public domain
    PICK[call] 22.0s @0.0s 2100-8400Hz  Phylloscopus collybita - Common Chiffchaff XC384000.mp3  | Jan Cibulka | CC BY-SA 4.0
    IMG Common Chiffchaff 2025 04 04 01.jpg tint=#a08764 | Alexis Lours
+
+## gartengrasmuecke — Sylvia borin  (5 Kandidaten)
+   cand  11.0 ['song'] 33.16351473922902s  Garden Warbler (Sylvia borin) (W1CDR0001463 BD12).ogg
+   cand   9.0 ['song'] 24.56909375s  Sylvia borin.ogg
+   cand   9.0 ['song'] 67.69066666666667s  Gartengrasmücke.ogg
+   cand   3.0 [] 11.444458333333333s  Gartengrasmücke (Sylvia borin).wav
+   cand   1.5 [] 4.644081632653061s  Sylvia borin sound.ogg
+   PICK[song] 22.0s @1.8s 800-7900Hz  Garden Warbler (Sylvia borin) (W1CDR0001463 BD12).ogg  |  | CC BY-SA 4.0
+   IMG Sylvia borin (Örebro County).jpg tint=#949663 | Biillyboy
+
+## drosselrohrsaenger — Acrocephalus arundinaceus  (11 Kandidaten)
+   cand  12.0 ['song'] 35.895454900224806s  Acrocephalus arundinaceus - Great Reed Warbler XC457406.mp3
+   cand   9.0 ['song'] 37.85688393315382s  Acrocephalus arundinaceus - Great Reed Warbler XC489905.mp3
+   cand   9.0 ['song'] 56.97955496718643s  Acrocephalus arundinaceus - Great Reed Warbler XC368405.mp3
+   cand   9.0 ['song'] 67.411075s  Acrocephalus arundinaceus - Great Reed Warbler XC416396.mp3
+   cand   9.0 ['song'] 23.765333333333334s  Acro arundinaceus song.wav
+   cand   9.0 ['song'] 10.608480725623583s  Acrocephalus arundinaceus 1.ogg
+   cand   3.0 [] 22.991975s  Reed Warbler (Acrocephalus sp.) - Parc Natural de s'Albufera, Spain 2022-04-21.mp3
+   cand   3.0 ['call', 'song'] 3.922108843537415s  Acrocephalus arundinaceus 2.ogg
+   PICK[song] 22.0s @12.4s 500-6800Hz  Acrocephalus arundinaceus - Great Reed Warbler XC457406.mp3  | Hannu Varkki | CC BY-SA 4.0
+   PICK[call] 3.92s @0.0s 500-6800Hz  Acrocephalus arundinaceus 2.ogg  | Marco Dragonetti | CC BY-SA 3.0
+   IMG Drosselrohrsänger Great reed warbler.jpg tint=#97a6a6 | Andreas Trepte
+
+## kleiber — Sitta europaea  (39 Kandidaten)
+   cand  11.5 ['call', 'song'] 31.152s  XC164989 - Boomklever - Sitta europaea caesia.ogg
+   cand  11.5 ['call', 'song'] 31.1524716553288s  XC164989-Eurasian Nuthatch call Oostermaet NL 2014.ogg
+   cand  11.0 ['song'] 76.57902494331066s  Eurasian Nuthatch (Sitta europaea) (W1CDR0001520 BD24).ogg
+   cand   9.0 ['song'] 24.780325s  Sitta europaea - Eurasian Nuthatch XC433160.mp3
+   cand   9.0 ['call', 'song'] 20.704615324776352s  Sitta europaea - Eurasian Nuthatch XC528003.mp3
+   cand   9.0 ['call', 'song'] 11.049962192603294s  Sitta europaea - Eurasian Nuthatch XC500056.mp3
+   cand   9.0 ['song'] 20.5660625s  Sitta europaea - Eurasian Nuthatch XC466459.mp3
+   cand   9.0 ['call', 'song'] 13.121903442948575s  Sitta europaea - Eurasian Nuthatch XC528002.mp3
+   PICK[song] 22.0s @0.8s 1000-7300Hz  XC164989 - Boomklever - Sitta europaea caesia.ogg  | Sander Pieterse | CC BY-SA 3.0
+   PICK[call] 22.0s @15.6s 1000-7300Hz  Eurasian Nuthatch (Sitta europaea) (W1CDR0001532 BD13).ogg  |  | CC BY-SA 4.0
+   IMG Kleiber (Sitta europaea caesia) Val Roseg.jpg tint=#46462f | Chme82
+
+## moenchsgrasmuecke — Sylvia atricapilla  (39 Kandidaten)
+   cand  11.0 ['song'] 48.41902494331066s  Blackcap (Sylvia atricapilla) (W1CDR0001539 BD11).ogg
+   cand   9.0 ['song'] 76.6353s  Sylvia atricapilla - Eurasian Blackcap XC282805.mp3
+   cand   9.0 ['song'] 41.717416666666665s  Sylvia atricapilla - Eurasian Blackcap XC539580.mp3
+   cand   9.0 ['song'] 61.0331875s  Sylvia atricapilla - Eurasian Blackcap XC316851.mp3
+   cand   9.0 ['song'] 55.627284228048275s  Sylvia atricapilla - Eurasian Blackcap XC546041.mp3
+   cand   9.0 ['song', 'wings'] 109.15931923622463s  Sylvia atricapilla - Eurasian Blackcap XC465727.mp3
+   cand   9.0 ['song'] 103.7259s  Sylvia atricapilla - Eurasian Blackcap XC483154.mp3
+   cand   9.0 ['call', 'song'] 47.72746294716115s  Sylvia atricapilla - Eurasian Blackcap XC546697.mp3
+   PICK[song] 22.0s @21.7s 800-9000Hz  Blackcap (Sylvia atricapilla) (W1CDR0001539 BD11).ogg  |  | CC BY-SA 4.0
+   PICK[call] 22.0s @23.7s 800-9000Hz  Sylvia atricapilla - Eurasian Blackcap XC546697.mp3  | Benoît Van Hecke | CC BY-SA 4.0
+   IMG Sylvia atricapilla -Lullington Heath, East Sussex, England -male-8.jpg tint=#afafae | Ron Knight from Seaford, East Sussex, United Kingdom
+
+## teichrohrsaenger — Acrocephalus scirpaceus  (11 Kandidaten)
+   cand  11.0 ['song'] 100.4549433106576s  Reed Warbler (Acrocephalus scirpaceus) (W1CDR0001533 BD12).ogg
+   cand   9.0 ['call', 'song'] 17.736458333333335s  Acrocephalus scirpaceus - Eurasian Reed Warbler XC503640.mp3
+   cand   9.0 ['song'] 46.99366106051384s  Acrocephalus scirpaceus - Eurasian Reed Warbler XC422189.mp3
+   cand   9.0 ['song'] 71.506125s  Acrocephalus scirpaceus - Eurasian Reed Warbler XC424196.mp3
+   cand   9.0 ['song'] 8.90425s  Acrocephalus scirpaceus - Eurasian Reed Warbler XC503636.mp3
+   cand   7.5 ['song'] 6.26047619047619s  Acrocephalus scirpaceus 2.ogg
+   cand   7.5 ['song'] 7.943469387755102s  Acrocephalus scirpaceus 1.ogg
+   cand   1.5 [] 182.16489795918366s  Moerasvogels in de Zouweboezem - SoundCloud - luc de bruijn.ogg
+   PICK[song] 22.0s @56.5s 1000-9000Hz  Reed Warbler (Acrocephalus scirpaceus) (W1CDR0001533 BD12).ogg  |  | CC BY-SA 4.0
+   PICK[call] 17.71s @0.0s 1000-9000Hz  Acrocephalus scirpaceus - Eurasian Reed Warbler XC503640.mp3  | Jochem verweij | CC BY-SA 4.0
+   IMG Eurasian Reed Warbler.jpg tint=#999a55 | Ron Knight
+
+## gartenbaumlaeufer — Certhia brachydactyla  (7 Kandidaten)
+   cand   9.0 ['call', 'song'] 100.80780544006615s  Certhia brachydactyla - Short-toed Treecreeper XC474508.mp3
+   cand   9.0 ['call', 'song'] 24.08423379839349s  Certhia brachydactyla - Short-toed Treecreeper XC474868.mp3
+   cand   9.0 ['song'] 28.145443852855763s  Certhia brachydactyla - Short-toed Treecreeper XC543231.mp3
+   cand   9.0 ['song'] 109.45995s  Certhia brachydactyla - Short-toed Treecreeper XC475244.mp3
+   cand   3.0 ['song'] 2.081625s  Certhia brachydactyla - Short-toed Treecreeper XC309172.mp3
+   cand   3.0 [] 9.87641723356009s  ŠOUPÁLEK KRÁTKOPRSTÝ.wav
+   cand   3.0 ['song'] 1.9889342403628119s  CerthiaBrachydactylaSong.ogg
+   PICK[song] 22.0s @6.2s 2400-10700Hz  Certhia brachydactyla - Short-toed Treecreeper XC474508.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   PICK[call] 22.0s @0.0s 2400-10700Hz  Certhia brachydactyla - Short-toed Treecreeper XC474868.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   IMG Short-toed treecreeper (Certhia brachydactyla brachydactyla).jpg tint=#9e8e75 | Charles J. Sharp
+
+## gruenspecht — Picus viridis  (12 Kandidaten)
+   cand  11.0 ['song'] 56.51698412698413s  Green Woodpecker (Picus viridis) (W1CDR0001497 BD6).ogg
+   cand   9.0 ['call', 'song'] 13.984592821959895s  Picus viridis - European Green Woodpecker XC416424.mp3
+   cand   9.0 ['call', 'song'] 11.30201801801802s  Picus viridis - European Green Woodpecker XC573514.mp3
+   cand   9.0 ['call', 'drum', 'song'] 80.040248654762s  Picus viridis - European Green Woodpecker XC468402.mp3
+   cand   7.5 ['call', 'song'] 120.10205s  Picus viridis - European Green Woodpecker XC433289.mp3
+   cand   7.5 ['song'] 185.4768125s  Grünspecht1.ogg
+   cand   7.5 ['song'] 161.8224375s  Grünspecht 2.ogg
+   cand   3.0 ['song'] 2.5028143475995845s  Picus viridis - European Green Woodpecker XC542203.mp3
+   PICK[song] 22.0s @1.4s 500-3400Hz  Green Woodpecker (Picus viridis) (W1CDR0001497 BD6).ogg  |  | CC BY-SA 4.0
+   PICK[call] 13.88s @0.0s 500-3400Hz  Picus viridis - European Green Woodpecker XC416424.mp3  | Alvaro Ortiz Troncoso | CC BY-SA 4.0
+   IMG Grünspecht Picus viridis.jpg tint=#6d694c | Sven Teschke, Büdingen
+
+## schwarzspecht — Dryocopus martius  (14 Kandidaten)
+   cand  10.5 ['call'] 5.537959183673469s  Dryocopus martius spring call kuikuikuikui.ogg
+   cand   9.0 ['call', 'song', 'wings'] 54.717425s  Dryocopus martius - Black Woodpecker XC108340.mp3
+   cand   9.0 ['call', 'song'] 10.098875s  Dryocopus martius - Black Woodpecker XC407246.mp3
+   cand   9.0 ['call', 'song', 'wings'] 19.356563231998493s  Dryocopus martius - Black Woodpecker XC538300.mp3
+   cand   9.0 ['call'] 11.847120181405895s  Dryocopus martius call at sitting Kjeee.ogg
+   cand   7.5 ['call'] 4.143666666666666s  Dryocopus martius - spring call.oga
+   cand   7.5 ['call', 'song', 'wings'] 7.0082086167800455s  Black woodpecker Dryocopus martius, flying call.ogg
+   cand   3.0 [] 24.817256235827664s  BlackWoodpeckerDryocopusMartiusConflictCallKijak.ogg
+   PICK[call] 5.54s @0.0s 400-4500Hz  Dryocopus martius spring call kuikuikuikui.ogg  | Alexander Kürthy | CC BY-SA 4.0
+   PICK[song] 22.0s @31.4s 400-4500Hz  Dryocopus martius - Black Woodpecker XC108340.mp3  | Alexander Kurthy | CC BY-SA 4.0
+   IMG BlackWoods.jpg tint=#6f7957 | Alastair Rae from London, United Kingdom
+
+## buntspecht — Dendrocopos major  (16 Kandidaten)
+   cand   9.0 ['drum', 'song'] 95.2085s  Dendrocopos major - Great Spotted Woodpecker XC560950.mp3
+   cand   9.0 ['drum'] 10.339541666666667s  Dendrocopos major.ogg
+   cand   8.0 ['drum'] 31.805147392290248s  Great Spotted Woodpecker (Picoides major) (W1CDR0001405 BD15).ogg
+   cand   7.5 ['drum'] 5.65156462585034s  Great Spotted Woodpecker drum.ogg
+   cand   4.0 ['call', 'song'] 35.31755102040816s  XC47350 - Grote Bonte Specht - Dendrocopos major.ogg
+   cand   3.0 ['drum'] 0.5680000000000001s  Woodpeckerdrum.ogg
+   cand   3.0 [] 15.48124716553288s  Buntspecht (Dendrocopos major), bettelnde Jungvögel.ogg
+   cand   1.5 ['call', 'song'] 35.361875s  Dendrocopos major - Great Spotted Woodpecker XC47350.mp3
+   PICK[drum] 22.0s @38.9s 300-6800Hz  Dendrocopos major - Great Spotted Woodpecker XC560950.mp3  | Olivier Grimm | CC BY-SA 4.0
+   PICK[call] 22.0s @4.3s 300-6800Hz  XC47350 - Grote Bonte Specht - Dendrocopos major.ogg  | Sander Pieterse | CC BY-SA 4.0
+   IMG Дятел большой пёстрый KR 01.jpg tint=#516436 | Плешков Алексей
+
+## kiebitz — Vanellus vanellus  (6 Kandidaten)
+   cand  11.0 ['call'] 35.25331065759637s  Northern Lapwing (Vanellus vanellus) (W1CDR0001471 BD4).ogg
+   cand   9.0 ['call', 'song', 'wings'] 8.19905s  Vanellus vanellus - Northern Lapwing XC436942.mp3
+   cand   9.0 ['call', 'song', 'wings'] 8.96705s  Vanellus vanellus - Northern Lapwing XC436945.mp3
+   cand   9.0 ['call', 'song'] 103.52736686210031s  Vanellus vanellus - Northern Lapwing XC467004.mp3
+   cand   9.0 ['call', 'song', 'wings'] 22.9409375s  Vanellus vanellus - Northern Lapwing XC247886.mp3
+   cand   3.0 ['call', 'song', 'wings'] 3.285907549248371s  Vanellus vanellus - Northern Lapwing XC588231.mp3
+   PICK[call] 22.0s @9.9s 700-6800Hz  Northern Lapwing (Vanellus vanellus) (W1CDR0001471 BD4).ogg  |  | CC BY-SA 4.0
+   PICK[song] 8.16s @0.0s 700-6800Hz  Vanellus vanellus - Northern Lapwing XC436942.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   IMG Northern-Lapwing-Vanellus-vanellus.jpg tint=#60623a | Andreas Trepte
+
+## rebhuhn — Perdix perdix  (1 Kandidaten)
+   cand   0.0 ['song'] 221.38875s  Perdiz pardilla (Perdix perdix).mp3
+   PICK[primary] 22.0s @10.1s 700-5700Hz  Perdiz pardilla (Perdix perdix).mp3  | Jochem Verweij | CC BY-SA 4.0
+   IMG Perdix perdix (Marek Szczepanek).jpg tint=#706b4b | 
+
+## fasan — Phasianus colchicus  (13 Kandidaten)
+   cand  12.0 ['call', 'wings'] 17.196598639455782s  PhasianusColchicusSlovakia.ogg
+   cand   9.0 ['call', 'song', 'wings'] 10.3574375s  Phasianus colchicus - Common Pheasant - XC115583.ogg
+   cand   9.0 ['call', 'song'] 16.415958333333332s  Phasianus colchicus - Common Pheasant XC503638.mp3
+   cand   9.0 ['call', 'song', 'wings'] 10.3955s  Phasianus colchicus - Common Pheasant XC115583.mp3
+   cand   9.0 ['call', 'song'] 97.916475s  Phasianus colchicus - Common Pheasant XC484051.mp3
+   cand   7.5 ['call', 'song', 'wings'] 193.24520833333332s  Phasianus colchicus - Common Pheasant XC179662.mp3
+   cand   3.0 ['call', 'song'] 2.3764354479378325s  Phasianus colchicus - Common Pheasant XC83152.mp3
+   cand   3.0 ['call'] 0.9963718820861678s  Phasianus colchicus.ogg
+   PICK[call] 17.2s @0.0s 300-5100Hz  PhasianusColchicusSlovakia.ogg  | SanoAK: Alexander Kürthy | CC BY-SA 4.0
+   PICK[song] 10.36s @0.0s 300-5100Hz  Phasianus colchicus - Common Pheasant - XC115583.ogg  | Jonathon Jongsma | CC BY-SA 3.0
+   IMG 00 4488 Hühnervogel - Edelfasan.jpg tint=#727f4b | W. Bulach
+
+## alpenschneehuhn — Lagopus muta  (3 Kandidaten)
+   cand   3.5 ['song'] 10.384739229024943s  Ptarmigan (Lagopus mutus) (W1CDR0001418 BD38).ogg
+   cand  -3.0 [] 2.54s  De-Alpenschneehuhn2.ogg
+   cand  -3.0 [] 2.55s  De-Alpenschneehuhn.ogg
+   PICK[primary] 10.38s @0.0s 200-3400Hz  Ptarmigan (Lagopus mutus) (W1CDR0001418 BD38).ogg  |  | CC BY-SA 4.0
+   IMG Lagopus muta2.jpg tint=#737776 | Tim Bowman
+
+## wachtel — Coturnix coturnix  (4 Kandidaten)
+   cand   9.0 ['call', 'song', 'wings'] 15.148364669484181s  Coturnix coturnix - Common Quail XC476230.mp3
+   cand   9.0 ['call', 'song', 'wings'] 8.68648598912589s  Coturnix coturnix - Common Quail XC549215.mp3
+   cand   9.0 ['call', 'song', 'wings'] 20.078975s  Coturnix coturnix - Common Quail XC559360.mp3
+   cand   3.5 ['call'] 36.61167800453515s  Common Quail (Coturnix coturnix) (W1CDR0001390 BD1).ogg
+   PICK[song] 15.12s @0.0s 1000-5700Hz  Coturnix coturnix - Common Quail XC476230.mp3  | Jens Loose | CC BY-SA 4.0
+   PICK[call] 22.0s @0.2s 1000-5700Hz  Common Quail (Coturnix coturnix) (W1CDR0001390 BD1).ogg  |  | CC BY-SA 4.0
+   IMG Coturnix coturnix, Fraunberg, Bayern, Deutschland 2, Ausschnitt.jpg tint=#6d844c | christoph_moning
+
+## weissstorch — Ciconia ciconia  (6 Kandidaten)
+   cand  12.0 ['clatter'] 12.064195011337869s  Klapperstorch.ogg
+   cand   9.0 ['clatter'] 39.12562358276644s  Ciconia ciconia bill-clattering.ogg
+   cand   3.0 ['clatter'] 2.04s  De-Klapperstorch.ogg
+   cand  -3.0 [] 1.92s  De-Weißstorch.ogg
+   cand  -3.0 [] 2.02s  De-Storchennest.ogg
+   cand  -4.0 [] 1.5136507936507937s  En-uk-white stork.ogg
+   PICK[clatter] 11.99s @0.0s 200-4500Hz  Klapperstorch.ogg  | Jugrü | CC BY-SA 3.0
+   IMG Ciconia ciconia - 01.jpg tint=#658ac9 | Carlos Delgado
+
+## haushuhn — Gallus gallus domesticus  (70 Kandidaten)
+   cand   9.0 ['call', 'crow', 'song'] 60.076975s  Sonus naturalis - Soundscape XC312802.mp3
+   cand   9.0 ['crow'] 8.306938775510204s  Medium rooster crowing.ogg
+   cand   9.0 ['crow'] 102.38494331065759s  Jim Rooster - 01 - Pull Your Socks Up.ogg
+   cand   9.0 ['crow'] 14.477641723356008s  RumRum.ogg
+   cand   9.0 ['crow'] 85.72895691609978s  Jim Rooster - 03 - Eastern Rain.ogg
+   cand   9.0 ['crow'] 102.61860416666667s  Jack Stanley - That Rooster's Walking Rag (1912).ogg
+   cand   7.5 ['crow'] 7.4448s  Kokrhající slepice a kohout, 2024-05-05, 07 43 39.mp3
+   cand   7.5 ['crow'] 5.340589569160998s  Rooster crowing.oga
+   PICK[crow] 22.0s @2.9s 200-4500Hz  Sonus naturalis - Soundscape XC312802.mp3  | Alexander Kürthy | CC BY-SA 4.0
+   IMG Kruppert Cubalaya cropped.JPG tint=#818170 | Kruppert_Cubalaya.JPG: Kruppert
+
+## auerhuhn — Tetrao urogallus  (2 Kandidaten)
+   cand   6.0 [] 20.095238095238095s  Auerhahn.ogg
+   cand   3.5 ['call'] 65.05902494331066s  Western Capercaillie (Tetrao urogallus) (W1CDR0001418 BD47).ogg
+   PICK[song] 20.02s @0.0s 200-6800Hz  Auerhahn.ogg  | Jugrü | CC BY-SA 3.0
+   PICK[call] 22.0s @0.5s 200-6800Hz  Western Capercaillie (Tetrao urogallus) (W1CDR0001418 BD47).ogg  |  | CC BY-SA 4.0
+   IMG Auerhuhn Schweden P1130026.jpg tint=#86835f | S. John, Elsterwerda
+
+## graureiher — Ardea cinerea  (9 Kandidaten)
+   cand   9.0 ['call', 'song', 'wings'] 14.153653338745688s  Ardea cinerea - Grey Heron XC531166.mp3
+   cand   9.0 ['call', 'song', 'wings'] 21.344404330319552s  Ardea cinerea - Grey Heron XC545059.mp3
+   cand   9.0 ['call', 'song'] 13.52755s  Ardea cinerea - Grey Heron XC432231.mp3
+   cand   9.0 ['call', 'song', 'wings'] 23.847425s  Ardea cinerea - Grey Heron XC436360.mp3
+   cand   9.0 ['call', 'song', 'wings'] 22.478725s  Ardea cinerea - Grey Heron XC432922.mp3
+   cand   9.0 ['call', 'song', 'wings'] 16.15079279018632s  Ardea cinerea - Grey Heron XC550579.mp3
+   cand   9.0 ['call', 'song', 'wings'] 47.90757926499876s  Ardea cinerea - Grey Heron XC610467.mp3
+   cand   7.5 ['call', 'song', 'wings'] 6.44695s  Ardea cinerea - Grey Heron XC432919.mp3
+   PICK[call] 14.12s @0.0s 200-4000Hz  Ardea cinerea - Grey Heron XC531166.mp3  | Benoît Van Hecke | CC BY-SA 4.0
+   PICK[song] 21.32s @0.0s 200-4000Hz  Ardea cinerea - Grey Heron XC545059.mp3  | Luis Alvarez Menendez | CC BY-SA 4.0
+   IMG Ardea cinerea EM1A2714 (27349354381).jpg tint=#6b7b47 | Bengt Nyman from Vaxholm, Sweden
+
+## hoeckerschwan — Cygnus olor  (3 Kandidaten)
+   cand  12.0 ['song', 'wings'] 23.030925s  Cygnus olor - Mute Swan XC434964.mp3
+   cand   9.0 ['call', 'song', 'wings'] 11.8272s  Cygnus olor - Mute Swan XC307509.mp3
+   cand   9.0 ['wings'] 11.745328798185941s  DM550172 060m 00s 120m 00sCygnusOlor.ogg
+   PICK[wings] 22.99s @0.0s 200-4500Hz  Cygnus olor - Mute Swan XC434964.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   PICK[call] 11.75s @0.0s 200-4500Hz  Cygnus olor - Mute Swan XC307509.mp3  | Alexander Kürthy | CC BY-SA 3.0
+   IMG Mute Swan Emsworth2.JPG tint=#5b5e65 | Geni
+
+## nilgans — Alopochen aegyptiaca  (3 Kandidaten)
+   cand   9.0 ['call'] 13.763895833333333s  Egyptian Goose (Alopochen aegyptiacus) Germany.ogg
+   cand   8.0 ['call'] 10.216780045351474s  Egyptian Goose (Alopochen aegyptiacus), Masai Mara (022A-WA03044X0032-0001M0).oga
+   cand   6.0 [] 43.178666666666665s  Artis, Nijlgans - SoundCloud - Beeld en Geluid.ogg
+   PICK[call] 13.76s @0.0s 200-3400Hz  Egyptian Goose (Alopochen aegyptiacus) Germany.ogg  | Kolmkolm | CC BY-SA 4.0
+   IMG Egyptian goose (05659).jpg tint=#74683a | Rhododendrites
+
+## graugans — Anser anser  (6 Kandidaten)
+   cand  12.0 ['call', 'song', 'wings'] 40.479025s  Anser anser - Greylag Goose XC436358.mp3
+   cand   9.0 ['call', 'song', 'wings'] 10.840472612078075s  Anser anser - Greylag Goose XC518305.mp3
+   cand   3.0 [] 33.3902947845805s  Oca Vulgar.ogg
+   cand   3.0 [] 10.89595s  Greylag Goose (Anser anser) - Bærum, Norway 2021-04-03.mp3
+   cand  -3.0 [] 1.97s  De-Graugans.ogg
+   cand  -3.0 [] 1.85s  Jer-pithot.ogg
+   PICK[call] 22.0s @2.5s 200-2900Hz  Anser anser - Greylag Goose XC436358.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   PICK[song] 10.8s @0.0s 200-2900Hz  Anser anser - Greylag Goose XC518305.mp3  | Jens Loose | CC BY-SA 4.0
+   IMG 00 3688 Graugans (Anser anser).jpg tint=#617e48 | W. Bulach
+
+## kranich — Grus grus  (10 Kandidaten)
+   cand   9.0 ['call', 'song', 'wings'] 27.467599872957148s  Grus grus - Common Crane XC594758.mp3
+   cand   9.0 ['call', 'song', 'wings'] 40.35833038556774s  Grus grus - Common Crane XC596509.mp3
+   cand   9.0 ['call'] 39.74429166666667s  Gus grus shouting in the Teufelsbruch swamp (Berlin-Spandau) 02.ogg
+   cand   9.0 ['call'] 25.153015873015875s  Menar 20230214 115447.ogg
+   cand   9.0 ['call'] 17.899875s  Gus grus shouting in the Teufelsbruch swamp (Berlin-Spandau) 01.ogg
+   cand   9.0 ['call'] 70.87554166666666s  Gus grus shouting in the Teufelsbruch swamp (Berlin-Spandau) 03.ogg
+   cand   3.0 [] 15.731519274376417s  Zuraw.ogg
+   cand   3.0 [] 15.072s  Grus grus.ogg
+   PICK[call] 22.0s @2.1s 200-3400Hz  Grus grus - Common Crane XC594758.mp3  | Pálos Lőrinc | CC BY-SA 4.0
+   PICK[song] 22.0s @9.3s 200-3400Hz  Grus grus - Common Crane XC596509.mp3  | Benoît Van Hecke | CC BY-SA 4.0
+   IMG 2017.07.04.-01-Wendisch Rietz--Kranich.jpg tint=#728a30 | Andreas Eichler
+
+## stockente — Anas platyrhynchos  (11 Kandidaten)
+   cand   9.0 ['call', 'song'] 16.861875s  Anas platyrhynchos - Mallard XC112828.mp3
+   cand   8.0 ['call'] 35.383922902494334s  Mallard (Anas platyrhynchos) (W1CDR0001518 BD17).ogg
+   cand   7.5 ['call', 'song'] 6.5718s  Anas platyrhynchos - Mallard XC518422.mp3
+   cand   3.0 ['call', 'song'] 3.5092469663064123s  Anas platyrhynchos - Mallard XC62258.mp3
+   cand   3.0 [] 82.05931972789115s  Pekin duck & mallard.ogg
+   cand   1.5 ['song'] 16.822857142857142s  Anas platyrhynchos - Mallard - XC112828.ogg
+   cand   1.5 [] 5.166666666666667s  Кряква в Лаздинае.ogg
+   cand   1.5 ['wings'] 9.792s  Ducks landing in water.ogg
+   PICK[call] 16.82s @0.0s 200-3400Hz  Anas platyrhynchos - Mallard XC112828.mp3  | Jonathon Jongsma | CC BY-SA 3.0
+   PICK[song] 6.52s @0.0s 200-3400Hz  Anas platyrhynchos - Mallard XC518422.mp3  | Marie-Lan Taÿ Pamart | CC BY-SA 4.0
+   IMG Anas platyrhynchos (mixed pair) (32428014687).jpg tint=#847c73 | Rolf Dietrich Brecher from Germany
+
+## blaesshuhn — Fulica atra  (14 Kandidaten)
+   cand  12.0 ['call', 'song', 'wings'] 31.046775s  Fulica atra - Eurasian Coot XC432890.mp3
+   cand   9.0 ['call', 'song', 'wings'] 22.046175s  Fulica atra - Eurasian Coot XC434599.mp3
+   cand   9.0 ['call', 'song', 'wings'] 29.6323s  Fulica atra - Eurasian Coot XC432891.mp3
+   cand   9.0 ['call', 'song'] 26.03645s  Fulica atra - Eurasian Coot XC519436.mp3
+   cand   9.0 ['call', 'song', 'wings'] 57.75385783299254s  Fulica atra - Eurasian Coot XC481323.mp3
+   cand   9.0 ['call', 'song', 'wings'] 12.051376583691328s  Fulica atra - Eurasian Coot XC467829.mp3
+   cand   9.0 ['call', 'song', 'wings'] 13.05425s  Fulica atra - Eurasian Coot XC476232.mp3
+   cand   9.0 ['call', 'song', 'wings'] 10.446046194546629s  Fulica atra - Eurasian Coot XC476234.mp3
+   PICK[call] 22.0s @4.8s 300-5100Hz  Fulica atra - Eurasian Coot XC432890.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   PICK[song] 21.99s @0.0s 300-5100Hz  Fulica atra - Eurasian Coot XC434599.mp3  | Joost van Bruggen | CC BY-SA 4.0
+   IMG Eurasian Coot.jpg tint=#726034 | Noodle snacks
