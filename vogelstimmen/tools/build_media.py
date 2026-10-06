@@ -237,7 +237,9 @@ def choose(sp, wd, ov):
                 cands[info["url"]] = info
         except Exception as e:
             log("   search failed", term, e)
-    cl = list(cands.values())
+    cl = [c for c in cands.values()
+          if not re.match(r"^[A-Z][a-z]{1,2}(-[A-Za-z]+)?-", c["title"])      # Aussprache-Dateien (De-…, LL-Q…)
+          and (c.get("duration") or 99) >= 3.5]
     picks = []
     forced = ov.get("clips")
     if forced:

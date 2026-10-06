@@ -1,1 +1,32 @@
-{}
+{
+ "schleiereule": {
+  "clips": [
+   "Tyto alba - Western Barn Owl XC432000.mp3",
+   "Tyto alba - Western Barn Owl XC433736.mp3"
+  ],
+  "kinds": [
+   "call",
+   "secondary"
+  ]
+ },
+ "buntspecht": {
+  "clips": [
+   "Dendrocopos major.ogg",
+   "XC47350 - Grote Bonte Specht - Dendrocopos major.ogg"
+  ],
+  "kinds": [
+   "drum",
+   "call"
+  ]
+ },
+ "alpendohle": {
+  "clips": [
+   "Pyrrhocorax graculus - Alpine Chough XC482782.mp3",
+   "Pyrrhocorax graculus - Alpine Chough XC589717.mp3"
+  ],
+  "kinds": [
+   "call",
+   "secondary"
+  ]
+ }
+}

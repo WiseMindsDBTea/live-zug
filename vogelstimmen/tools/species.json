@@ -86,7 +86,7 @@
 ["turmfalke", "Falco tinnunculus", "call"],
 ["wanderfalke", "Falco peregrinus", "call"],
 ["steinadler", "Aquila chrysaetos", "call"],
-["seeadler", "Haliaeetus albicilla", "call"],
+["seeadler", "Haliaeetus albicilla", "call", [], ["White-tailed Eagle", "White-tailed Sea Eagle"]],
 ["bartgeier", "Gypaetus barbatus", "call"],
 ["uhu", "Bubo bubo", "song"],
 ["waldkauz", "Strix aluco", "song"],
